@@ -1,0 +1,57 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Andy Ibanez"
+theme = "hyde"
+
+[params.social]
+	twitter = "AndyIbanezK"
+	keybase = "andyibanez"
+	github = "andyibanez"
+	stackoverflow = "648767"
+	instagram = "andyibanez"
+	linkedin = "andrés-ibañez-30234033"
+	reddit = "andyibanez"
+	gravatar = "leonnears+realpic@gmail.com"
+
+## Site Settings
+[params]
+    author = "Andy Ibanez"
+    title = "Software developer from La Paz, Bolivia"
+    # description = "..."
+    authorimage = "/static/img/me.jpg"
+    dateformat = "Jan 2, 2006"
+
+    # sidebar, copyright & license
+    copyright = "Andrés Ibañez"
+    # license = "CC BY-SA 4.0"
+    # licenseURL = "https://creativecommons.org/licenses/by-sa/4.0"
+    showBuiltWith = false
+
+    # https://highlightjs.org
+    highlightjs = true
+    highlightjsstyle = "github"
+
+    #toc = "hugo"
+
+    UtterancesRepo = "AndyIbanez/andyibanez-com"
+    UtterancesIssueTerm = "pathname"
+    UtterancesTheme = "github-light"
+
+    googleAnalytics = "UA-146179797-1"
+
+## Main Menu
+[[menu.main]]
+    name = "Posts"
+    weight = 100
+    identifier = "posts"
+    url = "/posts/"
+[[menu.main]]
+    name = "Projects"
+    identifier = "projects"
+    weight = 200
+    url = "/projects/"
+[[menu.main]]
+    name = "About"
+    identifier = "about"
+    weight = 300
+    url = "/about/"
