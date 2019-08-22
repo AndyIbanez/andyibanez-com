@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://www.andyibanez.com"
 languageCode = "en-us"
 title = "Andy Ibanez"
 theme = "hyde"

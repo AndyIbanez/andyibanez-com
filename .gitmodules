@@ -1,3 +1,7 @@
 [submodule "themes/hyde"]
 	path = themes/hyde
 	url = https://github.com/htr3n/hyde-hyde.git
+[submodule "public"]
+	path = public
+	url = git@github.com:andyibanez/andyibanez.github.io.git
+	branch = master

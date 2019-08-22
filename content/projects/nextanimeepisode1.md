@@ -15,7 +15,7 @@ link: https://apps.apple.com/us/app/next-anime-episode/id1227965532
 
 ![Next Anime Episode 1](/img/nextanimeepisode1.png)
 
-[Download on the App Store](https://apps.apple.com/us/app/next-anime-episode/id1227965532) | [Privacy Policy](/privacy-policies/nae1.png)
+[Download on the App Store](https://apps.apple.com/us/app/next-anime-episode/id1227965532) | [Privacy Policy](/privacy-policies/nae1)
 
 Next Anime Episode does one job: To help you keep track of airing anime and when they will have a new episode available in Japan.
 
