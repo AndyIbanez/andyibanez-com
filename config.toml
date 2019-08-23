@@ -3,6 +3,8 @@ languageCode = "en-us"
 title = "Andy Ibanez"
 theme = "hyde"
 
+googleAnalytics = "UA-146179797-1"
+
 [params.social]
 	twitter = "AndyIbanezK"
 	keybase = "andyibanez"
