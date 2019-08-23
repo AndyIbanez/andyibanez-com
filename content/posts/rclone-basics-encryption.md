@@ -4,6 +4,7 @@ date: 2019-08-20T13:59:15-04:00
 highlightjslanguages:
  - bash
 draft: false
+aliases:
  - /rclone-encryption-tutorial/
 tags:
  - rclone
