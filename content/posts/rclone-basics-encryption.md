@@ -12,6 +12,7 @@ tags:
  - command line
 categories:
  - command line
+description: "Learn to use rclone, a command line tool for cloud storage with support for encryption."
 ---
 
 *The original version of this article was titled "rclone and Encryption Tutorial" and was posted in the old version of my website. The original article was written in February 2017 for a much older version of rclone. This revised article covers rclone 1.48, and it has been rewritten from scratch to improve its quality. The examples used in the original article have been kept.*

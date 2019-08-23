@@ -17,6 +17,13 @@ tags:
  - watchos
 categories:
  - development
+description: "Learn multithreading on Apple Platforms with the help of NSOperation, a high-level concurrency API."
+keywords:
+ - concurrency
+ - ios
+ - tvos
+ - ipados
+ - watchos
 ---
 
 *The original title for this article was posted on my old website in 2012 and it was titled "Multithreading on iOS And Mac OS X Using NSOperations". The original examples were written in Objective-C. This article has been rewritten from scratch not only to give the examples in Swift, but also to improve the quality of the old article. It has been shortened, and both language and tone have been revised.*
