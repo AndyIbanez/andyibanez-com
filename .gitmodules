@@ -5,3 +5,7 @@
 	path = public
 	url = git@github.com:andyibanez/andyibanez.github.io.git
 	branch = master
+[submodule "public/public"]
+	path = public/public
+	url = git@github.com:andyibanez/andyibanez.github.io.git
+	branch = master
