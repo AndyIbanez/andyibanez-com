@@ -57,3 +57,8 @@ googleAnalytics = "UA-146179797-1"
     identifier = "about"
     weight = 300
     url = "/about/"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"

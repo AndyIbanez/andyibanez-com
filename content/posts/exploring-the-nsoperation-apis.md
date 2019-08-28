@@ -12,6 +12,7 @@ tags:
  - programming
  - apple
  - ios
+ - ipados
  - macos
  - tvos
  - watchos
@@ -19,6 +20,7 @@ categories:
  - development
 description: "Learn multithreading on Apple Platforms with the help of NSOperation, a high-level concurrency API."
 keywords:
+ - swift
  - concurrency
  - ios
  - tvos
@@ -28,7 +30,7 @@ keywords:
 
 *The original title for this article was posted on my old website in 2012 and it was titled "Multithreading on iOS And Mac OS X Using NSOperations". The original examples were written in Objective-C. This article has been rewritten from scratch not only to give the examples in Swift, but also to improve the quality of the old article. It has been shortened, and both language and tone have been revised.*
 
-Writing concurrent code is important and something that is done for almost non-trivial apps. If you want your app to handle expensive tasks without causing a bad experience for users (freezing the main thread), you will eventually have to deal with concurrency. And the good news is, if your concurrent task is complex enough, you can simplify how it's done with the help of an API that has been there for a very long time, but is ignored by many developers of Apple platforms: NSOperations.
+Writing concurrent code is important and something that is done for almost all non-trivial apps. If you want your app to handle expensive tasks without causing a bad experience for users (freezing the main thread), you will eventually have to deal with concurrency. And the good news is, if your concurrent task is complex enough, you can simplify how it's done with the help of an API that has been there for a very long time, but is ignored by many developers of Apple platforms: NSOperations.
 
 Concurrency on iOS and macOS is nothing new. The technologies have also been moved to TVOS and watchOS. In fact, there's four concurrency methods that you can do in all these platforms:
 
