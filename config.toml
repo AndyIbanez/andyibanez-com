@@ -53,7 +53,7 @@ googleAnalytics = "UA-146179797-1"
     weight = 200
     url = "/projects/"
 [[menu.main]]
-    name = "About"
+    name = "About Me"
     identifier = "about"
     weight = 300
     url = "/about/"
