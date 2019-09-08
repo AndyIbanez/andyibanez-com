@@ -261,9 +261,9 @@ n) No
 y/n> n
 ```
 
-Finally, you will be asked if you want to use auto config. If you configure rclone in your Mac, or Windows, or in another system with a GUI, you can say no to this. If you were configuring rclone in a headless system (like SSHing into a Linux system with no GUI), you need to say yes to this.
+Finally, you will be asked if you want to use auto config. If you configure rclone in your Mac, or Windows, or in another system with a GUI, you can say "yes" to this. If you were configuring rclone in a headless system (like SSHing into a Linux system with no GUI), you need to say "no" to this.
 
-Since you are working on a Mac, Windows, or Linux with a GUI, press `n` followed by Enter.
+Since you are working on a Mac, Windows, or Linux with a GUI, press `y` followed by Enter.
 
 ```bash
 Remote config

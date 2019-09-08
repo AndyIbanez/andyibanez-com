@@ -19,7 +19,7 @@ tags:
  - nsurl
 categories:
  - development
-description: "Learn to cache content on Apple's Platforms with NSCache, a high-level native caching API."
+description: "Learn to build URLs Swiftly with NSURLComponents."
 keywords:
  - swift
  - urls
@@ -29,8 +29,6 @@ keywords:
  - ipados
  - watchos
 ---
-
-Building URLs with NSURLComponents
 
 If you have been programming for Apple platforms for a while, chances are you have seen (or maybe even wrote yourself) a line of code that looks like this:
 
