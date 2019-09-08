@@ -33,7 +33,7 @@ When we are working with apps on iOS, iPadOS, macOS, watchOS, or TVOS, it's poss
 * It stores data in memory only. If our app gets killed, this memory is freed up and it's not persisted to disk.
 * The key-value pair mechanism lets us very easily set and get cached content. Very similar to what we would do with a `Dictionary`. Unlike a dictionary, the keys are not copied, so it's slightly more memory efficient.
 * We can set automatic eviction conditions to help `NSCache` delete objects automatically. We can also manually evict objects if we need to.
-* It is multi-threading friendly. We can read and write the cache without having to manage our cache object ourselves.
+* It is multi-threading friendly. We can read and write the cache without having to manage threading ourselves.
 
 And there is just one reason it is not perfect:
 
