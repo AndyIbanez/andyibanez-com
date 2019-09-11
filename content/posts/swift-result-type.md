@@ -1,7 +1,7 @@
 ---
 title: "Understanding the Result Type in Swift"
-date: 2019-09-07T15:17:02-04:00
-draft: true
+date: 2019-09-11T15:17:02-04:00
+draft: false
 highlightjslanguages:
  - swift
  - objectivec
