@@ -1,7 +1,7 @@
 ---
 title: "Formatting Content with NSFormatter"
 date: 2019-09-21T17:21:42-04:00
-draft: true
+draft: false
 publishDate: 2019-09-25T07:00:00-04:00
 highlightjslanguages:
  - swift
