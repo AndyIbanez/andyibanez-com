@@ -83,9 +83,9 @@ The call to `start()` is asynchronous, so be wary of that. There is an asynchron
   })
 ```
 
-There's some additional properties you can set. If the Haptic Engine gets stopped for any reason. When there's an error with the haptic server, you can also get notified when it has been reset.
+There's some additional properties you can set. If the Haptic Engine gets stopped for any reason, you an get a callback. When there's an error with the haptic server, you can also get notified when it has been reset.
 
-Bellow are the two relevant properties:
+Below are the two relevant properties:
 
 ```swift
 engine?.stoppedHandler = { reason in
@@ -93,8 +93,7 @@ engine?.stoppedHandler = { reason in
 }
           
 engine?.resetHandler = {
-    print("Haptic server has been reset")
-		// You can try to start it again.
+		// The engine has been reset, so you can try connecting to it again.
     do {
       try engine?.start()
     } catch {
@@ -123,6 +122,8 @@ do {
     print("Failed perform haptic: \(error.localizedDescription).")
 }
 ```
+
+The `eventType` can be `hapticTransient` or `hapticContinous`. The former is to play simple "tics". Think of the haptic you get when flipping a UISwitch, or exploring the options in a UIPicker. The latter is to give more lasting feedback, such as a longer vibration when an error occurs in a textfield. This is interesting to use in games because you can create haptics that resemble the situation in the game. If you get hit, you get a light vibration, but as you keep getting and your life bar depletes, you can make it more and more intense.
 
 These are just some of the basic configurations you can do for your feedbacks. Alongside vibrations, you can play sound as part of an event so you can create feedback similar to that of the context menus in Springboard. You can even read and write haptics into a file so users can create their own. In the Settings app on iPhone, you can create custom vibration patterns for calls, and they all use haptic feedbacks.
 
