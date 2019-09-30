@@ -109,8 +109,13 @@ After you have done all that setup, you can start creating some haptics events. 
 To create a haptic event, you begin creating the parameters that will be used to configure it.
 
 ```swift
-let intensity = CHHapticEventParameter(parameterID: .hapticSharpness, value: 0.5)
-let sharpness = CHHapticEventParameter(parameterID: .hapticIntensity, value: 0.5)
+let intensity = CHHapticEventParameter(parameterID: .hapticSharpness, value: 0.5) // The feel of  haptic event, from dull to sharp
+let sharpness = CHHapticEventParameter(parameterID: .hapticIntensity, value: 0.5) // How strong the haptic is
+// Some advanced parameters
+let attackTime = CHHapticEventParameter(parameterID: .attackTime, value: 0.5) // When to increase the intensity of the haptic.
+let decayTime = CHHapticEventParameter(parameterID: .decayTime, value: 0.5) // When the intensity of the haptic goes down.
+let releaseTime = CHHapticEventParameter(parameterID: .releaseTime, value: 0.5) // If you want the haptic to "fade", when
+let releaseTime = CHHapticEventParameter(parameterID: .sustained, value: true) // If you want to sustain the haptic for its entire duration.
 
 let event = CHHapticEvent(eventType: .hapticTransient, parameters: [intensity, sharpness], relativeTime: 0)
 
@@ -126,6 +131,8 @@ do {
 The `eventType` can be `hapticTransient` or `hapticContinous`. The former is to play simple "tics". Think of the haptic you get when flipping a UISwitch, or exploring the options in a UIPicker. The latter is to give more lasting feedback, such as a longer vibration when an error occurs in a textfield. This is interesting to use in games because you can create haptics that resemble the situation in the game. If you get hit, you get a light vibration, but as you keep getting and your life bar depletes, you can make it more and more intense.
 
 These are just some of the basic configurations you can do for your feedbacks. Alongside vibrations, you can play sound as part of an event so you can create feedback similar to that of the context menus in Springboard. You can even read and write haptics into a file so users can create their own. In the Settings app on iPhone, you can create custom vibration patterns for calls, and they all use haptic feedbacks.
+
+Audio haptics come with their own set of parameters as well, including the frequency (brightness), audio volume, audio pan, and pitch. If you have a designer who wants to experiment with these, it could be fun to play with them.
 
 # Conclusion
 
