@@ -228,7 +228,7 @@ let eileenPublicKey = eileenPrivateKey.publicKey
 
 Once all the parties have the relevant public keys.
 
-Then, all the parties need to derive a secret using their own private key and the public key of the people they want to talk with. Once they have that shared secret, they can get the symmetric key.
+Then, all the parties need to do is derive a secret using their own private key and the public key of the people they want to talk with. Once they have that shared secret, they can get the symmetric key.
 
 All parties should derive the same symmetric key, and later they can start sharing data encrypted using this key.
 
