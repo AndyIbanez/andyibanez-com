@@ -1,7 +1,7 @@
 ---
 title: "Common Cryptographic Operations With Cryptokit"
 date: 2019-10-05T18:08:07-04:00
-draft: true
+draft: false
 publishDate: 2019-10-09T07:00:00-04:00
 highlightjslanguages:
  - swift
