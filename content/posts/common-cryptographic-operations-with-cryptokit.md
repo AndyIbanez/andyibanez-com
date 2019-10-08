@@ -93,16 +93,6 @@ As a recent example of this, Apple recently changed what the `description` prope
 
 <hr>
 
-All the afore mentioned hashes are used the same way. If you need to use deprecated hash algorithms but are still popular today (such as `MD5`), Apple provides them in an `Insecure` enum.
-
-To calculate the MD5 hash of a piece of data with CryptoKit:
-
-```swift
-let md5 = Insecure.MD5.hash(data: data)
-```
-
-You can also find the `SHA1` algorithm within `Insecure`.
-
 For the sake of comparison, this is how I calculated a `SHA512` hash prior to iOS 13 in Swift:
 
 ```swift
@@ -114,6 +104,16 @@ For the sake of comparison, this is how I calculated a `SHA512` hash prior to iO
     return value as Data
   }
 ```
+
+All the afore mentioned hashes are used the same way. If you need to use deprecated hash algorithms but are still popular today (such as `MD5`), Apple provides them in an `Insecure` enum.
+
+To calculate the MD5 hash of a piece of data with CryptoKit:
+
+```swift
+let md5 = Insecure.MD5.hash(data: data)
+```
+
+You can also find the `SHA1` algorithm within `Insecure`.
 
 ## Symmetric Encryption
 
