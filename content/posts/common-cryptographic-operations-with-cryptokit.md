@@ -32,7 +32,7 @@ Apple has always taken security very seriously, so it's expected that they would
 
 Apple providing new cryptography tools is nothing new. They have provided the `Security` framework for a *very* long time, and a few years later they introduced `CommonCrypto`. The problem with these frameworks is that they can be very low level, being written in C, and it can be intimidating for new developers to adopt them in their project. `CryptoKit` abstracts a lot of the details and it provides easier interfaces for common operations such as hashing, encrypting, and even signing.
 
-In this article we will explore how to do common cryptographic operations with CriptoKit, and the downsides it currently has.
+In this article we will explore how to do common cryptographic operations with CryptoKit, and the downsides it currently has.
 
 # Introduction to CryptoKit
 
@@ -48,7 +48,7 @@ CryptoKit allows you to:
 
 ## Hashing
 
-To perform hashing, `CryptoKit` provides the [`HashFunction`](https://developer.apple.com/documentation/cryptokit/hashfunction) protocol, along with three implementations for it. At the time of this writing, said implementations are the following structs:
+To perform hashing, `CryptoKit` provides the [`HashFunction`](https://developer.apple.com/documentation/cryptokit/hashfunction) protocol, along with three implementations of it. At the time of this writing, said implementations are the following structs:
 
 * SHA256
 * SHA384
@@ -105,7 +105,7 @@ For the sake of comparison, this is how I calculated a `SHA512` hash prior to iO
   }
 ```
 
-All the afore mentioned hashes are used the same way. If you need to use deprecated hash algorithms but are still popular today (such as `MD5`), Apple provides them in an `Insecure` enum.
+All the aforementioned hashes are used the same way. If you need to use deprecated hash algorithms but are still popular today (such as `MD5`), Apple provides them in an `Insecure` enum.
 
 To calculate the MD5 hash of a piece of data with CryptoKit:
 
@@ -162,7 +162,7 @@ let publicKey = privateKey.publicKey
 let publicKeyData = publicKey.rawRepresentation //You can share this one with others
 ```
 
-The `P521.Signing.PrivateKey` object wraps both the private key and public key, and they both have a `Data` representation that you can use to share (though shouldn't share the private key with anyone, but you can use the data representation if you want to store it in a different way). You can convert these representations to Base64 encoded strings to make them easier to share, like posting them on your websites or sharing them in social media.
+The `P521.Signing.PrivateKey` object wraps both the private key and public key, and they both have a `Data` representation that you can use to share (though you shouldn't share the private key with anyone, but you can use the data representation if you want to store it in a different way). You can convert these representations to Base64 encoded strings to make them easier to share, like posting them on your websites or sharing them in social media.
 
 ### Signing
 
@@ -226,7 +226,7 @@ let eileenPublicKey = eileenPrivateKey.publicKey
 /// Eileen sends her public key to Alice
 ```
 
-Once all the parties have the relevant public keys.
+Now, all the parties have the relevant public keys.
 
 Then, all the parties need to do is derive a secret using their own private key and the public key of the people they want to talk with. Once they have that shared secret, they can get the symmetric key.
 
