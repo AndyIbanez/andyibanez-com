@@ -208,12 +208,17 @@ func randomData(length: Int) -> Data {
   return data
 }
 
-let salt = randomData(length: 32)
+let salt = randomData(length: 32) // 256bits
 ```
 
-(I wasn't able to generate cryptographically secure data with CryptoKit, so I had to drop down to the lower level APIs).
+If you don't want to drop down to CommonCrypto to generate a random salt, you can create a new `SymmetricKey` of 256bits, and than grab its raw bytes to use it as a salt.
 
-Then, all the interested parties need to generate their key pairs, and share their public keys with each other.
+```swift
+let symKeySalt = SymmetricKey(size: .bits256)
+let salt = .withUnsafeBytes { Data($0) }
+```
+
+After a salt has been generated, all the interested parties need to share their public keys with each other.
 
 ```swift
 let alicePrivateKey = P521.KeyAgreement.PrivateKey()
@@ -258,6 +263,8 @@ let decryptedMessage = try! ChaChaPoly.open(encryptedByAlice, using: eileenSymme
 let decryptedMessageString = String(data: decryptedMessage, encoding: .utf8)!
 print(decryptedMessageString) // Hi Eileen!
 ```
+
+You can send a different salt each time a new message is generated as to keep it unique, and I encourage you to do so. If you are starting with CryptoKit, feel free to use a hard coded salt, but don't use it in a real application.
 
 # The Downsides
 
