@@ -2,7 +2,6 @@
 title: "Filtering Arrays with Predicates"
 date: 2019-10-12T17:28:31-04:00
 draft: true
-draft: false
 publishDate: 2019-16-09T07:00:00-04:00
 highlightjslanguages:
  - swift
