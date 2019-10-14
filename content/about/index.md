@@ -8,7 +8,9 @@ showpagemeta: false
 
 I'm a software developer born and raised in La Paz, Bolivia.
 
-I started my university studies at [Universidad Católica Boliviana](http://www.ucb.edu.bo) in 2011. The career I was pursuing was simply "Systems Engineering". I didn't finish my degree there. Instead, I transferred to [Universidad Privada Boliviana](http://www.upb.edu) in late 2012 because the program was much more interesting. I finished all my courses in July 9, 2018 and I'm currently working on my thesis to get my degree in Computer Systems Engineering. In college I was involved in a few entrepreneurships all related to app development in Bolivia.
+I currently work for [Banco Nacional de Bolivia](https://www.bnb.com.bo) as a "Digital Solutions Analyst", though that's just a fancy name for someone who works at the Innovation Center. I work on their iOS apps and I have designed security-minded protocols for some of them.
+
+I started my university studies at [Universidad Católica Boliviana](http://www.ucb.edu.bo) in 2011. The career I was pursuing was simply "Systems Engineering". I didn't finish my degree there. Instead, I transferred to [Universidad Privada Boliviana](http://www.upb.edu) in late 2012 because the program was much more interesting. I finished all my courses in July 9, 2018 and I'm currently working on my thesis to get my degree in Computer Systems Engineering. In college I was involved in a few startups all related to app development in Bolivia.
 
 I mostly write iOS apps in both Objective-C and Swift, though I adopted the latter in the first version and have been using it almost exclusively since then. I have published many apps in the App Store throughout the years, and many have come and gone. I published my first app in 2011 when I was a college freshman; it was a simple numerical base converter which I was using for my computer science classes at the time. My most popular app is [Mignori](https://www.mignori.com), which used to be on the App Store, but I removed it to publish a better version sometime this year.
 
