@@ -193,6 +193,12 @@ if publicKey.isValidSignature(signature, for: data) {
 }
 ```
 
+<hr>
+**Important Note!**
+
+Not all cyphers have signing methods for both digests and data. Curve25519 only exposes signing methods for `DataProtocol`s.
+<hr>
+
 ### Key Agreement
 
 Key agreement is a method used for multiple parties to securely choose a shared encryption key that can be used for signing and encrypting the data they want to share between each other.

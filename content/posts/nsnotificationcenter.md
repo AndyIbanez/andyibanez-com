@@ -1,5 +1,5 @@
 ---
-title: "Nsnotificationcenter"
+title: "Understanding and Implementing NSNotificationCenter on Apple's Platforms"
 date: 2019-10-17T14:17:01-04:00
 draft: true
 publishDate: 2019-23-09T07:00:00-04:00
