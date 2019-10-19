@@ -215,7 +215,7 @@ If you don't want to drop down to CommonCrypto to generate a random salt, you ca
 
 ```swift
 let symKeySalt = SymmetricKey(size: .bits256)
-let salt = .withUnsafeBytes { Data($0) }
+let salt = symKeySalt.withUnsafeBytes { Data($0) }
 ```
 
 After a salt has been generated, all the interested parties need to share their public keys with each other.
