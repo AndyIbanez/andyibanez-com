@@ -144,7 +144,7 @@ CommonCrypto offers the `CCKeyDerivationPBKDF` function which you can use to der
 
 To derive a password using PBKDF2, you can use a function like this:
 
-```
+```swift
 func pbkdf2(hash: CCPBKDFAlgorithm,
             password: String,
             salt: Data,
