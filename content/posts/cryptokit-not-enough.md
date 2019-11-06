@@ -35,9 +35,9 @@ As I have been playing with the amazing CryptoKit framework in the past few week
 
 Making working with cryptography easier and providing developer with tools to implement it safely seems to be a great general goal for the framework, and for this reason it's missing some features that may be surprising to some. Some may find it surprising, for example, that CryptoKit doesn't support AES-CBC out of the box. Reading Twitter, I found a discussion where [Frederic Jacobs](https://twitter.com/FredericJacobs) says the following regarding AES in CBC mode:
 
-*"That call is AES in CBC mode. It is not supported in CryptoKit. AES-CBC does not provide authentication and is hard to use correctly.
+*"That call is AES in CBC mode. It is not supported in CryptoKit. AES-CBC does not provide authentication and is hard to use correctly.*
 
-Moving to an authenticated mode of operation such as GCM is recommended."* - [Frederic Jacobs, in a Tweet](https://twitter.com/FredericJacobs/status/1185164960793538561?s=20)
+*Moving to an authenticated mode of operation such as GCM is recommended."* - [Frederic Jacobs, in a Tweet](https://twitter.com/FredericJacobs/status/1185164960793538561?s=20)
 
 AES-CBC being hard to use correctly sounds like a very reasonable reason to leave it out of CryptoKit, but AES in CBC mode - along with other cryptographic tools - are very popular elsewhere. So what can we do in this situation? Dropping down to the `Security` and `CommonCrypto` frameworks.
 
