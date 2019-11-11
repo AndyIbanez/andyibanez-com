@@ -1,7 +1,7 @@
 ---
 title: "TranslateBO"
 date: 2019-11-11T12:05:19-04:00
-draft: true
+draft: false
 ---
 
 This article is translated to both English and Spanish.
