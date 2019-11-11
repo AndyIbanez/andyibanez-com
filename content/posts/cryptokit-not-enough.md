@@ -28,6 +28,8 @@ keywords:
  - watchos
 ---
 
+*This article is a continuation to my [Common Cryptographic Operations with CryptoKit](https://www.andyibanez.com/posts/common-cryptographic-operations-with-cryptokit/]) article. If you want to learn how to use CryptoKit, read that one instead, and come to this one when you need a feature not offered by it.*
+
 As I have been playing with the amazing CryptoKit framework in the past few weeks, I have discovered a few more things that CryptoKit currently doesn't do. This is not generally a bad thing, and I *think* these limitations are related to what seem to be the goal of the framework:
 
 * Dealing with cryptography is *hard*, and [Snej](https://github.com/snej) makes a good point in a comment in my [previous CryptoKit article](https://www.andyibanez.com/posts/common-cryptographic-operations-with-cryptokit/): It gives you easy and relatively safe operations without needing to dive deeply into the cryptographic primitives underneath it. This prevents us from writing dangerous apps that could destroy its security with an oversight or wrong settings.

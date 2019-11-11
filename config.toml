@@ -57,6 +57,12 @@ googleAnalytics = "UA-146179797-1"
     identifier = "about"
     weight = 300
     url = "/about/"
+[[menu.main]]
+    name = "Bolivia"
+    identifier = "bolivia"
+    weight = 300
+    url = "/bolivia/"
+
 
 [taxonomies]
   category = "categories"
