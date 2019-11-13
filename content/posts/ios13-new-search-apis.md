@@ -12,9 +12,6 @@ tags:
  - apple
  - ios
  - ipados
- - macos
- - tvos
- - watchos
  - uikit
  - search
  - uisearchbar
@@ -26,9 +23,7 @@ description: "iOS 13 introduced improvements to existing UI search APIs. Learn w
 keywords:
  - swift
  - ios
- - tvos
  - ipados
- - watchos
  - uikit
  - search
  - uisearchbar
