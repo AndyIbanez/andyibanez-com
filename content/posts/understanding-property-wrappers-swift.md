@@ -13,7 +13,7 @@ tags:
  - property wrappers
 categories:
  - development
-description: "Learn to build URLs Swiftly with NSURLComponents."
+description: "Learn and understand what Property Wrappers are in Swift and how to use them."
 keywords:
  - swift
  - programming
