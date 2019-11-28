@@ -128,7 +128,7 @@ print(myFullName.firstName) // prints "Andy"
 print(myFullName.lastName) // prints "IBANEZ"
 ```
 
-First, we create our `ConfigurableCapitalization` property wrapped, which contains an `enum` that lets us specify the capitalization of a String. In the setter of the `wrappedValue`, we instruct the code to store the property in any of the specified capitalization types.
+First, we create our `ConfigurableCapitalization` property wrapper, which contains an `enum` that lets us specify the capitalization of a String. In the setter of the `wrappedValue`, we instruct the code to store the property in any of the specified capitalization types.
 
 Then we created a `FullName` object that will store a `firstName` as a `capitalized` string (it will capitalize the first letter of each word), and the last name as an `uppercased` string.
 
@@ -171,11 +171,11 @@ struct ConfigurableCapitalization {
 print(myFullName.$firstName) // prints "capitalized"
 ```
 
-But you can use it for me. If you are storing your values in a database, you can expose the connector object to do something with it, like flush values, or more.
+If you are storing your values in a database, you can expose the connector object to do something with it, like flush values, or more.
 
 # The Downsides
 
-Property wrappers are an amazing feature, but they have one downside: They provide too much "black magic" for someone who is not familiar with them. If you handed a new programmer our `FullName` class and instructed them to use it, they may be surprised at what's going on behind the scenes. This can only be solved with proper documentation.
+Property wrappers are an amazing feature, but they have one downside: They provide too much "black magic" for someone who is not familiar with them. If you handed a new programmer our `FullName` struct and instructed them to use it, they may be surprised at what's going on behind the scenes. This can only be solved with proper documentation.
 
 # Conclusion
 
