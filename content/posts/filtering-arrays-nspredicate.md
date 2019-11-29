@@ -1,9 +1,9 @@
 ---
 title: "Filtering Arrays with Predicates"
-date: 2019-16-09T07:00:00-04:00
+date: 2019-10-16T07:00:00-04:00
 originalDate: 2019-10-12T17:28:31-04:00
 draft: false
-publishDate: 2019-16-09T07:00:00-04:00
+publishDate: 2019-10-16T07:00:00-04:00
 highlightjslanguages:
  - swift
  - objectivec
