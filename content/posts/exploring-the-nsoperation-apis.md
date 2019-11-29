@@ -1,6 +1,7 @@
 ---
 title: "Exploring the NSOperation APIs for Apple's Platforms"
-date: 2019-08-21T14:47:38-04:00
+date: 2019-08-21T07:00:00-04:00
+originalDate: 2019-08-21T14:47:38-04:00
 draft: false
 highlightjslanguages:
  - swift

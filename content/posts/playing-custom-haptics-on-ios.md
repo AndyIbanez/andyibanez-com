@@ -1,6 +1,7 @@
 ---
 title: "Playing Custom Haptics on iOS"
-date: 2019-09-28T16:47:11-04:00
+date: 2019-10-02T07:00:00-04:00
+originalDate: 2019-09-28T16:47:11-04:00
 draft: false
 publishDate: 2019-10-02T07:00:00-04:00
 highlightjslanguages:

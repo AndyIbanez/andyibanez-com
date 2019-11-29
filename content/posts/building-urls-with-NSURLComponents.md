@@ -1,6 +1,7 @@
 ---
 title: "Building URLs With NSURLComponents"
-date: 2019-09-04T14:00:00-04:00
+date: 2019-09-04T7:00:00-04:00
+originalDate: 2019-09-04T14:00:00-04:00
 draft: false
 highlightjslanguages:
  - swift

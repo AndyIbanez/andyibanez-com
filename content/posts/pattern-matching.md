@@ -1,6 +1,7 @@
 ---
 title: "Introduction to Patterns and Pattern Matching in Swift."
-date: 2019-10-25T15:57:05-04:00
+date: 2019-23-09T07:00:00-04:00
+originalDate: 2019-10-25T15:57:05-04:00
 draft: false
 publishDate: 2019-23-09T07:00:00-04:00
 highlightjslanguages:

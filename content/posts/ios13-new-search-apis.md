@@ -1,6 +1,7 @@
 ---
 title: "New Search APIs in iOS 13"
-date: 2019-11-06T16:32:01-04:00
+date: 2019-11-13T07:00:00-04:00
+originalDate: 2019-11-06T16:32:01-04:00
 publishDate: 2019-11-13T07:00:00-04:00
 draft: false
 highlightjslanguages:

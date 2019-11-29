@@ -1,6 +1,7 @@
 ---
 title: "Understanding Property Wrappers in Swift"
-date: 2019-11-23T16:26:13-04:00
+date: 2019-11-27T07:00:00-04:00
+originalDate: 2019-11-23T16:26:13-04:00
 draft: false
 publishDate: 2019-11-27T07:00:00-04:00
 highlightjslanguages:

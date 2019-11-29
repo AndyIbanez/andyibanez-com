@@ -1,6 +1,7 @@
 ---
 title: "Caching Content With NSCache"
-date: 2019-08-28T12:08:07-04:00
+date: 2019-08-28T07:00:00-04:00
+originalDate: 2019-08-28T12:08:07-04:00
 draft: false
 highlightjslanguages:
  - swift

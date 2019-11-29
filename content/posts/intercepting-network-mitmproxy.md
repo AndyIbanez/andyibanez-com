@@ -1,6 +1,7 @@
 ---
 title: "Intercepting Network Traffic with mitmproxy"
-date: 2019-11-17T15:29:41-04:00
+date: 2019-20-11T07:00:00-04:00
+originalDate: 2019-11-17T15:29:41-04:00
 draft: false
 publishDate: 2019-20-11T07:00:00-04:00
 highlightjslanguages:

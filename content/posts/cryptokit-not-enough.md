@@ -1,6 +1,7 @@
 ---
 title: "When CryptoKit is not Enough"
-date: 2019-11-02T12:28:26-04:00
+date: 2019-11-06T07:00:00-04:00
+originalDate: 2019-11-02T12:28:26-04:00
 draft: false
 publishDate: 2019-11-06T07:00:00-04:00
 highlightjslanguages:

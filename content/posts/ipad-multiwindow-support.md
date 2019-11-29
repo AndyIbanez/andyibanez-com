@@ -1,6 +1,7 @@
 ---
 title: "Understanding the Essentials for Adopting Multiwindow Support on iPadOS"
-date: 2019-09-14T15:02:44-04:00
+date: 2019-09-18T07:00:00-04:00
+originalDate: 2019-09-14T15:02:44-04:00
 publishDate: 2019-09-18T07:00:00-04:00
 draft: false
 highlightjslanguages:
