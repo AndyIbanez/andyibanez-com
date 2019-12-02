@@ -71,9 +71,9 @@ let text = byteFormatter.string(fromByteCount: 1_000_000_000)
 ```
 A bit of discussion is in order.
 
-First, as you may know, one gigabyte is actually 1,000,000,000 bytes. It's actually 1,073,741,824 bytes. As a convenience, we tend to just round to the nearest number when we talk about computer data file sizes, and even storage media manufactures of media do the same.
+First, as you may know, one gigabyte is not equivalent to 1,000,000,000 bytes. It's actually 1,073,741,824 bytes. As a convenience, we tend to just round to the nearest number when we talk about computer data file sizes, and even storage media manufactures of media do the same.
 
-If you need the formatter to be precise and not consider `1,000,000,000` bytes as 1 gigabyte, you can chance the `countStyle` property to use `.binary` instead of `.decimal`.
+If you need the formatter to be precise and not consider `1,000,000,000` bytes as 1 gigabyte, you can change the `countStyle` property to use `.binary` instead of `.decimal`.
 
 ```swift
 byteFormatter.countStyle = .binary
