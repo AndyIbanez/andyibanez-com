@@ -45,7 +45,7 @@ There's a bunch of formatters that are already provided by Foundation. These inc
 
 * [ByteCountFormatter](https://developer.apple.com/documentation/foundation/bytecountformatter): To represent digital filesizes of data.
 * [DateFormatter](https://developer.apple.com/documentation/foundation/dateformatter): For formatting dates.
-* [DateComponentsFormatter](https://developer.apple.com/documentation/foundation/datecomponentsformatter): For formatting individual components, like "2 days". You can also use this to create strings such as "2 days ago" or "3 days remain".
+* [DateComponentsFormatter](https://developer.apple.com/documentation/foundation/datecomponentsformatter): For formatting individual components, like "2 days".
 * [DateIntervalFormatter](https://developer.apple.com/documentation/foundation/dateintervalformatter): For formatting time ranges.
 * [EnergyFormatter](https://developer.apple.com/documentation/foundation/energyformatter): You can use this to format energy values, from joules and kilojoules, to calories and kilocalories.
 * [LengthFormatter](https://developer.apple.com/documentation/foundation/lengthformatter): Provides localized descriptions for distance and height units. 
