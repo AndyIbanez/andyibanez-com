@@ -18,6 +18,7 @@ tags:
  - uisearchbar
  - uisearchtoken
  - uisearchtextfield
+ - wwdc2019
 categories:
  - development
 description: "iOS 13 introduced improvements to existing UI search APIs. Learn what's changed."
@@ -30,6 +31,7 @@ keywords:
  - uisearchbar
  - uisearchtoken
  - uisearchtextfield
+ - wwdc2019
 ---
 
 iOS has always provided interesting search APIs, but they have always been limited and doing the most interesting tasks required you to either write your own implementation or use private APIs.

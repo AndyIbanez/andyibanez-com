@@ -17,6 +17,7 @@ tags:
  - tvos
  - watchos
  - cryptokit
+ - wwdc2019
 categories:
  - development
 description: "Learn about the limitations of CryptoKit, and how to go around them."
@@ -27,6 +28,7 @@ keywords:
  - tvos
  - ipados
  - watchos
+ - wwdc2019
 ---
 
 *This article is a continuation to my [Common Cryptographic Operations with CryptoKit](https://www.andyibanez.com/posts/common-cryptographic-operations-with-cryptokit/]) article. If you want to learn how to use CryptoKit, read that one instead, and come to this one when you need a feature not offered by it.*

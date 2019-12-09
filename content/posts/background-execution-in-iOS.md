@@ -163,7 +163,7 @@ It's possible the system adjusts this automatically depending on how good of a p
 
 **Important Note!**
 
-While my tests say you get around 30 seconds for execution task and the completion handler gets called about 5 seconds before the task expires, you should not rely on these numbers in your app. Don't hard code anything. As a rule of thumb, just try to finish all your work as soon as possible when using `beginBackgroundTask`, because if the system doesn't adjust to your use case, future iOS updates may.
+While my tests say you get around 30 seconds for execution task and the completion handler gets called about 5 seconds before the task expires, you should not rely on these numbers in your app. Don't hard code anything. As a rule of thumb, just try to finish all your work as soon as possible when using `beginBackgroundTask`, because if the system doesn't adjust to your use case, future iOS versions may change the amount of time you get for executing tasks.
 
 <hr>
 

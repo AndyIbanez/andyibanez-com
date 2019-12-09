@@ -13,6 +13,7 @@ tags:
  - apple
  - ios
  - ipados
+ - wwdc2019
 categories:
  - development
 description: "Understand the APIs needed to implement multiple window support on iPadOS."
@@ -20,6 +21,7 @@ keywords:
  - swift
  - ios
  - ipados
+ - wwdc2019
 ---
 
 On WWDC2019, Apple decided to fork iOS into two different operating systems: iOS for iPhones, and iPadOS for iPads. This is to recognize the iPad as its own independent entity that has its own set of features compared to iOS. Amongst those features, iPadOS adds Multiwindow support, which allows our apps to run in more than one Window at the same time.

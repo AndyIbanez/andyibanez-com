@@ -17,6 +17,7 @@ tags:
  - tvos
  - watchos
  - ipados
+ - wwdc2019
 categories:
  - development
 description: "Learn to use and understand the Result type in Swift."
@@ -27,6 +28,7 @@ keywords:
  - tvos
  - ipados
  - watchos
+ - wwdc2019
 ---
 
 Last week we talked about Property Wrappers, what they are, and how they work with Swift. In this article, we will build upon that to write a very nice property wrapper for user settings based on `NSUserDefaults`.

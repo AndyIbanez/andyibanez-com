@@ -12,6 +12,7 @@ tags:
  - programming
  - apple
  - property wrappers
+ - wwdc2019
 categories:
  - development
 description: "Learn and understand what Property Wrappers are in Swift and how to use them."
@@ -20,6 +21,7 @@ keywords:
  - programming
  - apple
  - property wrappers
+ - wwdc2019
 ---
 
 Swift 5.1 introduced a sleuth of wonderful features, and amongst them, there's one that is essential for SwiftUI: Property Wrappers. Property wrappers are a powerful feature in Swift that allow you to wrap behavior along with properties. This allows us to do some interesting things. If you have seen SwiftUI, you've seen the `@State` "keyword", and you know that it allows you to modify structs. This is possible thanks to the behavior "wrapped" within properties marked with it.

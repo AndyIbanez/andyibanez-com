@@ -16,6 +16,7 @@ tags:
  - watchos
  - corehaptics
  - ios13
+ - wwdc2019
 categories:
  - development
 description: "Learn to use the different NSFormatter subclasses to format data in a human-readable way."
@@ -26,6 +27,7 @@ keywords:
  - apple
  - programming
  - corehaptics
+ - wwdc2019
 ---
 
 Vibration and physical feedback has become an important feature of Apple's operating systems. Starting with the Apple Watch, Apple replaced the traditional vibration feedback with haptic feedback hardware, which allowed them to have more control over how vibrations and physical feedback work.

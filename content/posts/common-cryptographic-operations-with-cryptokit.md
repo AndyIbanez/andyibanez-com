@@ -17,6 +17,7 @@ tags:
  - tvos
  - watchos
  - cryptokit
+ - wwdc2019
 categories:
  - development
 description: "Learn to implement basic cryptography with CryptoKit in Swift."
@@ -27,6 +28,7 @@ keywords:
  - tvos
  - ipados
  - watchos
+ - wwdc2019
 ---
 
 Apple has always taken security very seriously, so it's expected that they would provide developers with the same tools they have to help developers implement the same security measures in their apps. This year, Apple introduced `CryptoKit`.

@@ -17,6 +17,7 @@ tags:
  - ipados
  - result
  - error
+ - wwdc2019
 categories:
  - development
 description: "Learn to use and understand the Result type in Swift."
@@ -27,6 +28,7 @@ keywords:
  - ios
  - tvos
  - ipados
+ - wwdc2019
  - watchos
 ---
 
