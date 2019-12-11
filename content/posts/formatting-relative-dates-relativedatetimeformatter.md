@@ -57,7 +57,7 @@ Using this new formatter is very easy. It provides three methods which you can u
 * `localizedString(for:relativeTo:)`: You can use this method to get the time difference between two different dates.
 * `localizedString(from:)`: This methods takes a `DateComponents` object, so you can easily construct objects and check their time difference relative to the current time on the device.<sup>[2]</sup>
 
-### Simple Usage: `localizedString(fromTimeInterval:)`
+### Simple Usage: localizedString(fromTimeInterval:)
 
 In its simplest form, you can get formatted text out of this formatter with two lines of code. We will use `localizedString(fromTimeInterval)` to show you how to do this:
 
@@ -154,6 +154,9 @@ If you find any inaccuracies (and that includes typos) or problems in this artic
 If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.
 
 ###### Foot Notes
+
 \[1\]: I actually don't know if formats the date relative to the user's device. The API is not documented, but that's what I have observed.
+
 \[2\]: Just like the note above, it's not documented if the formatting occurs relative to the device's time, but my observations point to yes.
+
 \[3\]: I looked and looked and couldn't find an input that produced something different. Hopefully the docs will be up soon.
