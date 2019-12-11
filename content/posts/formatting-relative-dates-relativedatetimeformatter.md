@@ -1,5 +1,5 @@
 ---
-title: "Formatting Relative Dates With RelativeDateTimeormatter"
+title: "Formatting Relative Dates With RelativeDateTimeFormatter"
 date: 2019-12-11T07:00:00-04:00
 originalDate: 2019-12-09T16:12:06-04:00
 publishDate: 2019-12-11T07:00:00-04:00
