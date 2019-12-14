@@ -48,7 +48,7 @@ Followed by the `Enter` key.
 
 # Quick Introduction
 
-`mitmproxy` is a proxy tool. It's features are spread across three different command line utilities:
+`mitmproxy` is a proxy tool. Its features are spread across three different command line utilities:
 
 * `mitmproxy`: Interactive man-in-the-middle proxy for HTTP and HTTPS with a console interface.
 * `mitmdump`: Command line version of `mitmproxy`. Think tcpdump for HTTP.
