@@ -36,7 +36,7 @@ keywords:
 
 Soon after I published this article, Christian Tietze wrote a fair criticism of this idea [here](https://christiantietze.de/posts/2019/12/userdefaults-property-wrappers/).
 
-Once you understand how property wrappers work, you can use this article to apply it to user defaults. The main idea is that property wrappers allow you to store your values differently and even externally. That said, you may or may not want to implement this in a real app. I recommend you read this article first, and then go back to Christian's to see more downsides of this idea than the ones I mentioned below.
+Once you understand how property wrappers work, you can use this article to apply it to user defaults. The main idea is that property wrappers allow you to store your values differently and even externally. That said, you may or may not want to implement this in a real app. I recommend you read this article first, and then go back to Christian's to see more downsides of this idea other than the ones I mentioned below.
 </hr>
 
 Last week we talked about Property Wrappers, what they are, and how they work with Swift. In this article, we will build upon that to write a very nice property wrapper for user settings based on `NSUserDefaults`.
