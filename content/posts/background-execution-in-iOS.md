@@ -48,7 +48,7 @@ This article is based on the [Advances in Background Execution](https://develope
 
 The original version of this article was supposed to cover the old background tasks APIs introduced since iOS 7 and then the new APIs introduced in iOS 13. The article became much longer than I had originally expected, so I separated the article into two different ones: One article for old but still relevant APIs (this one), and another one for the iOS 13 exclusive APIs (the `BackgroundTasks`) framework.
 
-For that reason this article won't cover the new shiny `BackgroundTasks`. You will have to wait till December 25 (Merry Christmas!) for that one. Sorry about that!
+For that reason this article won't cover the new shiny `BackgroundTasks`. You will have to wait until December 25 (Merry Christmas!) for that one. Sorry about that!
 </hr>
 
 # The Need for Background Execution
