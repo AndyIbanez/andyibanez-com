@@ -71,7 +71,7 @@ You should adopt background execution keeping all these in factors in mind.
 **Note**
 
 Like I said above, the original article was supposed to cover both the old and new APIs for background execution. Everything written here is stuff that can be done pre-iOS 13.
-</hr>
+<hr>
 
 We can divide the use cases of background execution into different categories. If your app needs to do any of the following, you can adopt this new framework:
 
