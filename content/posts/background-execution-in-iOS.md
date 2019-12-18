@@ -12,23 +12,15 @@ tags:
  - programming
  - apple
  - ios
- - macos
- - tvos
- - watchos
  - ipados
- - iOS13
- - backgroundtasks
 categories:
  - development
 description: "Learn how to perform background tasks in your iOS App."
 keywords:
  - swift
  - ios
- - tvos
  - ipados
- - watchos
  - iOS13
- - backgroundtasks
 ---
 
 In the early days of iOS development, developers had no way at all to perform background tasks beyond a very limited constraints of tasks, like music playback. Modern demands go beyond allowing people to play music in your app while they use a different app, and we as developers need to adapt to these changes. VoIP, lengthy networking, and even silent pushes to keep an app updated are very common these days, and fulfilling these demands used to be hard, if not outright impossible.
