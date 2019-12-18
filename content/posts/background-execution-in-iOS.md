@@ -200,7 +200,7 @@ For reference, here's the whole code I wrote for `viewDidAppear`:
 You can also give extensions additional time before they get suspended by the system, with the following method:
 
 ```
-ProcessInfo.performExpiringActivity(withReason:using:)
+ProcessInfo().performExpiringActivity(withReason:using:)
 ```
 
 The first parameter is a string you can use for debugging purposes. The second parameter is a handler where you put code you want to execute in the background. The block will give you a boolean telling you if the process is about to be suspended. If the boolean is `true`, you should take caution to end the task as soon as possible. I wasn't able to find a way to tell how much time you have left to execute a background task with this API.
