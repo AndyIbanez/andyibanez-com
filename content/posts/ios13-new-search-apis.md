@@ -36,7 +36,7 @@ keywords:
 
 iOS has always provided interesting search APIs, but they have always been limited and doing the most interesting tasks required you to either write your own implementation or use private APIs.
 
-iOS 13 has provided some very nice improvement and APIs to the UI search APIs. In this article we will talk about two of them.
+iOS 13 has provided some very nice improvements to the UI search APIs. In this article we will talk about two of them.
 
 # UISearchBar finally exposes its text field
 

@@ -58,7 +58,7 @@ These are just some of the formatters that Cocoa already provides for you, but t
 
 ## ByteCountFormatter
 
-This formatter allows you to represent file sizes in bytes in strings with their respective units. In other, it allows you to display `1_000_000_000` bytes as `1GB`.
+This formatter allows you to represent file sizes in bytes in strings with their respective units. In other words, it allows you to display `1_000_000_000` bytes as `1GB`.
 
 The basic usage looks like this:
 
