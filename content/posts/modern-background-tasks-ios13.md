@@ -323,7 +323,7 @@ func sceneDidEnterBackground(_ scene: UIScene) {
 In the WWDC talk, the presenter uses `applicationDidEnterBackground` in the app delegate instead of the Scene Delegate to schedule the background task. `applicationDidEnterBackground` is the old API for the old lifecycle of apps prior to iOS 13. In iOS 13, I wasn't able to get my app to call that delegate method at all, so I figured I needed to use the scene delegate instead.
 
 You might also be wondering why we have the task handling code in the App Delegate and not scene delegate. The reason is the methods in SceneDelegate can get called multiple times throughout the lifecycle of the app. This can only happen in iPadOS as it has multi-window support. We want to register the handler for our tasks only one time during the lifetime of our app. You can *probably* write all your BackgroundTasks code in the SceneDelegate if you have an iPhone-only app, but I can't say I recommend doing that.
-</hr>
+<hr>
 
 We can specify the `earliestBeginDate` property of the task. This will let us download the data as soon as possible. In the example above, we are scheduling the task 5 seconds after it is backgrounded. This does not guarantee that the task will start at the specified time, but rather that it won't start any sooner than that. If you use the default `nil`, there will be no start delay.
 
