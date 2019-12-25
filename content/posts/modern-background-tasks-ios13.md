@@ -81,7 +81,7 @@ This new API replaces the old one, so the fetch APIs of `UIApplication` for back
 **Note**
 
 The documentation says that the old APIs are not supported "on the Mac", but it's established that these APIs do not work on the Mac to begin with, so I'm assuming it's saying that the deprecated APIs are not available for Catalyst apps.
-</hr>
+<hr>
 
 ## Using BackgroundTasks
 
@@ -441,9 +441,15 @@ The usage of this task is exactly the same as the other one. But `BGProcessingTa
 `BackgroundTasks` is a new framework introduced in iOS 13 to offer developers more ways to execute background work. Background task offers two type of classes:
 
 * `BGAppRefreshTask`: To refresh your app in the background periodically and always have up to date content.
-* [`BGProcessingTask`]: To perform possibly longer operations related to mainenance, backup, and cleanup of the app. We can set tasks of this type to execute when our devices are connected to power and/or have internet connection available.
+* `BGProcessingTask`: To perform possibly longer operations related to mainenance, backup, and cleanup of the app. We can set tasks of this type to execute when our devices are connected to power and/or have internet connection available.
 
 The scheduler will decide the best time to wake up your app and hand them the tasks to execute. Be a good citizen and always let the system know when a task has finished running, either successfully or unsuccessfully.
+
+<hr>
+
+**Short Break Notice**
+
+Despite the fact that the article is ready, I will not be publishing anything on New Years (January 1, 2020). I'm taking a short break. For that reason, Jan 1st's article is getting pushed to January 8. Thank you for your understanding!
 
 
 <hr>
