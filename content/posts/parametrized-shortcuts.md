@@ -1,8 +1,8 @@
 ---
 title: "Implementing Parametrizable Shortcut Actions for your iOS Apps"
-date: 2020-01-01T07:00:00-04:00
+date: 2020-01-08T07:00:00-04:00
 originalDate: 2019-12-13T15:54:49-04:00
-publishDate: 2020-01-01T07:00:00-04:00
+publishDate: 2020-01-08T07:00:00-04:00
 draft: false
 highlightjslanguages:
  - swift
@@ -36,7 +36,7 @@ Implementing Parametrizable Shortcut Actions for your iOS Apps
 
 All the way back to 2016, a group of very talented iOS developers released [Workflow](workflow.is), a very popular app to let users create actions of different kinds within the system's constraints. You could create and automate different tasks, such as controlling a server via SSH, downloading all the images from a website, and more... Much, much more.
 
-Apple saw the power of the app and [aquired](https://techcrunch.com/2017/03/22/apple-has-acquired-workflow-a-powerful-automation-tool-for-ipad-and-iphone/) it in March 2017. This was very exciting, but we didn't hear anything from the app since. Until WWDC 2018. Apple revealed a new app: Shortcuts. This app was built on top of Workflow, and as an Apple app, it allowed it to do many things than Workflow just wasn't allowed to do, such as toggling system settings, integrating it with other apps (!!), and it was also natively integrated into Siri.
+Apple saw the power of the app and [aquired](https://techcrunch.com/2017/03/22/apple-has-acquired-workflow-a-powerful-automation-tool-for-ipad-and-iphone/) it in March 2017. This was very exciting, but we didn't hear anything from the app since. Until WWDC 2018. Apple revealed a new app: Shortcuts. This app was built on top of Workflow, and as an Apple app, it allowed it to do many things that Workflow just wasn't allowed to do, such as toggling system settings, integrating it with other apps (!!), and it was also natively integrated into Siri.
 
 This was in iOS 12, and as the initial release of Shortcuts, it was still very limited. Developers could integrate Shortcuts into their apps, but they were limited and there was no way to parametrize them.
 
@@ -105,7 +105,7 @@ The `Title` is the title of the action in the Shortcuts app. The `Description` i
 
 ![Action Title](/img/adds_two_numbers.png)
 
-~[Action Description](/img/adds_two_nums_desc.png)
+![Action Description](/img/adds_two_nums_desc.png)
 
 You can also set a `default image`, and whether the user should always be asked before running the Shortcut.
 
