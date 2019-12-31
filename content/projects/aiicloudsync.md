@@ -10,6 +10,8 @@ tags:
  - ipados
  - open source
  - swift
+showcomments: false
+showpagemeta: false
 ---
 
 [GitHub Repository](https://github.com/AndyIbanez/AIiCloudSync)
