@@ -20,7 +20,7 @@ googleAnalytics = "UA-146179797-1"
 [params]
     author = "Andy Ibanez"
     title = "Andy Ibanez - iOS Developer"
-    description = "iOS Developer from La Paz, Bolivia. Programming for iOS since 2011."
+    description = "Software Developer from La Paz, Bolivia. Programming for iOS since 2011."
     authorimage = "/static/img/me.jpg"
     dateformat = "Jan 2, 2006"
 
