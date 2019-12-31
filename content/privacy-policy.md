@@ -2,6 +2,8 @@
 title: "Privacy Policy"
 date: 2019-12-31T18:38:56-04:00
 draft: false
+showcomments: false
+showpagemeta: false
 ---
 
 I don't want to have anything fancy here, but you should know that:
