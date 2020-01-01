@@ -1,8 +1,8 @@
 ---
 title: "Happy New 2020!"
-date: 2020-01-01T07:00:00-04:00
+date: 2020-01-01T00:00:00-04:00
 originalDate: 2019-12-27T14:11:48-04:00
-publishDate: 2020-01-01T07:00:00-04:00
+publishDate: 2020-01-01T00:00:00-04:00
 draft: false
 ---
 
@@ -14,4 +14,8 @@ So in August this year, I decided to start this blog from scratch, removing all 
 
 So, once again, a big thank you to you all, and have yourself a great 2020! Hopefully this will be a great year for us. I intend to keep writing this blog, and hopefully to start other similar projects to this one.
 
+This year, I want to keep getting involved with the Swift and Apple Developer communities. I have some exciting plans, but I will share them with you in due time.
+
 I do not have an article this week as I am taking a short break. I'll be back to the regular weekly articles starting on January 8.
+
+Happy New Year!
