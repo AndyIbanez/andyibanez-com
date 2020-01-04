@@ -129,7 +129,7 @@ Their usage is once again very straightforward and you don't have to concern you
 The return type of the `seal` method is a `AES.GCM.SealedBox` object which contains information about the box. A few important properties:
 
 * A `ciphertext`, which is the encrypted data with the same size as the input data.
-* A `tag`, which ensures the cannot be tampered with in a way you would not notice.
+* A `tag`, which ensures the content cannot be tampered with in a way you would not notice.
 * A `nonce`, which is a random number to add entropy to the encrypted data.
 
 If you need to share the data with somebody else, you can use the `combined` property which combines all the previous properties into one. Then they can decrypt this data using the same key.
