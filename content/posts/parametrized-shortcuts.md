@@ -20,7 +20,7 @@ tags:
  - siri
 categories:
  - development
-description: "Learn how to perform background tasks in your iOS App."
+description: "Learn to implement parametrized Siri Shortcut Actions in your iOS apps."
 keywords:
  - swift
  - ios

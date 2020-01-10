@@ -139,7 +139,7 @@ I will only show you how to use `BGAppRefreshTask`, but rest assured that what a
 As much as a weeb as I am, I promise I'm not a Pokémon fan. I chose this API because it's easy to use and doesn't require any setup.
 
 (I promise)
-</hr>
+<hr>
 
 I will show you my code here, so you can build along if you wish. If you don't feel like doing that, I will also provide a download to the finish project near the end of this article.
 
