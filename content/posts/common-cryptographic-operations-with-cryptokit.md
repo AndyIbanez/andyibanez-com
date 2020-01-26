@@ -1,5 +1,5 @@
 ---
-title: "Common Cryptographic Operations With Cryptokit"
+title: "Common Cryptographic Operations With CryptoKit"
 date: 2019-10-09T07:00:00-04:00
 originalDate: 2019-10-05T18:08:07-04:00
 draft: false
