@@ -1,5 +1,5 @@
 ---
-title: "Recognizing Speech Locally on a iOS Device using the Speech Framework"
+title: "Recognizing Speech Locally on an iOS Device Using the Speech Framework"
 date: 2020-01-29T07:00:00-04:00
 originalDate: 2020-01-23T14:52:36-04:00
 publishDate: 2020-01-29T07:00:00-04:00
