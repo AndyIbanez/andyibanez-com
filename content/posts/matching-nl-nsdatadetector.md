@@ -1,6 +1,6 @@
 ---
 title: "Matching Natural Language Text for Predefined Data Patterns on Apple's Devices"
-date: 2019-02-05T07:00:00-04:00
+date: 2020-02-05T07:00:00-04:00
 originalDate: 2020-02-02T12:21:23-04:00
 publishDate: 2020-02-05T07:00:00-04:00
 draft: false
