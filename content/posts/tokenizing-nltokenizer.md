@@ -29,7 +29,7 @@ keywords:
  - watchos
  - macos
  - natural language
----
+--- 
 
 Working with Natural Language is possible thanks to machine learning. Starting on iOS 12, Apple has provided many APIs just for this task. In this article we will explore how to use [`NLTokenizer`](https://developer.apple.com/documentation/naturallanguage/nltokenizer) to separate natural language text into its proper units.
 
