@@ -1,5 +1,5 @@
 ---
-title: "Recognizing the language in Natural Language Text with NLanguageRecognizer"
+title: "Recognizing the language in a Natural Language Text with NLanguageRecognizer"
 date: 2020-02-19T07:00:00-04:00
 draft: false
 originalDate: 2020-02-13T07:26:20-04:00
