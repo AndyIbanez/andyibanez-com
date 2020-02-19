@@ -19,7 +19,7 @@ tags:
  - natural language
 categories:
  - development
-description: "Learn how to use the NLTokenizer Class to separate natural language strings into components"
+description: "Learn how to use the NLTokenizer Class to separate natural language strings into components."
 keywords:
  - swift
  - ios
@@ -29,7 +29,7 @@ keywords:
  - watchos
  - macos
  - natural language
---- 
+---
 
 Working with Natural Language is possible thanks to machine learning. Starting on iOS 12, Apple has provided many APIs just for this task. In this article we will explore how to use [`NLTokenizer`](https://developer.apple.com/documentation/naturallanguage/nltokenizer) to separate natural language text into its proper units.
 
