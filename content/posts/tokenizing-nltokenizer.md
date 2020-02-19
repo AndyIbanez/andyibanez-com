@@ -130,7 +130,7 @@ Output:
 ます
 ```
 
-So, even if Japanese is a "run-on" written language, where there's no visual way to separate words from each other, the tokenizer knows where it word begins and ends.
+So, even if Japanese is a "run-on" written language, where there's no visual way to separate words from each other, the tokenizer knows where each word begins and ends.
 
 <hr>
 **Important Note!**
