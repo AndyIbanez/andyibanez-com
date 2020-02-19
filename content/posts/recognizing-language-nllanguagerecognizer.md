@@ -41,7 +41,7 @@ Today we will explore the [`NLLanguageRecognizer`](https://developer.apple.com/d
 **Important Note!**
 
 Don't try to use one instance of this object through multiple threads.
-</hr>
+<hr>
 
 This class is actually very easy to use. It has very few methods, and the easiest task to perform is one static method away. You need to `import NaturalLanguage` to use it.
 
