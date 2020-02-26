@@ -33,7 +33,7 @@ keywords:
 
 Analyzing Text with NLTagger
 
-In the past few weeks, we have explored how we can [tokenize natural language text](https://www.andyibanez.com/posts/tokenizing-nltokenizer/) and how to [recognize the language a natural language text is written in](https://www.andyibanez.com/posts/recognizing-language-nllanguagerecognizer/). This week we will continue exploring more natural language APIs provided by the `Speech` framework. We will learn about the [NLTagger](https://developer.apple.com/documentation/naturallanguage/nltagger) class, which allows us to to analyze natural language text to find parts of speech, lexical classes, lemma, scripts, and more. This API, introduced in iOS 12, implements machine learning to work, and just like the other `NaturalLanguage` classes, is very easy to use.
+In the past few weeks, we have explored how we can [tokenize natural language text](https://www.andyibanez.com/posts/tokenizing-nltokenizer/) and how to [recognize the language a natural language text is written in](https://www.andyibanez.com/posts/recognizing-language-nllanguagerecognizer/). This week we will continue exploring more natural language APIs provided by the `NaturalLanguage` framework. We will learn about the [NLTagger](https://developer.apple.com/documentation/naturallanguage/nltagger) class, which allows us to to analyze natural language text to find parts of speech, lexical classes, lemma, scripts, and more. This API, introduced in iOS 12, implements machine learning to work, and just like the other `NaturalLanguage` classes, is very easy to use.
 
 # Introducing NLTagger
 
