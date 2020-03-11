@@ -1,9 +1,9 @@
 ---
 title: "Writing Command Line Tools in Swift Using ArgumentParser, Part 1: Introduction & Basic Usage"
-date: 2020-04-18T07:00:00-04:00
+date: 2020-03-18T07:00:00-04:00
 draft: false
 originalDate: 2020-03-10T14:27:23-04:00
-publishDate: 2020-04-18T07:00:00-04:00
+publishDate: 2020-03-18T07:00:00-04:00
 highlightjslanguages:
  - swift
  - objectivec
