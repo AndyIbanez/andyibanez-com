@@ -515,34 +515,6 @@ struct CharacterCount: ParsableCommand {
 
 The value names (`--whitespace`, `--numbers`, etc) are derived from the raw values.
 
-## Augmented Documentation With the help Property.
-
-`@Argument`, `@Option`, and `@Flag` can take a `help` property which we can use to describe the parameter and how to use it. But not only can this take a string, it can also take an `ArgumentHelp` object (despite it being called `ARGUMENTHelp`, it can be used in all the property wrappers).
-
-```
-  @Argument(help:
-    ArgumentHelp(
-      "The string parameter will be counted against the specified character sets",
-      discussion: "This obligatory parameter will be used to count the characters of.",
-      valueName: "theString",
-      shouldDisplay: true)) var string: String
-```
-
-```
-andyibanez@Andys-iMac Debug % ./MyCommandLineTool --help
-USAGE: character-count <theString> [--whitespace] [--numbers] [--vowels]
-
-ARGUMENTS:
-  <theString>             The string parameter will be counted against the
-                          specified character sets 
-        This obligatory parameter will be used to count the characters of.
-
-OPTIONS:
-  --whitespace/--numbers   
-  --vowels                 
-  -h, --help              Show help information.
-```
-
 # Conclusion
 
 It looks like we covered a lot of ground here, but all we really covered is how to use the building blocks of `ArgumentParser`. `@Argument`, `@Option`, and `@Flag` are used to create command line tools, and they provide a lot of functionality for free, all the way from parsing to documentation generation. We will be covering more about this package in the upcoming weeks, as it is one of the most exciting things in the community this year so far for me.
