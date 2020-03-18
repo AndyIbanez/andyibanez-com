@@ -14,7 +14,7 @@ tags:
  - ArgumentParser
 categories:
  - development
-description: "Learn what Function Builders in Swift are, and how to use them"
+description: "Introduction to ArgumentParser in Swift."
 keywords:
  - swift
  - programming
