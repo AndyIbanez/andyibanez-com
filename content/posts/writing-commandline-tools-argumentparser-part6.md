@@ -1,7 +1,7 @@
 ---
 title: "Writing Command Line Tools in Swift Using ArgumentParser, Part 6: Releasing And Installing Our Command Line Tool"
 date: 2020-04-22T07:00:00-04:00
-draft: true
+draft: false
 originalDate: 2020-04-20T12:02:04-04:00
 publishDate: 2020-04-22T07:00:00-04:00
 highlightjslanguages:
