@@ -15,7 +15,7 @@ tags:
  - swift-evolution
  - dynamiccallable
  - dynamicmemberlookup
-description: ""
+description: "Learn to use @dynamicMemberLookup and @dynamicCallable in Swift."
 keywords:
  - swift
  - programming
