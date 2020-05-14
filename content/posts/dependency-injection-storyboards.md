@@ -1,10 +1,4 @@
 ---
-title: "Dependency Injection Storyboards"
-date: 2020-05-10T18:19:35-04:00
-draft: true
----
-
----
 title: "Dependency Injection with Storyboards on Apple Platforms"
 date: 2020-05-13T07:00:00-04:00
 originalDate: 2020-05-10T18:19:35-04:00
