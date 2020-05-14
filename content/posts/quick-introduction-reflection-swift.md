@@ -1,6 +1,6 @@
 ---
 title: "Quick Introduction Reflection in Swift"
-date: 2020-05-03T22:24:46-04:00
+date: 2020-05-06T22:24:46-04:00
 originalDate: 2020-05-03T22:24:46-04:00
 publishDate: 2020-05-06T07:00:00-04:00
 draft: false
