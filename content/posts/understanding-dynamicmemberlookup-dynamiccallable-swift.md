@@ -34,7 +34,7 @@ In this article we will talk about two features Swift has added in the last two 
 
 # Accessing Member Properties with @dynamicMemberLookup
 
-Introduced in Swift 4.2, Swift introduced `@dynamicMemberLookup`. Marking your objects with this class will require them to a implement a subscript with the following signature:
+Introduced in Swift 4.2, Swift introduced `@dynamicMemberLookup`. Marking your objects with this attribute will require them to a implement a subscript with the following signature:
 
 ```swift
 subscript(dynamicMember member: String) -> AnyObject
