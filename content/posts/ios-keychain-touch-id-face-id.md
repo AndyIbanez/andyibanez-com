@@ -60,6 +60,8 @@ This is actually a very naïve approach because in theory, a jailbreak tweak cou
 
 This code *probably* has some uses and it should be used strictly for convenience and not for actual security. The right way to lock sensitive data in the keychain while allowing for biometric access is to create your keychain item with a specific access policy, also known as an access control.
 
+There is a nice article [here](https://medium.com/@pig.wig45/touch-id-authentication-bypass-on-evernote-and-dropbox-ios-apps-7985219767b2) about how easy it is to bypass the Touch ID/Face ID prompt, using the Evernote and Dropbox iOS apps as examples.
+
 # Keychain and Access Control
 
 When you create an access control, you specify two conditions under which a keychain item should be available:
@@ -138,7 +140,7 @@ The system is smart enough to prompt for the biometrics when it finds an item th
 
 You may be wondering how does this work when your query matches multiple items, some of which may not have an access control associated to them? If you want to perform a wide search, the item will return all the items that match, but it will ask you to provide authentication for every protected item. You can perform wide searches skipping the ones with a biometric access control by providing the `kSecUseAuthenticationUI` key with the `kSecUseAuthenticationUISkip` value in your search query.
 
-**Note:** To test this, you will need to run your code in the simulator. Because you can't set a device passcode in the simulator, this code runs and finished immediately after you run it, even if you enroll Touch ID/Face ID in the simulator. This gives you the impression it is not working properly, so keep that in mind if you are using this feature.
+**Note:** To test this, you will need to run your code in a real device. Because you can't set a device passcode in the simulator, this code runs and finishes immediately after you run it, even if you enroll Touch ID/Face ID in the simulator. This gives you the impression it is not working properly, so keep that in mind if you are using this feature.
 
 # Conclusion
 
