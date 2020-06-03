@@ -138,7 +138,7 @@ let status = SecItemCopyMatching(searchQuery, &item)
 
 The system is smart enough to prompt for the biometrics when it finds an item that was created with a given access control. The `kSecUseOperationPrompt` key allows us to specify a user-visible string, and it's optional.
 
-You may be wondering how does this work when your query matches multiple items, some of which may not have an access control associated to them? If you want to perform a wide search, the item will return all the items that match, but it will ask you to provide authentication for every protected item. You can perform wide searches skipping the ones with a biometric access control by providing the `kSecUseAuthenticationUI` key with the `kSecUseAuthenticationUISkip` value in your search query.
+You may be wondering, how does this work when your query matches multiple items, some of which may not have an access control associated to them? If you want to perform a wide search, the query will return all the items that match, but it will ask you to provide authentication for every protected item. You can perform wide searches skipping the ones with a biometric access control by providing the `kSecUseAuthenticationUI` key with the `kSecUseAuthenticationUISkip` value in your search query.
 
 **Note:** To test this, you will need to run your code in a real device. Because you can't set a device passcode in the simulator, this code runs and finishes immediately after you run it, even if you enroll Touch ID/Face ID in the simulator. This gives you the impression it is not working properly, so keep that in mind if you are using this feature.
 
