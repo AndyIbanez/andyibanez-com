@@ -89,7 +89,7 @@ We will create the Intent to add two numbers together.
 
 For now, copy the following configuration. I'm just showing the configuration for `firstNumber`, but you need to do the same thing for `secondNumber`:
 
-![Intent Variable Configuration](shortcuts_intent_config.png)
+![Intent Variable Configuration](/img/shortcuts_intent_config.png)
 
 Before we move on, let's talk about the different configurations each action can take.
 
