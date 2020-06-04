@@ -285,7 +285,7 @@ If the query doesn't find any items to return, `result` will be nil, so make sur
 
 To return more than one, we will specify `kSecMatchLimit` to a high enough number to return all the entries:
 
-```
+```swift
 let query = [
   kSecClass: kSecClassInternetPassword,
   kSecAttrServer: "pullipstyle.com",
