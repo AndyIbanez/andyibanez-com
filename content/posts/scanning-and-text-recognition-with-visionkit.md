@@ -3,7 +3,7 @@ title: "Document Scanning and Text Recognition With Vision and VisionKit on iOS"
 date: 2020-06-10T07:00:00-04:00
 originalDate: 2020-06-07T12:33:42-04:00
 publishDate: 2020-06-10T07:00:00-04:00
-draft: true
+draft: false
 highlightjslanguages:
  - swift
  - objectivec
