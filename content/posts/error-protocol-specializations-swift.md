@@ -1,7 +1,7 @@
 ---
 title: "Error Protocol Specializations in Swift"
 date: 2020-06-17T07:00:00-04:00
-draft: false
+draft: true
 originalDate: 2020-06-14T11:27:44-04:00
 publishDate: 2020-06-17T07:00:00-04:00
 highlightjslanguages:

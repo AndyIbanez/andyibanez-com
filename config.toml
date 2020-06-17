@@ -49,6 +49,11 @@ googleAnalytics = "UA-146179797-1"
     identifier = "posts"
     url = "/posts/"
 [[menu.main]]
+    name = "WWDC 2020"
+    weight = 101
+    identifier = "wwdc2020"
+    url = "/tags/wwdc2020/"
+[[menu.main]]
     name = "Projects"
     identifier = "projects"
     weight = 200
