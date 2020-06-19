@@ -6,6 +6,14 @@ categories:
  - development
 ---
 
+**UPDATE**
+
+June 18, 2020 at 10:24 PM EST: I have made contact with a human at Apple after they reached to me via Resolution Center. We are working on solving the issues, and while I have not been told "yes, your account will not be terminated", I believe in good faith we will work something out. Yes, the issue was my fault after all, but they are being very understanding and are letting me redeem myself by uploading a new binary. A proper update on this issue will come at a later date.
+
+**ORIGINAL POST**
+
+<hr>
+
 Hello guys.
 
 I have been holding off to write this in case I was able to solve this problem on my own (which I tried to do very patiently), but the fact that I cannot talk to a human at Apple has prompted me to write this. Today I received another generic response from them (probably from a bot), so I'm prompted to write this to try to reach out to someone who can help.
@@ -14,7 +22,11 @@ Yesterday at around 1PM EST, Apple opened and immediately closed an issue on an 
 
 I will tell my version of the story, and I sincerely wish Apple would do the same, but they are not providing me with any information that can help me understand what I did wrong.
 
-The app in question is [Mignori](https://www.mignori.com). Mignori is a client for Image Board websites (we informally call "Boorus"). These image boards are popular in the anime community, although there can be image boards for anything you can think of. This app let you browse those websites implementing their APIs so you have access to all their features. While the first version of this app was on the App Store from 2014 to 2016, I removed it in that last year because the app stopped working properly with most Boorus, and it was broken for most users. Since then, I started developing a new version called "Mignori 3", which has *never* hit the App Store. It has been on TestFlight for a while.
+The app in question is [Mignori](https://www.mignori.com). Mignori is a client for Image Board websites (we informally call "Boorus"). These image boards are popular in the anime community, although there can be image boards for anything you can think of. This app let you browse those websites implementing their APIs so you have access to all their features.
+
+The app does not ship with any servers by default. The user has to add them all manually. Just like a web browser.
+
+While the first version of this app was on the App Store from 2014 to 2016, I removed it in that last year because the app stopped working properly with most Boorus, and it was broken for most users. Since then, I started developing a new version called "Mignori 3", which has *never* hit the App Store. It has been on TestFlight for a while.
 
 Apple cites "Fraud" as the termination reason for my app and therefore my account, and I'm trying to wrap my head around what they think is fraudulent in my app. Especifically, they cite a paragraph of the developer program.
 
