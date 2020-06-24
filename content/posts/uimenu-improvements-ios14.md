@@ -1,7 +1,7 @@
 ---
 title: "UIMenu Improvements in iOS 14"
 date: 2020-06-24T15:12:07-04:00
-draft: true
+draft: false
 originalDate: 2020-06-14T11:27:44-04:00
 publishDate: 2020-06-18T07:00:00-04:00
 highlightjslanguages:
