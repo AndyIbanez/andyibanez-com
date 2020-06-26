@@ -42,7 +42,7 @@ Apple introduced the Vision framework on iOS 11 and it offers very quick APIs to
 
 ## Scanning Documents with VNDocumentCameraViewController
 
-`VNDocumentCameraViewController` is the object we use to perform scanning. Setting it up is pretty straightforward. This object comes from the `VisionKit` framework, so make sure you import that. You will also need to comform to `VNDocumentCameraViewControllerDelegate` in order to receive events.
+`VNDocumentCameraViewController` is the object we use to perform scanning. Setting it up is pretty straightforward. This object comes from the `VisionKit` framework, so make sure you import that. You will also need to conform to `VNDocumentCameraViewControllerDelegate` in order to receive events.
 
 ```swift
 import VisionKit

@@ -29,7 +29,7 @@ keywords:
  - watchos
 ---
 
-Earlier this week I was scrolling through my Twitter feed as usual and I found [this tweet](https://twitter.com/harlanhaskins/status/1270399151730118656?s=20) that made me realize I may have been handling errors incorrectly in Swift all my life. This prompted me to research a bit more about error handling in Swift, and it turns out there's many specialized `Error` protocols you can comform to, and you should probably be using them over the default `Error` provided by the language. All these specializations comform to `Error` themselves. In this article, we will explore a few specializations we can use when dealing with errors in Swift.
+Earlier this week I was scrolling through my Twitter feed as usual and I found [this tweet](https://twitter.com/harlanhaskins/status/1270399151730118656?s=20) that made me realize I may have been handling errors incorrectly in Swift all my life. This prompted me to research a bit more about error handling in Swift, and it turns out there's many specialized `Error` protocols you can conform to, and you should probably be using them over the default `Error` provided by the language. All these specializations comform to `Error` themselves. In this article, we will explore a few specializations we can use when dealing with errors in Swift.
 
 Keep in mind that they are part of the Foundation framework though, so they may not work when used outside Apple's platforms.
 
@@ -133,7 +133,7 @@ Once again the properties can be accessed via `NSError`'s `userInfo`, by using t
 
 ## CustomNSError
 
-Finally, the the [`CustomNSError`](https://developer.apple.com/documentation/foundation/customnserror) specialization provides us with properties to create a well-known `NSError` object, that has an error domain, error code, and the user info. All the properties are required, but you are provided with a default implementation for each:
+Finally, the [`CustomNSError`](https://developer.apple.com/documentation/foundation/customnserror) specialization provides us with properties to create a well-known `NSError` object, that has an error domain, error code, and the user info. All the properties are required, but you are provided with a default implementation for each:
 
 * `errorDomain`: If you worked with Objective-C, you know this one. It's the domain of the error, in reverse DNS notation.
 * `errorCode`: An error code, as an int.

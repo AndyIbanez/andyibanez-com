@@ -54,7 +54,7 @@ If you have implemented Touch ID or Face ID in your app before, you have probabl
   }
 ```
 
-In the above code, first we check if we have any available biometrics. If we do, we will try authenticating with the existing biometric. Once the function calls our closure, it will contain a boolean indicating if the authentication succeeded or if it failed. If it was successfull, you can access your data.
+In the above code, first we check if we have any available biometrics. If we do, we will try authenticating with the existing biometric. Once the function calls our closure, it will contain a boolean indicating if the authentication succeeded or if it failed. If it was successful, you can access your data.
 
 This is actually a very naïve approach because in theory, a jailbreak tweak could hook into your app, trick it to believe a successful biometric scan was performed, and steal any information behind that simple `if true` call.
 
