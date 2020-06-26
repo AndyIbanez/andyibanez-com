@@ -10,7 +10,7 @@ I just wanted to take a moment to wish you all a happy new year and to, to those
 
 As you may know, I originally started blogging in 2011 as a college freshman, mostly writing to document the new things I learned regarding iOS development. I had absolutely no consistency with how often I wrote. And in the timeframe the blog was alive (2011 - pre-August 2019), there were some pretty big gaps between articles - some spanning years.
 
-So in August this year, I decided to start this blog from scratch, removing all the old articles except for rewriting a few (you can access my old website's archive with [this link](https://www.andyibanez.com/old-content/)), with a commitment to writing weekly. I have been able to keep up with that commitent, and that is thanks to you all who read my articles, share them, comment on them, and critize them. I wouldn't have the drive the write weekly if it wasn't for you guys.
+So in August this year, I decided to start this blog from scratch, removing all the old articles except for rewriting a few (you can access my old website's archive with [this link](https://www.andyibanez.com/old-content/)), with a commitment to writing weekly. I have been able to keep up with that commitent, and that is thanks to you all who read my articles, share them, comment on them, and criticize them. I wouldn't have the drive the write weekly if it wasn't for you guys.
 
 So, once again, a big thank you to you all, and have yourself a great 2020! Hopefully this will be a great year for us. I intend to keep writing this blog, and hopefully to start other similar projects to this one.
 

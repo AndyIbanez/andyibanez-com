@@ -133,7 +133,7 @@ Now, follow these steps to finish the configuration of the proxy on your device:
 12. [Tap](/img/IMG_0611.PNG) the "mitm proxy" profile, and [tap](/img/IMG_0612.PNG) `Install`. The system will ask for your passcode.
 13. Go back to `General`, and this time tap `About`.
 14. Scroll down to the `Certificate Trust Settings` option, and tap it.
-15. [Enable the switch](/img/IMG_0613.PNG) for for `mitmproxy`.
+15. [Enable the switch](/img/IMG_0613.PNG) for `mitmproxy`.
 
 ![Proxy Settings](/img/IMG_0606.PNG)
 

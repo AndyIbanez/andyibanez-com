@@ -115,7 +115,7 @@ searchBar.searchTextField.tokens.forEach {
 
 # Conclusion
 
-The new search APIs are really neat in iOS 13. Other than a long-overdue functionality we have been begging for for years, we also got a new beautiful tokens API, which allows to build powerful search features for our users in our apps.
+The new search APIs are really neat in iOS 13. Other than a long-overdue functionality we have been begging for years, we also got a new beautiful tokens API, which allows to build powerful search features for our users in our apps.
 
 <hr>
 

@@ -29,7 +29,7 @@ keywords:
  - watchos
 ---
 
-Earlier this week I was scrolling through my Twitter feed as usual and I found [this tweet](https://twitter.com/harlanhaskins/status/1270399151730118656?s=20) that made me realize I may have been handling errors incorrectly in Swift all my life. This prompted me to research a bit more about error handling in Swift, and it turns out there's many specialized `Error` protocols you can conform to, and you should probably be using them over the default `Error` provided by the language. All these specializations comform to `Error` themselves. In this article, we will explore a few specializations we can use when dealing with errors in Swift.
+Earlier this week I was scrolling through my Twitter feed as usual and I found [this tweet](https://twitter.com/harlanhaskins/status/1270399151730118656?s=20) that made me realize I may have been handling errors incorrectly in Swift all my life. This prompted me to research a bit more about error handling in Swift, and it turns out there's many specialized `Error` protocols you can conform to, and you should probably be using them over the default `Error` provided by the language. All these specializations conform to `Error` themselves. In this article, we will explore a few specializations we can use when dealing with errors in Swift.
 
 Keep in mind that they are part of the Foundation framework though, so they may not work when used outside Apple's platforms.
 
@@ -165,7 +165,7 @@ Also bridged to `NSError`, this is the "rawest" error I could find that can be b
 
 ## Mashing Them Together
 
-Remember that these are protocols, and you are allowed to comform to more than one protocol at the same time, so nothing prevents you from, say, creating a recoverable localized error.
+Remember that these are protocols, and you are allowed to conform to more than one protocol at the same time, so nothing prevents you from, say, creating a recoverable localized error.
 
 ```swift
 enum NetworkError: LocalizedError, RecoverableError {

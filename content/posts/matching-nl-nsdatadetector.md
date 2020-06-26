@@ -91,7 +91,7 @@ DATE: Optional(2020-01-30 12:00:00 +0000)
 DATE: Optional(2020-01-31 16:00:00 +0000)
 ```
 
-Dates are in UTC, so you may need to operate on them when you  receive them. If your string contains text that can be used to to deduce the timezone, you can access the `timezone` property of `NSTextCheckingResult`.
+Dates are in UTC, so you may need to operate on them when you  receive them. If your string contains text that can be used to deduce the timezone, you can access the `timezone` property of `NSTextCheckingResult`.
 
 ```swift
 let string = "Visit me tomorrow at 8 UTC+4"
