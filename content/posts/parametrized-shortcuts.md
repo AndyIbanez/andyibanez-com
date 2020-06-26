@@ -34,7 +34,7 @@ keywords:
 
 All the way back to 2016, a group of very talented iOS developers released [Workflow](workflow.is), a very popular app to let users create actions of different kinds within the system's constraints. You could create and automate different tasks, such as controlling a server via SSH, downloading all the images from a website, and more... Much, much more.
 
-Apple saw the power of the app and [aquired](https://techcrunch.com/2017/03/22/apple-has-acquired-workflow-a-powerful-automation-tool-for-ipad-and-iphone/) it in March 2017. This was very exciting, but we didn't hear anything from the app since. Until WWDC 2018. Apple revealed a new app: Shortcuts. This app was built on top of Workflow, and as an Apple app, it allowed it to do many things that Workflow just wasn't allowed to do, such as toggling system settings, integrating it with other apps (!!), and it was also natively integrated into Siri.
+Apple saw the power of the app and [acquired](https://techcrunch.com/2017/03/22/apple-has-acquired-workflow-a-powerful-automation-tool-for-ipad-and-iphone/) it in March 2017. This was very exciting, but we didn't hear anything from the app since. Until WWDC 2018. Apple revealed a new app: Shortcuts. This app was built on top of Workflow, and as an Apple app, it allowed it to do many things that Workflow just wasn't allowed to do, such as toggling system settings, integrating it with other apps (!!), and it was also natively integrated into Siri.
 
 This was in iOS 12, and as the initial release of Shortcuts, it was still very limited. Developers could integrate Shortcuts into their apps, but they were limited and there was no way to parametrize them.
 
@@ -97,7 +97,7 @@ Before we move on, let's talk about the different configurations each action can
 
 ##### Basic Configuration and Variable Configuration
 
-The `Category` is a way to classify your action. This helps the system organize the entire actions from across all the apps into categories. We use the `Generic` `Run` category here, because it's hard to categorize in a a different way.
+The `Category` is a way to classify your action. This helps the system organize the entire actions from across all the apps into categories. We use the `Generic` `Run` category here, because it's hard to categorize in a different way.
 
 The `Title` is the title of the action in the Shortcuts app. The `Description` is a small description of the action. You can write what it does and show short instructions to explain your users how to use it.
 
@@ -127,7 +127,7 @@ But we can make it look a little bit prettier and more user friendly.
 
 ##### Shortcuts app Configurations
 
-###### Paramaters and Inputs
+###### Parameters and Inputs
 
 The `Input Parameter` allows you to define what variable will receive the value outputted from the previous action. There's no way to define more receiving variables at this time, but users can configure variables in the action and pass in more data that way.
 
@@ -237,9 +237,9 @@ And that's great. You have now created a new action that can take input, produce
 
 What we did so far allows us to create very interesting actions for our apps. But we can add more features to make them friendlier for our users.
 
-Suppose you want to add a new action to substract two numbers. Your first thought may be to just duplicate the "AddNumbers" Intent, rename it to "SubstractNumbers", and implement a new copy-paste version of AddNumbers to add the substraction method.
+Suppose you want to add a new action to subtract two numbers. Your first thought may be to just duplicate the "AddNumbers" Intent, rename it to "SubtractNumbers", and implement a new copy-paste version of AddNumbers to add the subtraction method.
 
-We can avoid all that code duplication by implementing an enum. An enum you know and love from writing Swift. You can then let the user choose an enum as part of the action's parameters. In this case, we will implement an `enum` called `Operation` which will have `addition` and `substraction`.
+We can avoid all that code duplication by implementing an enum. An enum you know and love from writing Swift. You can then let the user choose an enum as part of the action's parameters. In this case, we will implement an `enum` called `Operation` which will have `addition` and `subtraction`.
 
 Start by once again going to your `intentdefinition` file, click the "+" button the same way you created your first intent, and select "New Enum". Name it "Operation".
 
@@ -272,7 +272,7 @@ class OperateNumbersIntentHandler: NSObject, OperateNumbersIntentHandling {
   func operate(with operation: Operation, firstNumber: Int, secondNumber: Int) -> Int {
     switch operation {
     case .addition: return firstNumber + secondNumber
-    case .substraction: return firstNumber - secondNumber
+    case .subtraction: return firstNumber - secondNumber
     default: fatalError("Invalid operation")
     }
   }
