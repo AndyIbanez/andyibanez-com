@@ -31,7 +31,7 @@ aliases:
  - /using-ios-keychain/
 ---
 
-*This article is an entirely rewritten version of an old tutorial I wrote years ago titled "Using the iOS Keychain". Originally written in Objective-C, the old version has been archived but it is accesible [here](https://www.andyibanez.com/old-content/).*
+*This article is an entirely rewritten version of an old tutorial I wrote years ago titled "Using the iOS Keychain". Originally written in Objective-C, the old version has been archived but it is accessible [here](https://www.andyibanez.com/old-content/).*
 
 The Keychain is the place where you would store sensitive data. As secure as iOS currently is, the keychain is the right place to store passwords, authentication tokens, and other sensitive data. You should not store this kind of data in `UserDefaults`, even if iOS has made it harder to access that data for normal users in the latest versions.
 

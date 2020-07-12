@@ -36,7 +36,7 @@ Go through the rest of the prompts, and when you are done, click over your proje
 https://github.com/apple/swift-argument-parser
 ```
 
-![What the Project Looks Like](/img/argumentparser_addpkg)
+![What the Project Looks Like](/img/argumentparser_addpkg.png)
 
 We can now write some code.
 
