@@ -136,21 +136,21 @@ extension CharacterCount {
     
     func run() {
       let whiteSpacechars = string.filter { $0 == " " }.count
-      let alwaysSubstract = parentOptions.ignoringWhitespace ? whiteSpacechars : 0
+      let alwaysSubtract = parentOptions.ignoringWhitespace ? whiteSpacechars : 0
       let mult = parentOptions.multiplier
       
       if parentOptions.countingConfig == .all {
-        print((string.count - alwaysSubstract) * mult)
+        print((string.count - alwaysSubtract) * mult)
       }
       
       if parentOptions.countingConfig == .uppercaseOnly {
         let count = string.filter { $0.isUppercase }.count
-        print((count - alwaysSubstract) * mult)
+        print((count - alwaysSubtract) * mult)
       }
       
       if parentOptions.countingConfig == .lowercaseOnly {
         let count = string.filter { $0.isLowercase }.count
-        print((count - alwaysSubstract) * mult)
+        print((count - alwaysSubtract) * mult)
       }
     }
   }
