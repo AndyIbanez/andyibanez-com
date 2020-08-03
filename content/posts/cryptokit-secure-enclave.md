@@ -39,7 +39,7 @@ The Secure Enclave is a hardware feature for helping the system work with crypto
 
 # The Secure Enclave
 
-Before we dive into writing some code, we need to understand what the The Secure Enclave actually *is*. For some, it is nothing more than a buzzword from the past few years. But for developers and security-conscious people, it is a hardware feature for cryptographic tasks.
+Before we dive into writing some code, we need to understand what the Secure Enclave actually *is*. For some, it is nothing more than a buzzword from the past few years. But for developers and security-conscious people, it is a hardware feature for cryptographic tasks.
 
 The Secure Enclave first appeared on the Apple A7 chip, released on the iPhone 5S all the way back to 2013. Ever since then, all new iOS and iPadOS devices support it, and it's even available in MacBooks with a TouchBar. The iPhone 5S is also the first Apple device to support biometric authentication. Coincidence?
 
@@ -49,7 +49,7 @@ The Secure Enclave runs its own operating system separate from iOS, and iOS neve
 
 For us developers, how the Secure Enclave deals with biometrics is not the most exciting part about it, because we cannot query it directly. Even our biometric APIs are constrained and they are fully handled by the system, so we cannot really do much work on top of that. The real exciting thing is that we as developers can leverage the Secure Enclave to encrypt and decrypt information with keys that are specific to a specific setup in a specific device.
 
-We can create asymmetric keys directly on the Secure Enclave with both the old `Security` framework, or through Cryptokit. We cannot create a cryptographic key on some other platform or non-Secure Enclave piece of code and import it into the Secure Enclave later. But we can use CryptoKit to generate a key pair whose private key is stored on the Secure Enclave. This means that we can encrypt data that is only accessible via the device that encrypted it. Because keys created directly on the Secure Enclave cannot be retrieved, you cannot decrypt the info on another device. Moreover, when I say that the keys are specific to that specific *setup* and device, I mean that the key is specific that installation of iOS. If you do a clean install of your phone, the Secure Enclave is wiped clean. If your users restore a version of your app that had information encrypted by the secure enclave on another device than the original one, that information also becomes inaccessible.
+We can create asymmetric keys directly on the Secure Enclave with both the old `Security` framework, or through CryptoKit. We cannot create a cryptographic key on some other platform or non-Secure Enclave piece of code and import it into the Secure Enclave later. But we can use CryptoKit to generate a key pair whose private key is stored on the Secure Enclave. This means that we can encrypt data that is only accessible via the device that encrypted it. Because keys created directly on the Secure Enclave cannot be retrieved, you cannot decrypt the info on another device. Moreover, when I say that the keys are specific to that specific *setup* and device, I mean that the key is specific that installation of iOS. If you do a clean install of your phone, the Secure Enclave is wiped clean. If your users restore a version of your app that had information encrypted by the secure enclave on another device than the original one, that information also becomes inaccessible.
 
 At the time of this writing, the Secure Enclave offers 4MB of Flash Storage for keys, and it only supports P256 elliptic curve keys. That said, 4MBs of storage is plenty of storage for a bunch of keys.
 
@@ -116,7 +116,7 @@ let nonEnclavekeys = P256.KeyAgreement.PrivateKey(rawRepresentation: keyData)
 
 If you print the data in both the original device and the other device, you will see it is the same. CryptoKit will also have no issue "loading" the key on the other device.
 
-But, the moment you try to use the key on the other device, you will see that it doesn't work. That's because the The Secure Enclave on the new device is trying to open the key with its internal keys, and because the encrypted blob was made by another device, it cannot do that.
+But, the moment you try to use the key on the other device, you will see that it doesn't work. That's because the Secure Enclave on the new device is trying to open the key with its internal keys, and because the encrypted blob was made by another device, it cannot do that.
 
 Using CryptoKit with the Secure Enclave ensures that encrypted data created on a device can only be decrypted by the same device, on the same setup. If you do a restore of the device, the data will no longer be accessible.
 

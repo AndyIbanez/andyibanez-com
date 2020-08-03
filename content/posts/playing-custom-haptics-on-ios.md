@@ -42,7 +42,7 @@ In this article, we will explore how we can integrate haptic feedback into our i
 
 Apple has a few APIs that give developers a lot of control over the haptics they want to create on iOS 13.
 
-The [CHHapticEngine](https://developer.apple.com/documentation/corehaptics/chhapticengine) handles requests to to play haptic patterns.
+The [CHHapticEngine](https://developer.apple.com/documentation/corehaptics/chhapticengine) handles requests to play haptic patterns.
 
 To use it, you need to `import CoreHaptics`.
 

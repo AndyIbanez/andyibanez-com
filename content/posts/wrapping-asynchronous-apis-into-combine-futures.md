@@ -26,7 +26,7 @@ keywords:
  - combine
 ---
 
-Two of the concepts used a lot in Reactive Programming are the *Future* and *Promises*. Whether you have been using Combine for a while or are new to Reactive Programming, chances are you have seen these two words. These terms date to years ago. And I would be lying if I told you what that they were for until I started learning Combine. The first time I heard about Futures and Promises was back in my NodeJS job half a decade ago, and I didn't understand these concepts back then.
+Two of the concepts used a lot in Reactive Programming are the *Future* and *Promises*. Whether you have been using Combine for a while or are new to Reactive Programming, chances are you have seen these two words. These terms date to years ago. And I would be lying if I told you I knew what that they were for until I started learning Combine. The first time I heard about Futures and Promises was back in my NodeJS job half a decade ago, and I didn't understand these concepts back then.
 
 In this short article, we will learn about Futures and Promises and how we can use them in our iOS/iPadOS/watchOS/macOS apps to integrate asynchronous code with callbacks into Combine. Basic knowledge of Combine is assumed for this article.
 

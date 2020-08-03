@@ -32,7 +32,7 @@ keywords:
 description: "Learn how to scan documents and detect in iOS with the Vision Framework."
 ---
 
-It is amazing what we can do with smartphones these days. Document scanning and text recognition are nothing new. But being able to have such a functionality in our pockets is pretty neat. These days we can create apps that have such features very quickly thanks to the push Apple has been doing to promote Machine Learning and Artifical Intelligence on their devices.
+It is amazing what we can do with smartphones these days. Document scanning and text recognition are nothing new. But being able to have such a functionality in our pockets is pretty neat. These days we can create apps that have such features very quickly thanks to the push Apple has been doing to promote Machine Learning and Artificial Intelligence on their devices.
 
 Starting on iOS 11, we can natively scan documents with a system framework called VisionKit, and we can perform operations on images using a framework called Vision. It wasn't until iOS 13 that we finally had the ability to recognize text on images ourselves using the Vision framework, without leveraging third party libraries. In this article we will explore how we can use the VisionKit framework to scan documents and the Vision framework to detect text as two separate tasks, so you can see how easy these two tasks are and you can learn to put them together.
 
