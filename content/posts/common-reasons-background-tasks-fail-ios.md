@@ -1,7 +1,7 @@
 ---
 title: "Common Reasons for Background Tasks to Fail in iOS"
-date: 2020-08-05T15:44:16-04:00
-publishDate: 2020-08-05T15:44:16-04:00
+date: 2020-08-05T07:00:00-04:00
+publishDate: 2020-08-05T00:00:00-04:00
 originalDate: 2020-08-02T22:31:26-04:00
 draft: false
 highlightjslanguages:
@@ -130,7 +130,7 @@ The system will not limit background pushes based on App Usage. So no matter how
 
 This does not mean background pushes are a free way to trigger your app to do background work. Rate limiting is still a thing when it comes to this mechanism, and you should be responsible with them. If you are sending a lot of silent pushes, you are depleting budgets and affecting system resources.
 
-To avoid this, the system may delay the delivery of some background pushes. If you send 14 pushes in a short time, the system will not wake up your time for each. It may coalesce them into 7 pushes to optimize resource usage.
+To avoid this, the system may delay the delivery of some background pushes. If you send 14 pushes in a short time, the system will not wake up your app for each. It may coalesce them into 7 pushes to optimize resource usage.
 
 Rather than focusing on the delivery rate, focus on spacing the number of pushes sent to your apps. Send them less often. Background pushes are for non-essential content such as receiving messages in a muted conversation in a chat app.
 
