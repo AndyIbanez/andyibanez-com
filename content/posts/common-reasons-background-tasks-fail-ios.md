@@ -154,7 +154,7 @@ If you configured your task to send launch events, App Usage and  Rate limiting 
 
 ## Background Processing Tasks.
 
-App Usage, App Switcher, Background App Refresh switch, and Rate limiting are the only factors that applies to Background Processing tasks. If the user has used your app at least once in the last few weeks, the system may honor the launch of this task, so the system is very flexible with this type of tasks. If the user charges their phone daily, your tasks are more likely to run.
+App Usage, App Switcher, Background App Refresh switch, and Rate limiting are the only factors that apply to Background Processing tasks. If the user has used your app at least once in the last few weeks, the system may honor the launch of this task, so the system is very flexible with this type of tasks. If the user charges their phone daily, your tasks are more likely to run.
 
 # Conclusion
 
