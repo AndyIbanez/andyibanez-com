@@ -128,7 +128,7 @@ There is one specific API that is not available to non-Secure Enclave keys: We c
 init(compactRepresentable:accessControl:authenticationContext:)
 ```
 
-If you are not familiar with these security APIs, `LAContext` allows you to ask the device to authenticate the device with biometrics (Touch ID or Face ID) or with their password, and `SecAccessControl` allows you to specify an access control to instruct the system under which conditions should a key be available. These conditions can be that the user should be authenticated first, the app needs a specific password, in a specific application password, and more. The usage looks like this:
+If you are not familiar with these security APIs, `LAContext` allows you to ask the device to authenticate the user with biometrics (Touch ID or Face ID) or with their password, and `SecAccessControl` allows you to specify an access control to instruct the system under which conditions should a key be available. These conditions can be that the user should be authenticated first, the app needs a specific password, an specific application password, and more. The usage looks like this:
 
 ```
 import LocalAuthentication // For LAContext

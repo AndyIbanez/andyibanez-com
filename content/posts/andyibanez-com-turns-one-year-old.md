@@ -1,8 +1,8 @@
 ---
 title: "andyibanez.com Turns One Year Old"
-date: 2020-08-18T12:00:00-04:00
-draft: true
-publishDate: 2020-08-18T12:00:00-04:00
+date: 2020-08-18T00:00:00-04:00
+draft: false
+publishDate: 2020-08-18T00:00:00-04:00
 originalDate: 2020-08-17T09:41:43-04:00
 ---
 

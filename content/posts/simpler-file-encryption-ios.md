@@ -17,7 +17,7 @@ tags:
  - cryptography
 categories:
  - development
-description: "Learn to implement basic cryptography with CryptoKit in Swift."
+description: "Learn how to use the Data Protection APIs on iOS and iPadOS."
 keywords:
  - swift
  - encryption
