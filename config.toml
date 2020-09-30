@@ -64,11 +64,6 @@ googleAnalytics = "UA-146179797-1"
     weight = 300
     url = "/about/"
 [[menu.main]]
-    name = "Bolivia"
-    identifier = "bolivia"
-    weight = 400
-    url = "/bolivia/"
-[[menu.main]]
     name = "Privacy Policy"
     identifier = "privacy-policy"
     weight = 500

@@ -20,7 +20,7 @@ tags:
  - oslog
 categories:
  - development
-description: "Learn how to use the Data Protection APIs on iOS and iPadOS."
+description: "Learn about the Unified Logging system on Apple Platforms."
 keywords:
  - swift
  - programming
