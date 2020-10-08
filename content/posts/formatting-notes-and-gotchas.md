@@ -164,6 +164,22 @@ let historic = ["incas", "aymaras"]
 ListFormatter.localizedString(byJoining: historic) // incas y aymaras
 ```
 
+## The Oxford Comma
+
+When [@steipete](https://twitter.com/steipete) [shared this article on Twitter](https://twitter.com/steipete/status/1314113507529568256?s=20), I looked into the comments and remmebered the (in)famous [Oxford comma](https://www.rd.com/article/oxford-comma-proper-use/). Turns out that the formatter will even take into account when to use it. When your locale is the UK, it will not use the comma, whereas when it is the USA, it will.
+
+```swift
+let items = ["apples", "eggs", "pears"]
+
+let formatter = ListFormatter()
+formatter.locale = Locale(identifier: "en_UK")
+
+print(formatter.string(from: items)) // apples, eggs and pears
+
+formatter.locale = Locale(identifier: "en_US")
+print(formatter.string(from: items)) //  apples, eggs, and pears
+```
+
 Starting on iOS 14 and the rest of the OSes introduced in WWDC2020, `ListFormatter` will use the right grammatical rules for your lists. In earlier versions you may get unexpected results for some lists.
 
 # Numbers
