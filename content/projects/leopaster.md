@@ -7,6 +7,7 @@ showcomments: false
 showpagemeta: false
 categories:
  - projects
+ - Mac App
 tags:
  - macos
  - open source

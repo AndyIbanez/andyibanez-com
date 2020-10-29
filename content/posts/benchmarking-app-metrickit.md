@@ -105,7 +105,7 @@ To make use of this, all we need to do is implement a new method of `MXMetricMan
 
 The API for dealing with `MXDiagnosticPayload` is pretty much the same as `MXMetricPayload`. Where we had `MXMetric` as the base class for all metric objects, we now have `MXDiagnostic` which fulfills that paper for diagnostics. `MXDiagnosticPayload` will wrap a bunch of `MXDiagnostic` subclasses the same way `MXMetricDiagonistic` does for wrapping `MXMetric` subclasses.
 
-It also includes a `MXCallStackTree` object. This encapsulates stack traces for the moments when regressions occurred. It is important to note that these stack traces are unsymbolicated, so make sure you don't store them in your app unless you want to leak implementation details of certain functionality.
+It also includes a `MXCallStackTree` object. This encapsulates stack traces for the moments when regressions occurred. These stacktraces are unsymbolicated.
 
 The new subclasses introduced in WWDC2020 for diagnostics are:
 

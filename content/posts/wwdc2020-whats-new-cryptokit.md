@@ -31,7 +31,7 @@ keywords:
  - wwdc2020
 ---
 
-CryptoKit, introduced in WWDC2019, allows us to [https://www.andyibanez.com/posts/common-cryptographic-operations-with-cryptokit/ perform cryptographic operations very easily].
+CryptoKit, introduced in WWDC2019, allows us to [perform cryptographic operations very easily](https://www.andyibanez.com/posts/common-cryptographic-operations-with-cryptokit/). 
 
 While CryptoKit still doesn't offer many algorithms and functionality, it's still growing, and this year CryptoKit and do more.
 

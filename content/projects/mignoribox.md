@@ -7,6 +7,7 @@ showcomments: false
 showpagemeta: false
 categories:
  - projects
+ - Web
 tags:
  - web
  - php

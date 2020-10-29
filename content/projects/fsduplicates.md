@@ -7,6 +7,7 @@ showcomments: false
 showpagemeta: false
 categories:
  - projects
+ - Command Line Tool
 tags:
  - macos
  - open source
