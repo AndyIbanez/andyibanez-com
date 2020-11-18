@@ -1,5 +1,5 @@
 ---
-title: "Silvianna for Anilist"
+title: "Silvianna for Anilist "
 date: 2020-10-17T11:48:58-04:00
 originalDate: 2020-10-17T11:48:58-04:00
 publishDate: 2020-10-17T11:48:58-04:00
@@ -34,3 +34,7 @@ FEATURES:
 - You can search the entire Anilist database for Anime and Manga.
 
 This is just the initial release of Silvianna, and we are excited to make the project grow with your feedback and ideas.
+
+# TestFlight Link
+
+[Click Here](https://testflight.apple.com/join/fx84oOLT)
