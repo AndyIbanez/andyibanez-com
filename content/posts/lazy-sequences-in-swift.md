@@ -3,7 +3,7 @@ title: "Lazy Sequences in Swift"
 date: 2020-11-25T07:00:00-04:00
 originalDate: 2020-11-22T22:45:06-04:00
 publishDate: 2020-11-25T07:00:00-04:00
-draft: true
+draft: false
 highlightjslanguages:
  - swift
  - objectivec
@@ -53,7 +53,7 @@ Second, if you use `.filter` and you want to `.count` the number of elements in 
 
 On the other hand, if you consider you don't have memory to spare, or you don't need to do something with all the results of a `.filter` or `.map` immediately, you could use lazy collections. For example, if you are consuming a web service and want to convert all the JSON into user objects, you can avoid mapping the JSON that is not currently visible to the user by using `.lazy`.
 
-If you find yourself in a situation in a situation which you genuinely don't know which one to use, I'd recommend opting to use standard sequences over lazy ones. Lazy is great, but it can be seen as premature optimization for some, and while you may have some uses for it in mind, you may find yourself in the unexpected scenarios in which you do need to do that `.count` call after all, completely voiding `.lazy`'s benefits and actually writing worse-performing code.
+If you find yourself in a situation which you genuinely don't know which one to use, I'd recommend opting to use standard sequences over lazy ones. Lazy is great, but it can be seen as premature optimization for some, and while you may have some uses for it in mind, you may find yourself in the unexpected scenarios in which you do need to do that `.count` call after all, completely voiding `.lazy`'s benefits and actually writing worse-performing code.
 
 # Conclusion
 
