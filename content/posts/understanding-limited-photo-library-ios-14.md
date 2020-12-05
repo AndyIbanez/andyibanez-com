@@ -75,6 +75,8 @@ library.presentLimitedLibraryPicker(from: viewController)
 
 The system prompt can be annoying. The good news is that we can suppress it by setting `PHPhotoLibraryPreventAutomaticLimitedAccessAlert` key in our `Info.plist` to yes. If you already deal with the new limited photo library, you don't need the system to alert your users, as you have code to show the picker as necessary.
 
+Note that you need to `import PhotosUI` to use this feature.
+
 # Conclusion
 
 The new limited photo library exists for privacy reason. Before you even make use of these APIs, you should ask yourself if you really need to access user photos, or if the new `PHPhotoPicker` can do the work for you. If you must access the assets directly, adopt the new features and suppress the alert to make the photo picker experience smoother.
