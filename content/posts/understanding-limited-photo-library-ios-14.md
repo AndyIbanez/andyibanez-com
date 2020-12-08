@@ -42,7 +42,7 @@ The first one is to send them to Settings. In the Settings for your app, users c
 
 Note that when a user limits photo access to your app, you still have access to all the information you had before at an individual photo level. The functionality only limits access to assets themselves, not their metadata.
 
-For apps that haven't made any changes to their photo library handling code, the app can prompt the user, once per launch session, if they want to keep their library selection or or if they want to change it.
+For apps that haven't made any changes to their photo library handling code, the app can prompt the user, once per launch session, if they want to keep their library selection or if they want to change it.
 
 ## The Motivation
 
@@ -52,7 +52,7 @@ As we said above, this feature exists to give users more control over the data t
 
 The prompts we saw above are displayed to users when the app wants to access assets directly. In general, there's very little need to ask access to entire photo libraries.
 
-Apple has introduced the new `PHPicker` class in iOS 14. This class is a replacement for `UIImagePickerController` which has many more features. Thew new picker provides a system UI to let users search their libraries and select multiple photos and videos. The best part is, since this is a system prompt, the user will never be prompted about giving access to their photos to your app. Unless you have a good reason to request access to user photos directly (specific cases include photo backup apps), you should adopt this picker instead, which has many improvements over the old `UIImagePickerController`. It makes it better for users to search for the photo they want in huge libraries.
+Apple has introduced the new `PHPicker` class in iOS 14. This class is a replacement for `UIImagePickerController` which has many more features. The new picker provides a system UI to let users search their libraries and select multiple photos and videos. The best part is, since this is a system prompt, the user will never be prompted about giving access to their photos to your app. Unless you have a good reason to request access to user photos directly (specific cases include photo backup apps), you should adopt this picker instead, which has many improvements over the old `UIImagePickerController`. It makes it better for users to search for the photo they want in huge libraries.
 
 Also, in the past, camera apps had to request full read/write access to the library to be able to take photos and save them. This didn't make sense, as most camera apps would only want write access. There are new workflows to support this kind of situations.
 
