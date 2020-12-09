@@ -514,7 +514,7 @@ y/g/n> y
 
 You will be prompted twice for your password.
 
-To complicate things a bit, you are given the option to generate a second password. The options are the same as above, as are the implications of each. I always choose `g` because I keep this data stored in my password manager.
+To complicate things a bit, you are given the option to generate a second password. The options are the same as above, as are the implications of each. I always choose `y` because I generate and keep this data stored in my password manager.
 
 ```bash
 Password or pass phrase for salt. Optional but recommended.

@@ -1,5 +1,5 @@
 ---
-title: "Getting Started App Store Connect Api"
+title: "Getting Started with the App Store Connect API"
 date: 2020-12-09T07:00:00-04:00
 originalDate: 2020-12-06T23:44:47-04:00
 publishDate: 
@@ -10,12 +10,14 @@ highlightjslanguages:
 tags:
  - apple
  - app store connect
+ - programming
 categories:
  - development
 description: "Get started with the App Store Connect API and how it can be automated."
 keywords:
  - apple
  - app store connect
+ - programming
 ---
 
 In 2018, Apple introduced the App Store Connect API. We as iOS developers interact with App Store Connect almost daily. We like to see our sales reports, analytics, check how our apps are doing. Occasionally, we may need to register a new device or manage our users.
