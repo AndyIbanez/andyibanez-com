@@ -164,7 +164,7 @@ public class ArrayNumberMultipler: ExpressibleByArrayLiteral {
 
 These protocols use associated types to assign the data type of the elements. In our case, our object can be initialized with an array of integers, so we assign `ArrayLiteralElement` to `Int`.
 
-```Swif
+```Swift
 let myNumbers: ArrayNumberMultipler = [2, 4, 6]
 
 print(myNumbers.numbers) // Prints "[4, 16, 36]"
