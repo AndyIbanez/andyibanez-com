@@ -18,7 +18,7 @@ keywords:
 description: "Learn how to use the ExpressibleBy- protocols in Swift to write more expressive code."
 ---
 
-Swift gives us many interesting features to write cleaner and more obvious code. This code is more readable, and it help both SDK consumers and code maintainers.
+Swift gives us many interesting features to write cleaner and more obvious code. This code is more readable, and it helps both SDK consumers and code maintainers.
 
 One such feature Swift has is the `ExpressibleBy-` family of protocols. This is a set of protocols that allow you to instantiate objects by providing some native Swift object. For example, we can instantiate an object providing a Boolean, or a String.
 
@@ -40,7 +40,7 @@ The different variations of these protocols have different requirements. We will
 
 ## ExpressibleByNilLiteral
 
-Suppose you have a requirement that requires that, when an object gets initialized with `nil`, you don't want the whole object instead. You may have a custom requirement in which you need to consider `nil` something different.
+Suppose you have a requirement that requires that, when an object gets initialized with `nil`, you don't want the whole object to be nil. You may have a custom requirement in which you need to consider `nil` something different.
 
 For example, suppose you want to treat the existence of an object that actually does exist, but has all its properties set to `nil`.
 
