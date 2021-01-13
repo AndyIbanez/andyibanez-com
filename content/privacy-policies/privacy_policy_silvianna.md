@@ -9,11 +9,11 @@ showpagemeta: false
 
 The Privacy Policy for Silvianna can be resumed in one sentence:
 
-*Silvianna will not store your information, personal or otherwise, in any third-party servers not owned by Anilist.co, Apple, or RevenueCat.*
+*Silvianna will not store your information, personal or otherwise, in any third-party servers not owned by Anilist.co, Apple, RevenueCat, or GitHub.*
 
 Silvianna is a client for https://anilist.co (hereafter simply called "Anilist"), the popular anime and manga database service. As such, Silvianna will interact with Anilist in order to do any work at all. With Silvianna, you can view information stored on Anilist, and that includes any personal information you may have provided to them.
 
-*The only networking interaction occurs between the App and Anilist, the App and Apple's Servers, and the App and RevenueCat's servers.*
+*The only networking interaction occurs between the App and Anilist, the App and Apple's Servers, the App and RevenueCat's servers, and the App and GitHub's servers.*
 
 Silvianna **will not** not send any information stored in the service to a third party server that is not owned by Anilist or RevenueCat.
 
@@ -26,6 +26,7 @@ The following points highlight how the app is used, and what information may be 
 * https://anilist.co, in order to provide functionality. [Anilist's Privacy Policy](https://anilist.co/terms)
 * Apple's servers, in order to provide In-App Purchase information. [Apple's Privacy Policy](https://www.apple.com/legal/privacy/)
 * RevenueCat's services, in order to provide facilities for dealing with In-App Purchases. RevenueCat may collect anonymous information regarding your in-app purchases for the purpose of aggregating IAP data. [RevenueCat's Privacy Policy](https://www.revenuecat.com/privacy)
+* GitHub. There are some plain JSON files stored there that Silvianna needs in order to provide some functionality. As an example, the list of IAPs is stored and loaded dynamically from there.
 
 * When you authorize the app to access your Anilist account, at the login step, the app will **never** receive your login information such as E-mail and Password. Instead, you will authenticate to Anilist.co directly via a webview, and when the website determines your credentials are fine and you allow Silvianna to access your account, Anilist will give the app an unique token that can be used to access your account. This token allows us to access your Anilist account and retrieve information such as your username, and your avatar, as well as your Anilist lists for anime and manga. Please understand this is necessary in order for the app to work. We also use this token to update your lists on Anilist when perform actions such as adding and removing media, or editing existing ones. The information we can retrieve with your authorization token will never be sent to a third party. Your Anilist username may be shared with RevenueCat. The access token is received on your device, and it will never leave your device.
 * Silvianna does not currently make use of any third-party analytics or benchmarking frameworks.
