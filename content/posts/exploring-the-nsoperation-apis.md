@@ -81,7 +81,7 @@ With all that theory out of the way, it's time to get our feet wet. We will be r
 
 ## NSBlockOperation
 
-Using `NSBlockOperation` is very easy. In the example below, we will create two different `NSBlockOperation`. One will count from 1 to 10, and the other one will count from 1 to 20. You will see that there's no consistent order in how the numbers are printed, despite the fact that we queue the `from1to10`operation before `from11to20`.
+Using `NSBlockOperation` is very easy. In the example below, we will create two different `NSBlockOperation`. One will count from 1 to 10, and the other one will count from 11 to 20. You will see that there's no consistent order in how the numbers are printed, despite the fact that we queue the `from1to10`operation before `from11to20`.
 
 ```swift
 class NumberCounter: NSObject {

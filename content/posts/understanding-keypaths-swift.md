@@ -112,7 +112,7 @@ ForEach(dollArray, id: \.name) {
 
 KeyPaths are very powerful if you know how to use them.
 
-Second, KeyPaths enable us to do what's called *metaprogramming*. Megaprogramming is a concept in which a program uses another program as its data. When it comes to KeyPaths, our apps themselves *are* their own data. This funky concept opens a lot of doors, and the best thing is, in Swift, it does in a very safe manner. Metaprogramming in Objective-C through KeyPaths is very possible, but as we said above, it doesn't have specialized `KeyPath` types, but rather it just uses KeyPaths as strings.
+Second, KeyPaths enable us to do what's called *metaprogramming*. Metaprogramming is a concept in which a program uses another program as its data. When it comes to KeyPaths, our apps themselves *are* their own data. This funky concept opens a lot of doors, and the best thing is, in Swift, it does in a very safe manner. Metaprogramming in Objective-C through KeyPaths is very possible, but as we said above, it doesn't have specialized `KeyPath` types, but rather it just uses KeyPaths as strings.
 
 One more important thing before we move in, `KeyPaths` can reference properties nested deeply in other objects. Consider the following example:
 
