@@ -38,7 +38,7 @@ Which means that `nil` itself can call methods, safely enough, without crashing.
 
 In Swift, we have a bit more safety. We can send "messages" to `nil`, but only if they are the result of a chained optional. `nil` can only be a thing when we are working with optionals.
 
-Dealing with nullability in Objective-C can be mess, and this mess can carry over to Swift when bridging, so we are going to talk about the different "kinds" of nullability here, with practical examples and situations I have come across the real world.
+Dealing with nullability in Objective-C can be a mess, and this mess can carry over to Swift when bridging, so we are going to talk about the different "kinds" of nullability here, with practical examples and situations I have come across the real world.
 
 If you are thinking that dealing with nils is easy and "works as expected", I recommend you read this, *especially* if you have never touched Objective-C.
 
@@ -213,7 +213,7 @@ The console will print `(null)` when printing *real* nothingness, and `<null>` w
 
 In other words ` dictionary[@"Nendoroid"]` is `nil`, whereas `dictionary[@"HarmoniaBloom"]` is `NSNull`.
 
-In short, in Objective-C, when a dictionary does not have a given key, it will point to `nil`. When the dictionary does the have the key, but said key is null, it will be `NSNull`. It makes complete sense if you think about it. Earlier we said `NSNull` is a placeholder for actual nothingness, and if you want a dictionary that can have nothingness, you need to use a placeholder for nothingness.
+In short, in Objective-C, when a dictionary does not have a given key, it will point to `nil`. When the dictionary does have the key, but said key is null, it will be `NSNull`. It makes complete sense if you think about it. Earlier we said `NSNull` is a placeholder for actual nothingness, and if you want a dictionary that can have nothingness, you need to use a placeholder for nothingness.
 
 This has been the source of many weird crashes for the following reason: In Objective-C, you can send messages to `nil`, but when you are sending messages to a real object, the object needs to implement the method you want to call - in other words, you want the object to *respond to a selector*. If you send a message to an object and the object does not implement, you will crash with a message similar to "`unrecognized selector sent to instance 0xb4df00d`".
 
