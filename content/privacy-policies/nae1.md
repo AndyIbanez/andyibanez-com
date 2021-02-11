@@ -6,6 +6,12 @@ showcomments: false
 showpagemeta: false
 ---
 
+# NOTE
+
+This app has been transferred to [Alon Waller](https://www.alonwaller.com), effective Feb 11, 2021. This privacy policy no longer applies.
+
+---------
+
 Andy Ibanez K built the Next Anime Episode app as a Commercial app. This SERVICE is provided by Andy Ibanez K and is intended for use as is.
 
 This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use my Service.

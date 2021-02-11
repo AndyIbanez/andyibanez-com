@@ -14,6 +14,12 @@ tags:
 link: https://apps.apple.com/us/app/next-anime-episode/id1227965532
 ---
 
+# IMPORTANT NOTE
+
+While I am the original developer of this app, it has since been transferred to [Alon Waller](https://www.alonwaller.com), so I can no longer offer support for the app.
+
+------
+
 ![Next Anime Episode 1](/img/nextanimeepisode1.png)
 
 [Download on the App Store](https://apps.apple.com/us/app/next-anime-episode/id1227965532) | [Privacy Policy](/privacy-policies/nae1)
