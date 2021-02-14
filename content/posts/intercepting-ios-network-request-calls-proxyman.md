@@ -58,7 +58,7 @@ Proxyman is available through Homebrew, so if you already have Homebrew installe
 brew install proxyman
 ```
 
-Otherwise you can get it from [https://proxyman.io](here).
+Otherwise you can get it from [here](https://proxyman.io).
 
 ## Setting up
 
