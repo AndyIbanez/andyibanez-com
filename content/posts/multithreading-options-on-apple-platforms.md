@@ -38,6 +38,7 @@ keywords:
  - grand central dispatch
 ---
 
+
 We have reached the point in which computers are really fast. Especially Apple's, as they have control of both the hardware and software, so, oftentimes, some tasks that could be sped up with multithreading, are not necessary anymore. But, for those cases when you do need multithreading, we have many options available.
 
 On Apple's platforms there is a surprising amount of concurrency tools. You are likely familiar with the most used one, the Grand Central Dispatch, `DispatchQueue`, which is pretty good and it covers the vast majority of use cases. But there are some tasks that can be done easier with other tools.
