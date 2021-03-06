@@ -77,8 +77,3 @@ What we saw here are some common tasks that can be done with this class. They ar
 
 NLEmbedding can be used to find "related" words to each other. You know how google can show alternatives for words related to the ones used in your query? That's the magic of natural language embedding. Use this class if you need to support similar functionality in your apps.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

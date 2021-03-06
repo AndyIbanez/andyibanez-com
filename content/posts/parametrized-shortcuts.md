@@ -336,8 +336,3 @@ If you don't feel like following the steps above, you can download the completed
 
 The Shortcuts app has received a very nice improvement with the introduction of Parameters on iOS 13. In this article we explored how you could implement them in your own apps, by creating a simple Action that allows users to pass in numbers to do some math operation on them. We saw how actions are exactly like functions - black boxes that take input and produce and output - and how developers can leverage them for their users.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

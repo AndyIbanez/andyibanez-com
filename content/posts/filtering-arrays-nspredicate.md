@@ -221,8 +221,3 @@ The answer is that, not only is this great for using with Core Data (where you s
 
 NSPredicate offer a very powerful way to search and filter array and other content, such as queries in core data. They can be as simple or complex as you need them, and their format language is similar to SQL and therefore very intuitive to use. It's a bit of a bummer we need to play with a lot of Objective-C code to make them to work, but if you need them, the effort is worth it.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

@@ -102,8 +102,3 @@ And that's it! Configuring our help pages is really use, and we can write user-f
 
 Your command line tool should provide as much help as possible for your users. ArgumentParser makes it very easy to write them, by providing `ArgumentHelp` and `CommandConfiguration`.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

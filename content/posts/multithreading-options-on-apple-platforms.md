@@ -156,7 +156,3 @@ Use NSThread when you need to have full control over concurrency, including thre
 # Conclusion
 
 Multithreading is complicated and to this day it is a hard problem to solve. Apple provides us with many options to deal with multithreading. NSOperation is great and high level, but GCD gets the job done very often. Balancing your options is important to become a better iOS developer.
-
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!

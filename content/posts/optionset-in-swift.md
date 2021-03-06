@@ -155,6 +155,3 @@ func convertUSDTo(_ currencies: Currency, value: Double) -> [CurrencyPair] {
 
 Building configurable APIs is not necessarily a challenge, but it can always be improved. OptionSet provides us with a way to let user configure their calls to our APIs and internally they are essentially sets.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!

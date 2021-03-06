@@ -247,8 +247,3 @@ And don't forget to add them as subcommands in the parent command:
 
 Separating your command line tool into subcommands is very easy to do thanks to `ArgumentParser`'s parser features. You can configure children commands very easily in a parent command's configuration, and, if your subcommands take the same options, flags, and arguments, you can declare them in a type conforming to `ParsableArgument`, so all subcommands that need them can simply use the `@OptionGroup` property wrapper to access them.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

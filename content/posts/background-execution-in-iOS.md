@@ -253,8 +253,3 @@ Background execution is a very common task and you can adopt your app to do it. 
 
 The APIs are easy to use, and I encourage you to add them if it makes sense in your use case. In particular, the first point is very useful as you never know when a user may send your app to the background when your app is doing something important.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

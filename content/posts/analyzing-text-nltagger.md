@@ -169,8 +169,3 @@ Sentiment Analysis is available on iOS 13 and later.
 
 NLTagger allows you to analyze a piece of natural language text to get its components and understand how a sentence is formed. The analysis can be done in different ways for different languages. We can also perform sentiment analysis on strings starting on iOS 13. NLTagger has many features and it's easy to use.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

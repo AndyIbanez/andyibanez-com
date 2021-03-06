@@ -164,8 +164,3 @@ You only need the context to perform the authentication. The access control is o
 
 In this article, we learned a little bit more CryptoKit by exploring how it can integrate with the Secure Enclave. The Secure Enclave is an area that stores secret information and no information can ever leave it. We also learned how we can use other device features - such as Touch ID and Face ID - to further secure our keys within the Secure Enclave.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

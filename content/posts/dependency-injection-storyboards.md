@@ -121,8 +121,4 @@ With this, we can finally initialize view controllers using dependency injection
 
 Dependency injection is nothing new. Unfortunately, using it with Storyboards has never been directly possible. Thanks to iOS 13 we can now do this. Eliminating optionals has never felt better!
 
-<hr>
 
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

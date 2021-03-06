@@ -58,8 +58,3 @@ It's very easy to add this type of feedback, so I recommend you add it whenever 
 
 Haptics are a core part of the iOS experience, and implementing them doesn't have to be complicated. If you need a lot of control over your feedbacks, use `CHHapticEngine` directly. If you need simple feedbacks that respond to user interaction, the `UINotificationFeedbackGenerator` class is likely to cover your needs.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

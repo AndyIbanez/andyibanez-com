@@ -230,8 +230,3 @@ enum NetworkError: LocalizedError, RecoverableError {
 
 Error handling in Swift suddenly became easier when I learned about these `Error` specializations. Though, to be honest, they are more powerful when using them in macOS rather than the smaller OSes, because macOS has APIs to which you can provide your errors and let the system manage their displaying and even their recovery. in iOS, they aren't as powerful, but they can still help us a lot to write better error handling code that works across the Foundation framework, and in the rest of the APIs.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

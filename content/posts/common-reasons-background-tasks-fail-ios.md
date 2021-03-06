@@ -160,8 +160,3 @@ App Usage, App Switcher, Background App Refresh switch, and Rate limiting are th
 
 The system will ultimately have all the control on whether your tasks will be executed or not. Still, if you are a good player and your apps are not resource hogs, you should have a better change of getting executed, depending on the conditions, task type, and whether your users are actually using your app.
 
-<br>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

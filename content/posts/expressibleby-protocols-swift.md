@@ -199,6 +199,3 @@ Once again, we have associated types, this time for the `Key` and `Value` of the
 
 The `ExpressibleBy-` protocols are very helpful and they can help us write very expressive code. We shouldn't abuse them as they can be shocking for someone looking at a codebase the first time, but when used in moderation, they are one of my favorite features of Swift.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!

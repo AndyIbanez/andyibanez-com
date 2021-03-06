@@ -81,6 +81,3 @@ Note that you need to `import PhotosUI` to use this feature.
 
 The new limited photo library exists for privacy reason. Before you even make use of these APIs, you should ask yourself if you really need to access user photos, or if the new `PHPhotoPicker` can do the work for you. If you must access the assets directly, adopt the new features and suppress the alert to make the photo picker experience smoother.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!

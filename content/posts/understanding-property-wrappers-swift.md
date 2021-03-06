@@ -184,8 +184,3 @@ Property wrappers are an amazing feature, but they have one downside: They provi
 
 Property wrappers are a very interesting Swift feature. While their usage is prominent in SwiftUI, it doesn't have to be. It can be hard to wrap (heh) your head around them at first, but once you take the time to understand them, you can see they offer ways to simplify, reduce boilerplate, or simply wrap a lot of power in a small container.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

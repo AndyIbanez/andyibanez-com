@@ -277,8 +277,3 @@ let userMenu = UIMenu(
 
 UIMenu brings a bunch of interesting and unexpected features. Being able to dynamically load menu elements and mix them with static elements is a great feature I didn't know I wanted. This article may or may not be updated as I learn more about the new features introduced for `UIMenu` and related APIs.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

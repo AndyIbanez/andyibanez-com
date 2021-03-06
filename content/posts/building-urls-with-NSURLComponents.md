@@ -145,9 +145,3 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 # Conclusion
 
 While `NSURLComponents` does require more code to write, using it has a lot of benefit. Automatic encoding, security, and peace of mind are some of the benefits it brings to us when building URLs. Being able to decompose existing URLs into their components is also a useful thing, especially on systems where app communication through URLs is prevalent.
-
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

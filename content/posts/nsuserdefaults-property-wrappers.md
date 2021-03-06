@@ -245,8 +245,3 @@ You now have two property wrappers to deal with your settings in a clean and ind
 
 Property Wrappers are very powerful, and they can help you kill common patterns in favor of something nicer and more contextually aware. Using them for user defaults has a lot of benefits and it helps you write cleaner code, not to mention it can help new programmers in a project get up to speed with how defaults are stored.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

@@ -81,10 +81,6 @@ ESPECIES: bulbasaur
 
 Our Command-Line tools can be installed by simply pasting them in a directory specified in the user's `$PATH` variable. The user may configure some additional paths, but there's a few default ones we can use. Once our tool is there, our users can use our tools very naturally, without having to specify their full name.
 
-<hr>
 
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.
 
 

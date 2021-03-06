@@ -234,8 +234,3 @@ Other than that cast to `NSObject`, this is very straightforward to use, and you
 
 Formatters never cease to amaze us. Writing our own can be very easy, but it has everything you need to write more complex formatters. There's various APIs that can take formatters throughout all the APIs in Apple's platforms, and thus subclassing (NS)Formatter to get that default functionality can be very rewarding.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

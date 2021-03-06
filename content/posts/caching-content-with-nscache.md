@@ -281,8 +281,3 @@ When an object is about to be deleted, we will be notified, which allows us to t
 
 `NSCache` is a good API to cache content that you only need in memory. You can both control the contents manually, or you can set conditions to allow the cache to manage itself. Being an Objective-C object at its core, it has some quirks to work with, but it's still very easy to use.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

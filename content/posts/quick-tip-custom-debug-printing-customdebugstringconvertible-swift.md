@@ -114,6 +114,3 @@ name: Andy
 
 While I still prefer breakpoints when it comes to debugging, getting proper prints is useful, especially if you want to observer the values of multiple variables, probably in different scopes, and don't want to deal with a breakpoint on each. Hopefully this also helps library developers implement "print-friendly" objects.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!

@@ -165,7 +165,3 @@ Don't forget to disable the certificates on both your Mac and iOS when you are d
 
 Proxyman is a wonderful debugging tool. I find it easier than mitmproxy, and even friendlier than Charles. If you can afford it, I strongly recommend Proxyman, as it makes network debugging a breeze.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-

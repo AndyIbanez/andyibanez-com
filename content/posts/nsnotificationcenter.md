@@ -165,9 +165,3 @@ There's many documentation pages that list some notification names, like the  [A
 * [SKStorefrontCountryCodeDidChange](https://developer.apple.com/documentation/foundation/nsnotification/name/2909077-skstorefrontcountrycodedidchange): Changed when country used for purchases changes.
 
 You can use these and others in the linked documentation to do more interesting stuff with your code. Play around with the notifications and see what you can do.
-
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

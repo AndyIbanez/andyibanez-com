@@ -318,6 +318,3 @@ string3Set.isSubset(of: morseCodeCharSet) // true
 
 Sets are a very powerful but lesser used data structure. They have al of features and they can take up the place of arrays more often than we would think. It's worth to study them, as they will help us become better developers.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!

@@ -589,6 +589,3 @@ rclone is a great tool to interact with cloud storage services from the command 
 
 Once you are familiar with rclone, I recommend you explore the [Official Site](https://rclone.org) of the project so you can learn more advanced tasks you can do. Take some time to explore the documentation to learn how to use other commands, as well as how to use certain flags with certain commands. A particular command I use a lot is `sync` with the `--log-file` and `--backup-dir` flags. This allows me to check that all files were synced properly to the remote, and to move the ones that were different or deleted someplace else instead of outright removing them (for incremental backups). But there's much more you can do, and the only way to learn all the power of rclone is to browse the documentation and play around with it. In the future, I may share my backup strategies with rclone to give you ideas how you can use this amazing tool.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. rclone is a living project, so some things may change overtime and this article may need to be revised. Thank you!

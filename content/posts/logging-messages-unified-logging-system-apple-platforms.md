@@ -107,8 +107,3 @@ We can now reference all the logs with this specific user, without leaking any i
 
 The unified logging system has all the facilities to format logs in a way that make sense in the context of your app, and they have all the tools you need to strip out potentially personal information, without losing references to it and without undermining the usefulness of the logging system.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

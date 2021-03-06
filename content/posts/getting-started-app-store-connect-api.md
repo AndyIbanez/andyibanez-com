@@ -135,6 +135,3 @@ In a future article, we will explore a little bit more of the features the API o
 
 The App Store Connect API has many features to help with automation. It has seen steady growth in terms of features each WWDC, and we can expect it to become better.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!

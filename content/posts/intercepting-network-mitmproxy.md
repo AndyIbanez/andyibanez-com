@@ -175,8 +175,3 @@ Unfortunately you cannot do this on iOS, but there was no workaround for Charles
 
 We didn't explore the full power of mitmproxy in this article, but what you learned should help you add a new tool to your arsenal to debug networking in your apps. mitmproxy is a very powerful tool, and if you are interested in learning all its features, I encourage you to read the [docs](https://docs.mitmproxy.org/stable/). That said what you learned in this article is more than enough for most scenarios, and the power to do more is out there.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

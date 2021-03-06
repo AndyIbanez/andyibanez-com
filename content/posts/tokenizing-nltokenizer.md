@@ -142,8 +142,3 @@ If any point you have troubles with the tokenizer, and the enumeration function 
 
 Separating a string with a token is a common task, but doing it naively will not account for all possible cases. `NLTokenizer` is very smart as it can process words in many languages and already knows about a lot of special cases. If you are tokenizing strings in natural language, you should use this class instead of trying to do it manually.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

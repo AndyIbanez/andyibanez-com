@@ -121,9 +121,3 @@ And that's it for static strings! In subsequent articles in this series we will 
 # Conclusion
 
 Logging can help you diagnose issues that just don't occur at development time. It can also help you troubleshoot other issues your users may experience. The unified logging system is very performant and very easy to use for this task.
-
-<br>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

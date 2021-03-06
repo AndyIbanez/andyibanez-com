@@ -31,6 +31,7 @@ keywords:
  - watchos
  - codable
 ---
+
 If you have been writing Swift in the past couple of years, you have probably been using [`Codable`](https://developer.apple.com/documentation/swift/codable) (which is really just the composition of [`Decodable`](https://developer.apple.com/documentation/swift/decodable) and [`Encodable`](https://developer.apple.com/documentation/swift/encodable) in the same protocol).
 
 If you have been writing iOS apps for longer, you likely know about [`JSONSerialization`](https://developer.apple.com/documentation/foundation/jsonserialization) as well, which is the backbone of `Codable` and it allows you to do more manual work when parsing JSON, seemingly giving you more control.
@@ -280,8 +281,3 @@ Pretty straightforward. Once we have our `DoubleWrapper` object, we can try to p
 
 JSON is oftentimes a format that is out of our control. Luckily `Codable` actually provides all the tools we need to parse extravagant JSON responses without having to drop down to `JSONSerialization`. Often times when dealing with broken (but valid) JSON, the first solution we may think of is to use the lower level APIs, but by manually overriding `init(from)`, we can do manual parsing even easier.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

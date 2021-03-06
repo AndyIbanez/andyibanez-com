@@ -325,8 +325,3 @@ Tapping the Sign In button will show a web view:
 
 `ASWebAuthenticationSession` is one of the hidden gems from WWDC18. Authorizing your app with third party web services is now easier than ever, and you can get it done in just a few hours of code, without having to engage in heavy configurations or callbacks.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

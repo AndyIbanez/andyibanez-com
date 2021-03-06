@@ -149,6 +149,3 @@ This makes simpler concurrency easier to do in some cases. Just keep in mind tha
 
 The `NSOperation` API is really good to do complex concurrently easily. You have a lot of control over your operations and managing dependencies is very easy.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!

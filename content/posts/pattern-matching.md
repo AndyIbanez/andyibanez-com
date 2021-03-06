@@ -309,8 +309,3 @@ default:
 
 Pattern matching is a really powerful and interesting feature. It can help you write cleaner code and there's many ways to do it. You can use pattern matching in many different places to improve the quality of your code.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

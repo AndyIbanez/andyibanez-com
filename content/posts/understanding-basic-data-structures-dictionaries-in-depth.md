@@ -158,6 +158,3 @@ In the example above, I'm using the `name` property's `hashValue` as the hash fo
 
 Dictionaries are very common, in all programming languages, all over the world. Understanding the gotchas is important, and the features Swift provides for them are worthwhile a bit more study.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!

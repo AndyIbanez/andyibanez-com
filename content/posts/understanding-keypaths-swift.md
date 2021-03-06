@@ -240,6 +240,3 @@ onlyGrooveDolls.forEach { print($0.name) }
 
 KeyPaths open a lot of doors for us. By leveraging metaprogramming, we can write highly dynamic code. With Swift, this code is dynamic without sacrificing safety thanks to the fact we have literal `KeyPath` objects. KeyPaths also exist in Objective-C, but they aren't as safe.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!

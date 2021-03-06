@@ -134,8 +134,3 @@ And it would be good to assign `withMaxium` to `2` here, as we know we only want
 
 Recognizing a language in iOS is as easy as using the `NLLanguageRecognizer` API introduced in iOS 12 and calling a few lines of code. The system will do its best to determine the dominant language or all the possible languages in a string, and you can use this information for natural-language apps.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

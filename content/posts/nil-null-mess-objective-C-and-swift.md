@@ -318,6 +318,3 @@ When it comes to Swift, you will largely use Codable to parse JSON anyway, so yo
 
 Nullability can actually be messy when working in some (rather common situations). Keep in mind what `nil` really is and what `NSNull` represents, and you will be mostly fine. To make matters worse, Objective-C has additional nothingness, including `NULL` which happens when working with C and C++ code, and `Nil`, when working with nullability of classes. Most developers do not need to concern themselves with the last two, but it's good to know they exist.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!

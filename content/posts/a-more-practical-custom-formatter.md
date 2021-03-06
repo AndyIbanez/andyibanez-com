@@ -222,9 +222,3 @@ print("We will send an email to \(newEmail.to!) and \(newEmail.cc!.count) others
 # Conclusion
 
 Hopefully this article shows you a bit better everything you can do with your custom formatters. Having the flexibility to convert anything into string and back is great, and there's support for it all over the frameworks.
-
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

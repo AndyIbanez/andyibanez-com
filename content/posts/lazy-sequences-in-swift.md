@@ -59,6 +59,3 @@ If you find yourself in a situation which you genuinely don't know which one to 
 
 `.lazy` sequences are an interesting tool to add to your arsenal. They have performance implications that can sometimes be better or worse. Use them wisely, and don't mindlessly apply their use everywhere unless you have a good reason to.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!

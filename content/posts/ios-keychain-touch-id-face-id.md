@@ -146,8 +146,3 @@ You may be wondering, how does this work when your query matches multiple items,
 
 Using biometrics with the keychain is very easy, so you should definitely use it if you are planning to hide credentials behind Touch ID/Face ID. I've seen a lot of code who don't do this, and it is dangerous to do. There's very little use to use the LocalAuthentication framework directly when dealing with credentials, so use the keychain this way when you need to.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

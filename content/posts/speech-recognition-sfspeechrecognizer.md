@@ -220,8 +220,3 @@ You need to keep your audio duration sessions to one minute at most. Speech reco
 
 Despite a few limitations, on-device speech recognition is finally a thing. While this feature is available on iOS 13, previous iOS devices can use speech recognizing, although it will require an internet connection to work. The API is very easy to use, and you have the option to provide different input sources.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

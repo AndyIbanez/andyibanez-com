@@ -409,8 +409,3 @@ Using the keychain to store sensitive data is the way to go. While it is a low-l
 
 We explored the basic usage of the keychain services APIs. We learend how to add, search, update, and delete entries, but the keychain can actually do quite a lot more than just that. Hopefully this article helped you get started to write more secure storage for sensitive data in your own apps.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.

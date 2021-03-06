@@ -70,6 +70,3 @@ Bolivia is a very challenging place to *get* into iOS development, but once you 
 
 If you want to get into iOS development in Bolivia, I strongly encourage you to, as it is very rewarding and job security will be a given for many years to come.
 
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!

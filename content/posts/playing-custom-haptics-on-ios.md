@@ -141,10 +141,3 @@ Audio haptics come with their own set of parameters as well, including the frequ
 
 Using Haptics on Apple's devices is now easier than ever and we have a lot of flexibility to implement them. When designing apps, consider the interactions where you could use haptics to improve the experience of your users, but be careful not to overdo them because if used wrongly, they can cause physical discomfort. Try to see where devices that support use it so you can learn the best place to implement it.
 
-
-<hr>
-
-If you find any inaccuracies (and that includes typos) or problems in this article please tweet at me ([@AndyIbanezK](https://twitter.com/AndyIbanezK)) or send me an e-mail to andy[at]andyibanez[dot]com. Thank you for helping me improve the quality of my blog!
-
-If there's anything related to Swift, iOS, or another Apple Platform you'd like me to cover, feel free to contact me and I will try to cover it in an upcoming article.
-
