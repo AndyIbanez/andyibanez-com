@@ -7,7 +7,7 @@ draft: true
 highlightjslanguages:
  - swift
  - objectivec
-tags
+tags:
  - apple
  - simulator
  - ios
@@ -16,7 +16,7 @@ tags
  - tvos
 categories:
  - development
-keywords
+keywords:
  - apple
  - simulator
  - ios
