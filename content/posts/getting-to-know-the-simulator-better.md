@@ -3,7 +3,7 @@ title: "Getting to Know the Simulator Better"
 date: 2021-03-10T07:00:00-04:00
 originalDate: 2021-03-06T18:18:20-04:00
 publishDate: 2021-03-10T07:00:00-04:00
-draft: true
+draft: false
 highlightjslanguages:
  - swift
  - objectivec
