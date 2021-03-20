@@ -26,7 +26,7 @@ keywords:
 description: "Learn about the features the Simulator offers to make your Apple App development better."
 ---
 
-Every iOS developer has used the simulator. Alongside Xcode, it's probably one of the most used tool by us all. We use the simulator to test our iOS, iPadOS, and watchOS apps without having to run them in an iOS developer.
+Every iOS developer has used the simulator. Alongside Xcode, it's probably one of the most used tool by us all. We use the simulator to test our iOS, iPadOS, and watchOS apps without having to run them in an iOS device.
 
 But other than helping us test our apps, the simulator actually has many nice features that can help make our job a little bit easier. With the use of these features we can avoid using physical devices until it's time to do an actual test run or one.
 
