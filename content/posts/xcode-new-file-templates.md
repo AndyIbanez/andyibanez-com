@@ -1,6 +1,6 @@
 ---
 title: "Xcode New File Templates"
-date: 2021-03-31T07:00:00-04:00
+date: 2021-04-07T07:00:00-04:00
 originalDate: 2021-03-24T20:40:36-04:00
 publishDate: 2021-03-31T07:00:00-04:00
 draft: false
