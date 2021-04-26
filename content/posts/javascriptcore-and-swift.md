@@ -96,4 +96,4 @@ context?.setObject(Doll.self, forKeyedSubscript: "Doll")
 
 # Conclusion
 
-JavaScript is huge, and due to its huge community support you can find a lot of libraries for it. You may come to a point in which it may be easier to use JavaScript than Native Swift to solve a particular problem. It's also just a pretty cool feature in general that doesn't hurt to have in your toolbox.
+JavaScript is big, and due to its huge community support you can find a lot of libraries for it. You may come to a point in which it may be easier to use JavaScript than Native Swift to solve a particular problem. It's also just a pretty cool feature in general that doesn't hurt to have in your toolbox.
