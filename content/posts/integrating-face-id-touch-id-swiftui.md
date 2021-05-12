@@ -1,8 +1,8 @@
 ---
 title: "Integrating FaceID/TouchID with SwiftUI"
-date: 2020-05-12T07:00:00-04:00
+date: 2021-05-12T07:00:00-04:00
 originalDate: 2021-05-09T22:09:16-04:00
-publishDate: 2020-05-12T07:00:00-04:00
+publishDate: 2021-05-12T07:00:00-04:00
 draft: false
 highlightjslanguages:
  - swift
