@@ -1,5 +1,5 @@
 ---
-title: "A Integrating FaceID/TouchID with SwiftUI"
+title: "Integrating FaceID/TouchID with SwiftUI"
 date: 2020-05-12T07:00:00-04:00
 originalDate: 2021-05-09T22:09:16-04:00
 publishDate: 2020-05-12T07:00:00-04:00
@@ -28,7 +28,7 @@ keywords:
  - apple
  - ios
  - ipados
- ---
+---
 
 As SwiftUI is still relatively new, and it is not clear yet for many people how to use MVVM on iOS, I decided to write this short article in which I explain how one would integrate Face ID/Touch ID with SwiftUI.
 
