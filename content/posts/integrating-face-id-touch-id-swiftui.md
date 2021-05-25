@@ -108,7 +108,7 @@ struct Touch IDswiftuiApp: App {
 
 When you build and run your app, you should see this:
 
-![Main App Screen](/img/Face ID_Touch ID_swiftui_main.png)
+![Main App Screen](/img/Face+ID_Touch+ID_swiftui_main.png)
 
 With this, we have a full functional app without Face ID login. We are going to add the Face ID part now, and we will start by designing a simple Face ID screen.
 
@@ -143,7 +143,7 @@ struct Face IDLoginView: View {
 }
 ```
 
-![Face ID Login Screen](/img/Face ID_swiftui_login_view.png)
+![Face ID Login Screen](/img/Face+ID_swiftui_login_view.png)
 
 These are the only two views we need for this simple. We will now setup the logic to allow Face ID to unlock the app later. We will also add a very temporary logic to ensure our login view looks properly when running it on the simulator.
 
@@ -298,7 +298,7 @@ And with this, our app works. We can login with Face ID without an issue now. On
 
 # Sample Project.
 
-You can delete a sample project from [here](/archives/Touch IDswiftui.zip). It has a little bonus, which is transition animations when the Face ID scan is successful.
+You can delete a sample project from [here](/archives/Touch+IDswiftui.zip). It has a little bonus, which is transition animations when the Face ID scan is successful.
 
 # Conclusion
 
