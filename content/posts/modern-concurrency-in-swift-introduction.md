@@ -158,13 +158,13 @@ I am not saying your current concurrency knowledge will be irrelevant. Far from 
 
 # Without further ado...
 
-The table of contents below list the articles of this series. As the series is not complete at the time of this writing, this table may change overtime, adding or removing topics, as the series progresses. They are designed to be independent of each other, so you don't need to read the early articles if you just need the last ones. That said if you are new to async/await, you should read them in order.
+The table of contents below list the articles of this series. As the series is not complete at the time of this writing, this table may change overtime, adding or removing topics, or reordering them, as the series progresses. They are designed to be independent of each other, so you don't need to read the early articles if you just need the last ones. That said if you are new to async/await, you should read them all in order.
 
-The tutorials contain code and the code is designed to run. Feel free to copy and paste it or download the sample projects when available to aid your learning.
+The tutorials contain code that you can run. Feel free to copy and paste it or download the sample projects when available to aid your learning.
 
 # Table of Contents
 
-1. [Understanding async/await in Swift]()
+1. [Understanding async/await in Swift](/posts/)
 2. Continuations
 3. Structured concurrency
 4. Unstructured concurrency
