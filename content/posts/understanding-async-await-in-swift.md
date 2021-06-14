@@ -334,7 +334,7 @@ If your internet is a bit too speedy to appreciate the slow prints, Apple gives 
 
 * **Note**: *Unfortunately `Task.sleep` appears to crash as of Xcode 13 Beta 1. `await Task.sleep(2 * 1_000_000_000) `.*
 
-One final important note about `await`: It's not guaranteed that the same thread that executed the code above it is the same one that will execute the code below it (commonly called the *continuation*). This has important implications when dealing with UI. If you use `await` in a context that needs the main thread such as a ViewController, make sure you mark the functions with `await` with the `@MainActor` attribute, or add the attribute to the entire class declaration.
+One final important note about `await`: It's not guaranteed that the same thread that executed the code above it is the same one that will execute the code below it (commonly called the *continuation*). This has important implications when dealing with UI. If you use `await` in a context that needs the main thread such as a ViewController, make sure you mark the functions with `await` with the `@MainActor` attribute, or add the attribute to the entire class declaration. If you want a complete tour behind how the new concurrency works in Swift, check out the [Swift concurrency: Behind the scenes](https://developer.apple.com/videos/play/wwdc2021/10254/) WWDC2021 session talk.
 
 ## "Bridging" between the sync and async worlds with async{}
 
@@ -346,7 +346,7 @@ func performDownload() {
 }
 ```
 
-The compiler will protect us from erroneously running this, show the following error:
+The compiler will protect us from erroneously running this, showing the following error:
 
 > 'async' call in a function that does not support concurrency
 > Add 'async' to function 'performDownload()' to make it asynchronous
