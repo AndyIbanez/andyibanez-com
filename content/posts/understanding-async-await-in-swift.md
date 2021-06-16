@@ -354,10 +354,10 @@ The compiler will protect us from erroneously running this, showing the followin
 > Add 'async' to function 'performDownload()' to make it asynchronous
 
 
-The compiles is suggesting we mark `performDownload` as async.
+The compiler is suggesting we mark `performDownload` as async.
 
 ```swift
-func performDownload() await {
+func performDownload() async {
     let imageDetail = try? await downloadMetadata(for: 1)
 }
 ```
