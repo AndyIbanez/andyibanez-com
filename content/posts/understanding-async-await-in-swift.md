@@ -46,6 +46,8 @@ keywords:
 
 Before you try to dive in with concurrency in Swift, you need to understand async/await. There's no way around it. While async/await are not the only [concurrency options](https://www.andyibanez.com/posts/multithreading-options-on-apple-platforms/), Apple's SDKs are starting to make heavy use of them. There is no doubt that third-party library providers will start offering these as well.
 
+This article will explore async/await and nothing else. Once you understand these concepts, we will start moving on to more advanced articles where we cover structured concurrency, unstructured currency, SwiftUI, and more.
+
 If you have been writing callback-based concurrency, keep in mind that the implementation for async/await is *very* different to anything you have seen before in Apple's technologies. It basically throws what you know about concurrent programming out of the window. It's important to keep that in mind to read this article.
 
 In this article, we will write a function that downloads an image and then its metadata using a different network call. We will show you how doing this with callback-based concurrency can become hard to manage quickly, and how async/await solves this problem beautifully.
