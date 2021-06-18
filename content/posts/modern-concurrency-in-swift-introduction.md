@@ -10,6 +10,7 @@ highlightjslanguages:
 categories:
  - article series
  - modern concurrency article series
+ - modern concurrency in swift article series
  - development
 tags:
  - swift
