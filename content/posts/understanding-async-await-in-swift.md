@@ -43,7 +43,12 @@ keywords:
  - multithreading
 ---
 
-*This article is part of my [Modern Concurrency in Swift](/posts/modern-concurrency-in-swift-introduction.md) article series.*
+*This article is part of my [Modern Concurrency in Swift](/posts/modern-concurrency-in-swift-introduction/) article series.*
+
+###### Table of Contents
+1. [Modern Concurrency in Swift: Introduction](/posts/modern-concurrency-in-swift-introduction/)
+2. **Understanding async/await in Swift**
+3. [Converting closure-based code into async/await in Swift](/posts/converting-closure-based-code-into-async-await-in-swift/)
 
 Before you try to dive in with concurrency in Swift, you need to understand async/await. There's no way around it. While async/await are not the only [concurrency options](https://www.andyibanez.com/posts/multithreading-options-on-apple-platforms/), Apple's SDKs are starting to make heavy use of them. There is no doubt that third-party library providers will start offering these as well.
 

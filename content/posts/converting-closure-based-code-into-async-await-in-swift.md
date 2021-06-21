@@ -43,6 +43,14 @@ keywords:
  - multithreading
 ---
 
+*This article is part of my [Modern Concurrency in Swift](/posts/modern-concurrency-in-swift-introduction/) article series.*
+
+###### Table of Contents
+
+1. [Modern Concurrency in Swift: Introduction](/posts/modern-concurrency-in-swift-introduction/)
+2. [Understanding async/await in Swift](/posts/understanding-async-await-in-swift/)
+3. **Converting closure-based code into async/await in Swift**
+
 *To better benefit from this article, you should be familiar with async/await. If you aren't, feel free to read the first part of this article series: [Understanding async/await in Swift](https://www.andyibanez.com/posts/understanding-async-await-in-swift/).*
 
 *I was debating whether this article should be its own or if its contents should be appended to Introducing async/await in Swift. I decided to make the previous article shorter in an attempt to not overload the articles with information, and to hopefully make it easier to understand these API with smaller articles.*
@@ -329,7 +337,7 @@ class ContactPicker: NSObject, CNContactPickerDelegate {
 }
 ```
 
-This is much better. We will now call `resume` in all possible paths, our program will always be in a valid state, and, while we did write more code, there will be cases in which going the extra mile to preserve linearity will benefit the structure of the program in the long run.
+This is much better. We will now call `resume` in all possible paths, our program will always be in a valid state, and, while we did write more code, there will be cases in which going the extra mile to preserve linearity will benefit the structure of the program in the long run. \*
 
 You can download a full version of the contact picker app [here](/archives/AsyncAwaitContactPicker.zip). It's a UIKit app with a simple button and labels that shows you the given name of the contact you selected. Hopefully it will help you better understand the contents of this article.
 
@@ -338,3 +346,7 @@ You can download a full version of the contact picker app [here](/archives/Async
 In this article we have explored how we can bridge from callback-based code or delegate-based code into `async/await`. We learned how to use checked continuations to do so, and we enforced the idea of what a continuation actually is.
 
 With this, you should now know have all the essentials of `async/await`, You are now ready to tackle actual concurrency, and I'm happy to tell you will explore concurrency next week covering *structured concurrency*. You will learn how to run many tasks in parallel and how to process such results.
+
+# Notes
+
+\*: You should always stop and think if going that extra mile is actually worth it or if it is overkill.
