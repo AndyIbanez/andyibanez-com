@@ -57,7 +57,7 @@ keywords:
 
 Last week, we had a long discussion on async/await. We contrasted how it compares to callbacks, and we showed examples that hopefully convinced async/await is really neat.
 
-We are just one step away from actual concurrency. Before we dive in into concurrency - with *structured concurrency* - next week, I want to show you how you can convert closure-based code into async/await code. The idea behind this article is to give you all the tools so that you can start adopting async/await in your projects, baby steps at a time.
+We are just one step away from actual concurrency. Before we dive in into concurrency - with *structured concurrency* - next week, I want to show you how you can convert closure-based and delegate-based code into async/await code. The idea behind this article is to give you all the tools so that you can start adopting async/await in your projects, baby steps at a time.
 
 If you are a library vendor, you will be able to provide async/await code for all your closure-based APIs, so not only you will you be able to start using it for your uses, you will be able to ship async/await to your users.
 
@@ -67,7 +67,7 @@ If you are not a library vendor, but you do have an app in production, it's like
 
 If you have read the [first part](https://www.andyibanez.com/posts/understanding-async-await-in-swift/) of this article series, you may remember what a Continuation is, but let's have a quick refresher before we move on.
 
-A continuation is simply what happens after an async call. When you are using async/await, the continuation is easy to understand: Everything below an `await` call, is a continuation.
+A continuation is simply what happens after an await call. When you are using async/await, the continuation is easy to understand: Everything below an `await` call, is a continuation.
 
 Consider the following example:
 

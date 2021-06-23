@@ -46,6 +46,7 @@ keywords:
 *This article is part of my [Modern Concurrency in Swift](/posts/modern-concurrency-in-swift-introduction/) article series.*
 
 ###### Table of Contents
+
 1. [Modern Concurrency in Swift: Introduction](/posts/modern-concurrency-in-swift-introduction/)
 2. **Understanding async/await in Swift**
 3. [Converting closure-based code into async/await in Swift](/posts/converting-closure-based-code-into-async-await-in-swift/)
@@ -382,7 +383,7 @@ func performDownload() {
 
 We are explicitly creating an asynchronous context, and it will behave as such.
 
-## get await
+## get async
 
 To make things even better, properties that are read-only can be `await`ed.
 
