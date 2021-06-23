@@ -67,7 +67,7 @@ If you are not a library vendor, but you do have an app in production, it's like
 
 If you have read the [first part](https://www.andyibanez.com/posts/understanding-async-await-in-swift/) of this article series, you may remember what a Continuation is, but let's have a quick refresher before we move on.
 
-A continuation is simply what happens after an await call. When you are using async/await, the continuation is easy to understand: Everything below an `await` call, is a continuation.
+A continuation is simply what happens after an async call. When you are using async/await, the continuation is easy to understand: Everything below an `await` call, is a continuation.
 
 Consider the following example:
 
@@ -349,4 +349,4 @@ With this, you should now know have all the essentials of `async/await`, You are
 
 # Notes
 
-\*: You should always stop and think if going that extra mile is actually worth it or if it is overkill.
+\*: You should always stop and think if going that extra mile is actually worth it or if it is overkill. Over-engineering is a real and common problem in software engineering.
