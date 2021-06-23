@@ -167,7 +167,7 @@ The tutorials contain code that you can run. Feel free to copy and paste it or d
 
 1. [Understanding async/await in Swift](/posts/understanding-async-await-in-swift/)
 2. [Converting closure-based code into async/await in Swift](/posts/converting-closure-based-code-into-async-await-in-swift/)
-3. Structured concurrency
+3. [Structured Concurrency in Swift: Using async let](/posts/structured-concurrency-in-swift-using-async-let/)
 4. Unstructured concurrency
 5. Understanding Actors in Swift
 6. The AsyncSequence Protocol in Swift

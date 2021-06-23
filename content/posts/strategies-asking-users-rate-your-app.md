@@ -21,7 +21,7 @@ keywords:
 
 Having our apps have good reviews is generally a good thing. After all, many users look into how many stars an app has before deciding on downloading it. Apps with a general poor rating may not get many downloads (unless they are "essential" apps of any kind, such as companion app to another service).
 
-We all as developers have experience that users are quick to give a one-star review when something doesn't work right, but they are never inclined to rate 5 stars when they are satisfied with an app.
+We all as developers have experienced that users are quick to give a one-star review when something doesn't work right, but they are never inclined to rate 5 stars when they are satisfied with an app.
 
 Luckily  for us, Apple has given us the `SKStoreReviewController.requestReview()` API. Introduced in iOS 13, we can call this method (rather, its non-deprecated sibling, `SKStoreReviewController.requestReview(scene:)`) to prompt users to rate our app.
 
@@ -87,7 +87,7 @@ I can't stress this enough, but you have three opportunities to ask your users f
 
 ## Look for specific satisfying actions to make the call on
 
-If you do not want to spend much time thinking on a strategy for your review prompt, spend a few hours thinking on the key ares or your app that bring value to your users, and attach the call to those actions. Don't blindly put your calls when launching your app and call it a day.
+If you do not want to spend much time thinking on a strategy for your review prompt, spend a few hours thinking on the key areas or your app that bring value to your users, and attach the call to those actions. Don't blindly put your calls when launching your app and call it a day.
 
 ## Piggyback on existing score prompts to call the review prompt
 

@@ -51,6 +51,8 @@ keywords:
 2. [Understanding async/await in Swift](/posts/understanding-async-await-in-swift/)
 3. **Converting closure-based code into async/await in Swift**
 
+<hr>
+
 *To better benefit from this article, you should be familiar with async/await. If you aren't, feel free to read the first part of this article series: [Understanding async/await in Swift](https://www.andyibanez.com/posts/understanding-async-await-in-swift/).*
 
 *I was debating whether this article should be its own or if its contents should be appended to Introducing async/await in Swift. I decided to make the previous article shorter in an attempt to not overload the articles with information, and to hopefully make it easier to understand these API with smaller articles.*
