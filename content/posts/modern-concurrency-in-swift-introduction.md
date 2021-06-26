@@ -106,7 +106,7 @@ As the calls get nested and nested (and nested), it can become a problem when it
 
 ## Callback-based concurrency for API Designers
 
-Now suppose you were tasked with creating a function that downloads and image and resizes it to create a thumbnail. You may end up writing something like this:
+Now suppose you were tasked with creating a function that downloads an image and resizes it to create a thumbnail. You may end up writing something like this:
 
 ```swift
 func fetchThumbnail(for id: String, completion: @escaping (UIImage?, Error?) -> Void) {

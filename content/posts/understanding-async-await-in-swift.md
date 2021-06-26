@@ -486,7 +486,7 @@ We can now append one more thing to summarize:
 
 > 3 async/await will run in order just like procedural programming. When it finds an `await` call, the job will  suspend and will give control back to the system instead of the caller. Unlike callback-based concurrency, it will not continue execution of the statements under it until it has finished. The system will make use of the thread to perform other work, and when it decides it's time to revisit your function, it will, and execution will resume linearly.
 
-When you are ready, you can proceed to the third article in the series, [Converting Closure-based code into async/await in Swift](/posts/converting-closure-based-code-into-async-await-in-swift.md) to learn more about continuations, explicit continuations, and how to bridge closure-based and delegate-based code into async/await.
+When you are ready, you can proceed to the third article in the series, [Converting Closure-based code into async/await in Swift](/posts/converting-closure-based-code-into-async-await-in-swift/) to learn more about continuations, explicit continuations, and how to bridge closure-based and delegate-based code into async/await.
 
 ### Notes
 
