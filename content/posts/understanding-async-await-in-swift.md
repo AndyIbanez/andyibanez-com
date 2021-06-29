@@ -221,7 +221,7 @@ Let's take a few minutes to discuss the `async` and `await` keywords individuall
 * To create a "bridge" between synchronous and asynchronous code. We will show an example of this after we write our first `async` function.
 * To spawn asynchronous tasks in parallel.
 
-In this article, we will only explore the former two, but the second use case will come in a later article in the series.
+In this article, we will only explore the former two, but the third use case will come in a later article in the series.
 
 To mark a function as `async`, simply put the keyword after the function's closing parenthesis and before the arrow, like this:
 
@@ -247,7 +247,7 @@ If the system does suspend the function, `await` will return control, not to the
 
 You can think of it as a traffic light. If you are driving down the road and you find a red light, chances are you will stop. But if it is 4 AM in the morning and there's no cars coming you may just run it. \*\*\*
 
-**What you need to understand about await is that, shall it choose to suspend, nothing below it will execute until the system tells it to, and the system will use the thread to do other work.**
+**What you need to understand about await is that, it it does choose to suspend, nothing below it will execute until the system tells it to, and the system will use the thread to do other work.**
 
 Every call to an `async` function, must be marked as `await`.
 
