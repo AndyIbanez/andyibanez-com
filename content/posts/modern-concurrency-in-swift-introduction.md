@@ -133,7 +133,7 @@ func fetchThumbnail(for id: String, completion: @escaping (UIImage?, Error?) -> 
 ```
 *(This code was taken directly as-is from Apple's [Meet async/await in Swift](https://developer.apple.com/videos/play/wwdc2021/10132/) session)*
 
-The first thing you will notice is that this code is a mouthful. Just sit down and appreciate how *long* it is. It begins by downloading an image, and then it tries to resize it. Both the network call and the thumbnail resizing call are asynchronous calls. Not only that, but your call needs tot pass in their own completion handler as well.
+The first thing you will notice is that this code is a mouthful. Just sit down and appreciate how *long* it is. It begins by downloading an image, and then it tries to resize it. Both the network call and the thumbnail resizing call are asynchronous calls. Not only that, but your call needs to pass in their own completion handler as well.
 
 This code has bugs too, and they may be hard to find. Remember that if you write a callback-based function, you need to call the passed callback regardless of what happens. The developer calling your function can find cases in which their callback is never called. In the example above, there's two places where this can happen. I have marked those places as `(1)` and `(2)`. As you are not calling the completion handler in these places, you will leave the API caller waiting for a response that will never arrive - at the very least you won't be blocking the thread, though.
 
