@@ -51,6 +51,7 @@ keywords:
 2. [Understanding async/await in Swift](https://www.andyibanez.com/posts/understanding-async-await-in-swift/)
 3. [Converting closure-based code into async/await in Swift](/posts/converting-closure-based-code-into-async-await-in-swift/)
 4. **Structured Concurrency in Swift: Using async let**
+5. [Structured Concurrency With Group Tasks in Swift](/posts//posts/structured-concurrency-with-group-tasks-in-swift/)
 
 <hr>
 

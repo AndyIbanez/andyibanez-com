@@ -74,7 +74,7 @@ Take the `URLSession` API as an example. Prior to WWDC2021, if you needed to som
 
 let task = URLSession.shared.dataTask(with: ...) { data, response, error in
     // ... (2)
-}.resume()
+}
 
 task.resume()
 
@@ -97,7 +97,7 @@ let task = URLSession.shared.dataTask(with: ...) { data, response, error in
     }
     taskThatNeedsPreviousResponse.resume()
     
-}.resume()
+}
 
 task.resume()
 ```
@@ -153,7 +153,7 @@ Combine will not be mentioned much throughout this tutorial series unless it's r
 
 # A new way of thinking
 
-Finally, before diving in to the articles below, I recommend you try to throw your current knowledge of concurrency outside the window, because the implementation for async/await is very different, and it's important to understand this mindset before you truly understand how it works. Once you understand async/await, the rest of the toolset is easier to understand.
+Finally, before diving in to the articles below, I recommend you try to throw your current knowledge of concurrency out of the window, because the implementation for async/await is very different, and it's important to understand this mindset before you truly understand how it works. Once you understand async/await, the rest of the toolset is easier to understand.
 
 I am not saying your current concurrency knowledge will be irrelevant. Far from it, but it's interesting how imposing an easier to write concurrency code requires us to rethink how we have been thinking about concurrency in Apple's platforms in the past decades. I actually think async/await is easier to understand for people who have never seen asynchronous code before, because the way it's implemented doesn't derive much from procedural programming.
 
@@ -168,6 +168,7 @@ The tutorials contain code that you can run. Feel free to copy and paste it or d
 1. [Understanding async/await in Swift](/posts/understanding-async-await-in-swift/)
 2. [Converting closure-based code into async/await in Swift](/posts/converting-closure-based-code-into-async-await-in-swift/)
 3. [Structured Concurrency in Swift: Using async let](/posts/structured-concurrency-in-swift-using-async-let/)
-4. Unstructured concurrency
-5. Understanding Actors in Swift
-6. The AsyncSequence Protocol in Swift
+4. [Structured Concurrency With Group Tasks in Swift](/posts//posts/structured-concurrency-with-group-tasks-in-swift/)
+5. Unstructured concurrency
+6. Understanding Actors in Swift
+7. The AsyncSequence Protocol in Swift

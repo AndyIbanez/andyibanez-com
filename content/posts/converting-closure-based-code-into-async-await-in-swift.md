@@ -50,6 +50,7 @@ keywords:
 1. [Modern Concurrency in Swift: Introduction](/posts/modern-concurrency-in-swift-introduction/)
 2. [Understanding async/await in Swift](/posts/understanding-async-await-in-swift/)
 3. **Converting closure-based code into async/await in Swift**
+4. [Structured Concurrency in Swift: Using async let](/posts/structured-concurrency-in-swift-using-async-let/)
 
 <hr>
 
