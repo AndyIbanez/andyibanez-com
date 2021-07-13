@@ -115,7 +115,8 @@ Whenever you create a Task, the body is a `@Sendable` closure, and this closure 
 
 With this knowledge in mind, we can fix our Task Group above. When you create a Task Group with either `withThrowingTaskGroup` or `withTaskGroup`, the task group takes as a parameter the return type your concurrent tasks will create.
 
-```swiftfunc downloadMultipleImagesWithMetadata(images: Int...) async throws -> [DetailedImage]{
+```swift
+func downloadMultipleImagesWithMetadata(images: Int...) async throws -> [DetailedImage]{
     try await withThrowingTaskGroup(of: DetailedImage.self, body: { group in
         for image in images {
             group.async {
