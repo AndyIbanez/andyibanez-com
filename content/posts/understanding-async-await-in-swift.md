@@ -45,6 +45,8 @@ keywords:
 
 *This article is part of my [Modern Concurrency in Swift](/posts/modern-concurrency-in-swift-introduction/) article series.*
 
+*This article was originally written creating examples using Xcode 13 beta 1. The article, code samples, and provided sample project have been updated for Xcode 13 beta 3.*
+
 ###### Table of Contents
 
 1. [Modern Concurrency in Swift: Introduction](/posts/modern-concurrency-in-swift-introduction/)
@@ -218,10 +220,9 @@ Let's take a few minutes to discuss the `async` and `await` keywords individuall
 
 ## async
 
-`async` has three uses:
+`async` has two uses:
 
 * To tell the compiler when a piece of code is asynchronous.
-* To create a "bridge" between synchronous and asynchronous code. We will show an example of this after we write our first `async` function.
 * To spawn asynchronous tasks in parallel.
 
 In this article, we will only explore the former two, but the third use case will come in a later article in the series.
@@ -240,7 +241,7 @@ Func downloadImage(id: Int) async throws -> UIImage { ... }
 
 You can already see a huge advantage here. The completion handler is gone, and our function signature is very clear with its purpose. We can tell at first glance if it is `async` and what it returns.
 
-`async` code can only run in *concurrent* contexts. That is to say, within other `async` functions, or when manually dispatched via `async {}`. We will explore `async {}` in a bit.
+`async` code can only run in *concurrent* contexts. That is to say, within other `async` functions, or when manually dispatched via `Task {}`. We will explore `Task {}` in a bit.
 
 ## await
 
@@ -258,7 +259,7 @@ To better understand this, we will rewrite our `downloadImageAndMetadata` functi
 
 ```swift
     func downloadImageAndMetadata(imageNumber: Int) async throws -> DetailedImage {
-        
+
         // Attempt to download the image first.
         let imageUrl = URL(string: "https://www.andyibanez.com/fairesepages.github.io/tutorials/async-await/part1/\(imageNumber).png")!
         let imageRequest = URLRequest(url: imageUrl)
@@ -266,7 +267,7 @@ To better understand this, we will rewrite our `downloadImageAndMetadata` functi
         guard let image = UIImage(data: imageData), (imageResponse as? HTTPURLResponse)?.statusCode == 200 else {
             throw ImageDownloadError.badImage
         }
-        
+
         // If there were no issues, continue downloading the metadata.
         let metadataUrl = URL(string: "https://www.andyibanez.com/fairesepages.github.io/tutorials/async-await/part1/\(imageNumber).json")!
         let metadataRequest = URLRequest(url: metadataUrl)
@@ -274,9 +275,9 @@ To better understand this, we will rewrite our `downloadImageAndMetadata` functi
         guard (metadataResponse as? HTTPURLResponse)?.statusCode == 200 else {
             throw ImageDownloadError.invalidMetadata
         }
-        
+
         let detailedImage = DetailedImage(image: image, metadata: try JSONDecoder().decode(ImageMetadata.self, from: metadataData))
-        
+
         return detailedImage
     }
 ```
@@ -322,7 +323,7 @@ func downloadMetadata(for id: Int) async throws -> ImageMetadata {
     guard (metadataResponse as? HTTPURLResponse)?.statusCode == 200 else {
         throw ImageDownloadError.invalidMetadata
     }
-    
+
     return try JSONDecoder().decode(ImageMetadata.self, from: data)
 }
 ```
@@ -353,7 +354,7 @@ One final important note about `await`: It's not guaranteed that the same thread
 
 ## "Bridging" between the sync and async worlds with async{}
 
-Earlier we mentioned that `async {}` is used to create a "bridge" between sync and async code. To better illustrate this, consider the following code:
+We can create a "bridge" between the sync and async worlds creating a `Task`. To understand why this is necessary, consider the following piece of code:
 
 ```swift
 func performDownload() {
@@ -377,17 +378,17 @@ func performDownload() async {
 
 But this is not always possible. What if `performDownload` is in a view controller or in another place that can't give you an asynchronous context?
 
-To fix this, we can bridge this synchronous function to the asynchronous world using `async {}`.
+To fix this, we can bridge this synchronous function to the asynchronous world using `Task {}`.
 
 ```swift
 func performDownload() {
-    async {
+    Task {
         let imageDetail = try? await downloadMetadata(for: 1)
     }
 }
 ```
 
-We are explicitly creating an asynchronous context, and it will behave as such.
+We are explicitly creating an asynchronous context, and it will behave as such. We can now call perform download from any sync context without an issue.
 
 ## get async
 
@@ -406,14 +407,14 @@ We can get its image and metadata by calling `downloadImageAndMetadata`, but you
 ```swift
 struct Character {
     let id: Int
-    
+
     var metadata: ImageMetadata {
         get async throws {
             let metadata = try await downloadMetadata(for: id)
             return metadata
         }
     }
-    
+
     var image: UIImage {
         get async throws {
             return try await downloadImage(imageNumber: id)
@@ -443,19 +444,19 @@ On the `viewDidAppear` method, you will find the following code:
 ```swift
 override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    
+
     // MARK: METHOD 1 - Using Async/Await
-    
-    async {
+
+    Task {
         if let imageDetail = try? await downloadImageAndMetadata(imageNumber: 1) {
             self.imageView.image = imageDetail.image
             self.metadata.text = "\(imageDetail.metadata.name) (\(imageDetail.metadata.firstAppearance) - \(imageDetail.metadata.year))"
         }
     }
-    
+
     // MARK: METHOD 2 - Using async properties
-    
-//        async {
+
+//        Task {
 //            let character = Character(id: 1)
 //            if
 //                let metadata = try? await character.metadata,
@@ -464,9 +465,9 @@ override func viewDidAppear(_ animated: Bool) {
 //                self.metadata.text = "\(metadata.name) (\(metadata.firstAppearance) - \(metadata.year))"
 //            }
 //        }
-    
+
     // MARK: Method 3 - Using Callbacks
-    
+
 //        downloadImageAndMetadata(imageNumber: 1) { imageDetail, error in
 //            DispatchQueue.main.async {
 //                if let imageDetail = imageDetail {
