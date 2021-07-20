@@ -45,6 +45,8 @@ keywords:
 
 *This article is part of my [Modern Concurrency in Swift](/posts/modern-concurrency-in-swift-introduction/) article series.*
 
+*This article was originally written creating examples using Xcode 13 beta 1. The article, code samples, and provided sample project have been updated for Xcode 13 beta 3.*
+
 ###### Table of Contents
 
 1. [Modern Concurrency in Swift: Introduction](/posts/modern-concurrency-in-swift-introduction/)
@@ -85,7 +87,7 @@ func downloadMetadata(for id: Int) async throws -> ImageMetadata {
     guard (metadataResponse as? HTTPURLResponse)?.statusCode == 200 else {
         throw ImageDownloadError.invalidMetadata
     }
-    
+
     return try JSONDecoder().decode(ImageMetadata.self, from: data)
 }
 ```
@@ -188,7 +190,7 @@ Continuations **must be called exactly once**, therefore there must be a continu
 And just like that, we have converted closure-based code into something prettier! Using the `async/await` version of this function is as easy as:
 
 ```swift
-async {
+Task {
     if let imageDetail = try? await downloadImageAndMetadata(imageNumber: 1) {
         self.imageView.image = imageDetail.image
         self.metadata.text = "\(imageDetail.metadata.name) (\(imageDetail.metadata.firstAppearance) - \(imageDetail.metadata.year))"
@@ -206,10 +208,10 @@ Suppose you have an UIKit app that lets users choose contacts in a ViewControlle
 
 ```swift
 class ViewController: UIViewController, CNContactPickerDelegate {
-    
-    
+
+
     @IBOutlet weak var contactNameLabel: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -218,13 +220,13 @@ class ViewController: UIViewController, CNContactPickerDelegate {
     @IBAction func chooseContactTouchUpInside(_ sender: Any) {
         showContactPicker()
     }
-    
+
     func showContactPicker() {
         let picker = CNContactPickerViewController()
         picker.delegate = self
         present(picker, animated: true)
     }
-    
+
     func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
         self.contactNameLabel.text = contact.givenName
         picker.dismiss(animated: true, completion: nil)
@@ -243,25 +245,25 @@ We can declare `ContactPicker` as follows:
 @MainActor
 class ContactPicker: NSObject, CNContactPickerDelegate {
     private typealias ContactCheckedContinuation = CheckedContinuation<CNContact, Never>
-    
+
     private unowned var viewController: UIViewController
     private var contactContinuation: ContactCheckedContinuation?
     private var picker: CNContactPickerViewController
-    
+
     init(viewController: UIViewController) {
         self.viewController = viewController
         picker = CNContactPickerViewController()
         super.init()
         picker.delegate = self
     }
-    
+
     func pickContact() async -> CNContact {
         viewController.present(picker, animated: true)
         return await withCheckedContinuation({ (continuation: ContactCheckedContinuation) in
             self.contactContinuation = continuation
         })
     }
-    
+
     func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
         contactContinuation?.resume(returning: contact)
         contactContinuation = nil
@@ -285,7 +287,7 @@ And then, to use this:
         let contactPicker = ContactPicker(viewController: self)
         let contact = await contactPicker.pickContact()
         self.contactNameLabel.text = contact.givenName
-        
+
     }
 }
 ```
@@ -299,31 +301,31 @@ To solve this, we have two options: We can throw an error when users cancel, or 
 ```swift
 class ContactPicker: NSObject, CNContactPickerDelegate {
     private typealias ContactCheckedContinuation = CheckedContinuation<CNContact?, Never>
-    
+
     private unowned var viewController: UIViewController
     private var contactContinuation: ContactCheckedContinuation?
     private var picker: CNContactPickerViewController
-    
+
     init(viewController: UIViewController) {
         self.viewController = viewController
         picker = CNContactPickerViewController()
         super.init()
         picker.delegate = self
     }
-    
+
     func pickContact() async -> CNContact? {
         viewController.present(picker, animated: true)
         return await withCheckedContinuation({ (continuation: ContactCheckedContinuation) in
             self.contactContinuation = continuation
         })
     }
-    
+
     func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
         contactContinuation?.resume(returning: contact)
         contactContinuation = nil
         picker.dismiss(animated: true, completion: nil)
     }
-    
+
     func contactPickerDidCancel(_ picker: CNContactPickerViewController) {
         contactContinuation?.resume(returning: nil)
         contactContinuation = nil
