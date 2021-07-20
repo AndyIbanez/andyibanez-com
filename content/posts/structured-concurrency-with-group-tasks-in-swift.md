@@ -45,6 +45,8 @@ keywords:
 
 *This article is part of my [Modern Concurrency in Swift Article Series](https://www.andyibanez.com/posts/modern-concurrency-in-swift-introduction/).*
 
+*This article was originally written creating examples using Xcode 13 beta 1. The article, code samples, and provided sample project have been updated for Xcode 13 beta 3.*
+
 ###### Table of Contents
 
 1. [Modern Concurrency in Swift: Introduction](/posts/modern-concurrency-in-swift-introduction/)
