@@ -45,6 +45,8 @@ keywords:
 
 *This article is part of my [Modern Concurrency in Swift](/posts/modern-concurrency-in-swift-introduction/) article series.*
 
+*This article was originally written creating examples using Xcode 13 beta 1. The article, code samples, and provided sample project have been updated for Xcode 13 beta 3.*
+
 ###### Table of Contents
 
 1. [Modern Concurrency in Swift: Introduction](/posts/modern-concurrency-in-swift-introduction/)
@@ -95,7 +97,7 @@ func downloadMetadata(for id: Int) async throws -> ImageMetadata {
     guard (metadataResponse as? HTTPURLResponse)?.statusCode == 200 else {
         throw ImageDownloadError.invalidMetadata
     }
-    
+
     return try JSONDecoder().decode(ImageMetadata.self, from: data)
 }
 
@@ -212,7 +214,7 @@ func downloadImageAndMetadata(imageNumber: Int) async throws -> DetailedImage {
 
 When we call `downloadImageAndMetadata`, it will inherit all the attributes from the parent task. Each call to `async let` will create a new task - this task is the *child task* of the task the current function is running on.
 
-![async let diagram](/images/async_let_diagram.png)
+![async let diagram](/img/async_let_diagram.png)
 
 Our `downloadImageAndMetadata` function can potentially span two child tasks: One for the image, and one for the metadata, and all this code will (again potentially) be running at the same time.
 
@@ -256,7 +258,7 @@ func downloadMetadata(for id: Int) async throws -> ImageMetadata {
     guard (metadataResponse as? HTTPURLResponse)?.statusCode == 200 else {
         throw ImageDownloadError.invalidMetadata
     }
-    
+
     return try JSONDecoder().decode(ImageMetadata.self, from: data)
 }
 
