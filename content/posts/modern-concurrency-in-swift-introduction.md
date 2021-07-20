@@ -170,7 +170,7 @@ The tutorials contain code that you can run. Feel free to copy and paste it or d
 1. [Understanding async/await in Swift](/posts/understanding-async-await-in-swift/)
 2. [Converting closure-based code into async/await in Swift](/posts/converting-closure-based-code-into-async-await-in-swift/)
 3. [Structured Concurrency in Swift: Using async let](/posts/structured-concurrency-in-swift-using-async-let/)
-4. [Structured Concurrency With Group Tasks in Swift](/posts//posts/structured-concurrency-with-group-tasks-in-swift/)
+4. [Structured Concurrency With Group Tasks in Swift](/posts/structured-concurrency-with-group-tasks-in-swift/)
 5. [Introduction to Unstructured Concurrency in Swift](/posts/introduction-to-unstructured-concurrency-in-swift/)
 6. [Unstructured Concurrency With Detached Tasks in Swift](/posts/unstructured-concurrency-with-detached-tasks-in-swift/)
 7. The AsyncSequence Protocol in Swift
