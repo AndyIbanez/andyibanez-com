@@ -45,6 +45,8 @@ keywords:
 
 # Introduction
 
+*This article series was originally written creating examples using Xcode 13 beta 1. The articles in the series, code samples, and provided sample projects have been updated for Xcode 13 beta 3.*
+
 This is a tutorial series focused on the new async/await APIs Apple introduced in WWDC2021. I do not know how many articles it is going to have yet, but they will be posted in the upcoming weeks.
 
 The WWDC2021 session videos do a great job explaining these new APIs, but I feel they can still be overwhelming for both newcomers and long-time developers alike. My intention with this series is to talk about the new concurrency APIs, one step a time, covering a few concepts on each article, until you can feel confident with your understanding of these APIs. When I see it necessary, I may use or modify Apple's provided snippets. I will explicitly mark this external code as such.
@@ -96,7 +98,7 @@ let task = URLSession.shared.dataTask(with: ...) { data, response, error in
         evenMoreNestedNetworking.resume()
     }
     taskThatNeedsPreviousResponse.resume()
-    
+
 }
 
 task.resume()
