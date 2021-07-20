@@ -1,8 +1,8 @@
 ---
 title: "Unstructured Concurrency With Detached Tasks in Swift"
-date: 2021-07-21T07:00:00-04:00
+date: 2021-07-28T07:00:00-04:00
 originalDate: 2021-07-14T09:50:44-04:00
-publishDate: 2021-07-21T07:00:00-04:00
+publishDate: 2021-07-28T07:00:00-04:00
 draft: false
 highlightjslanguages:
  - swift
@@ -45,6 +45,9 @@ keywords:
 
 *This article is part of my [Modern Concurrency in Swift Article Series](https://www.andyibanez.com/posts/modern-concurrency-in-swift-introduction/).*
 
+
+*This article was originally written creating examples using Xcode 13 beta 1. The article, code samples, and provided sample project have been updated for Xcode 13 beta 3.*
+
 ###### Table of Contents
 
 1. [Modern Concurrency in Swift: Introduction](/posts/modern-concurrency-in-swift-introduction/)
@@ -59,7 +62,7 @@ keywords:
 
 *Understanding async tasks is a requirement to read this article. If you don't understand async tasks, you can read the [Introduction to Unstructured Concurrency in Swift]() article from this Article Series*
 
-Throughout this article series, we have explored what `async/await` is. We have also gotten our feet wet by exploring structured concurrency with `async let` and `Group Tasks`. We have explored that sometimes, structured concurrency, while nice, is not going to cover all our cases, so we mentioned the existence of unstructured concurrency and we have explored how to use `async {}`  blocks to launch unstructured tasks.
+Throughout this article series, we have explored what `async/await` is. We have also gotten our feet wet by exploring structured concurrency with `async let` and `Group Tasks`. We have explored that sometimes, structured concurrency, while nice, is not going to cover all our cases, so we mentioned the existence of unstructured concurrency and we have explored how to use `Task {}`  blocks to launch unstructured tasks.
 
 In this article, we will explore the final method to implement unstructured concurrency by using the most flexible method provided to us by Swift 5.5: Detached tasks.
 
@@ -82,7 +85,7 @@ func storeImageInDisk(image: UIImage) async {
 ```swift
 func downloadImageAndMetadata(imageNumber: Int) async throws -> DetailedImage {
     let image = try await downloadImage(imageNumber: imageNumber)
-    asyncDetached(priority: .background) {
+    Task.detached(priority: .background) {
         await storeImageInDisk(image: image)
     }
     let metadata = try await downloadMetadata(for: imageNumber)
@@ -90,12 +93,12 @@ func downloadImageAndMetadata(imageNumber: Int) async throws -> DetailedImage {
 }
 ```
 
-We have created a `storeImageInDisk` task. Then we call this method within a `asyncDetached` inside `downloadImageAndMetadata`. Right after the image is downloaded, we will try to cache it.
+We have created a `storeImageInDisk` task. Then we call this method within a `Task.detached` inside `downloadImageAndMetadata`. Right after the image is downloaded, we will try to cache it.
 
-It's really simple, and once you understand `async {}`, you can understand `asyncDetached {}`. When launching a detached task, you need to specify the `priority`. In our case, we used `background`, because it's not a user task that needs to finish with high priority. `.userInitiated` would mean the user cares about that task, and it needs to have high priority.
+It's really simple, and once you understand `Task {}`, you can understand `Task.detached {}`. When launching a detached task, you can specify the `priority`. In our case, we used `background`, because it's not a user task that needs to finish with high priority. `.userInitiated` would mean the user cares about that task, and it needs to have high priority.
 
-Because these tasks are unstructured, `asyncDetached` will return us `Task.Handle` we can use to cancel the task at any time. Note that, while `asyncDetached` is independent of the task that launched it, all other tasks started within it will still depend on `asyncDetached`, so if you cancel a `asyncDetached` task, all children of it will be marked as `cancelled`, save for a case in which you run another `asyncDetached` within `asyncDetached`, and so on.
+Because these tasks are unstructured, `Task.detached` will return us `Task` handle we can use to cancel the task at any time. Note that, while `Task.detached` is independent of the task that launched it, all other tasks started within it will still depend on `Task.detached`, so if you cancel a `Task.detached` task, all children of it will be marked as `cancelled`, save for a case in which you run another `Task.detached` within `Task.detached`, and so on.
 
 # Summary
 
-`detachedAsync` is not too hard to understand once you understand `async {}`. They behave almost the same way. The main differences are `detachedAsync` will not inherit anything from the parent context. You can cancel both manually. They are great to run related by non-dependant tasks at a given time.
+`detachedAsync` is not too hard to understand once you understand `Task {}`. They behave almost the same way. The main differences are `Task.detached` will not inherit anything from the parent context. You can cancel both manually. They are great to run related by non-dependant tasks at a given time.
