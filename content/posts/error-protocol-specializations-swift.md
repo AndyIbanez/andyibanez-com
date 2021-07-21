@@ -161,7 +161,7 @@ enum NetworkError: CustomNSError {
 }
 ```
 
-Also bridged to `NSError`, this is the "rawest" error I could find that can be bridged to Objective-C. Since you provide the `userInfo` yourself, you don't have to worry about about what keys it has. It has a lot of flexibility, but more compliecated to work with.
+Also bridged to `NSError`, this is the "rawest" error I could find that can be bridged to Objective-C. Since you provide the `userInfo` yourself, you don't have to worry about about what keys it has. It has a lot of flexibility, but more complicated to work with.
 
 ## Mashing Them Together
 
