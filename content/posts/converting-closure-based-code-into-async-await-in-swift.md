@@ -67,7 +67,7 @@ Last week, we had a long discussion on async/await. We contrasted how it compare
 
 We are just one step away from actual concurrency. Before we dive in into concurrency - with *structured concurrency* - next week, I want to show you how you can convert closure-based and delegate-based code into async/await code. The idea behind this article is to give you all the tools so that you can start adopting async/await in your projects, baby steps at a time.
 
-If you are a library vendor, you will be able to provide async/await code for all your closure-based APIs, so not only you will you be able to start using it for your uses, you will be able to ship async/await to your users.
+If you are a library vendor, you will be able to provide async/await code for all your closure-based APIs, so not only will you be able to start using it for your uses, you will be able to ship async/await to your users.
 
 If you are not a library vendor, but you do have an app in production, it's likely that your own app is using asynchronous code that notifies you via callbacks. If you want to start migrating that project, you can start by implementing `async` versions of your async methods. If you are using a third party library that is not offering async/await versions of their calls, you can easily provide your own.
 
@@ -137,7 +137,7 @@ enum ImageDownloadError: Error {
     case invalidMetadata
 }
 
-//MARK: - Function
+// MARK: - Functions
 
 func downloadImageAndMetadata(
     imageNumber: Int,
@@ -164,7 +164,7 @@ func downloadImageAndMetadata(
 }
 ```
 
-And suppose you are not the original author of it, and it's closed source, preventing you from modifying it directly. If you wanted to start your async/await migration with this method, the simplest way to do would be by wrapping a call to `downloadImageAndMetadata(for:imageNumber:completionHandler)` inside the `withCheckedThrowingContinuation` method.
+And suppose you are not the original author of it, and it's closed source, preventing you from modifying it directly. If you wanted to start your async/await migration with this method, the simplest way to do it would be by wrapping a call to `downloadImageAndMetadata(for:imageNumber:completionHandler)` inside the `withCheckedThrowingContinuation` method.
 
 ```swift
 func downloadImageAndMetadata(imageNumber: Int) async throws -> DetailedImage {
@@ -208,7 +208,6 @@ Suppose you have an UIKit app that lets users choose contacts in a ViewControlle
 
 ```swift
 class ViewController: UIViewController, CNContactPickerDelegate {
-
 
     @IBOutlet weak var contactNameLabel: UILabel!
 
@@ -287,7 +286,6 @@ And then, to use this:
         let contactPicker = ContactPicker(viewController: self)
         let contact = await contactPicker.pickContact()
         self.contactNameLabel.text = contact.givenName
-
     }
 }
 ```

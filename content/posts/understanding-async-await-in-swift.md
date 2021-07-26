@@ -203,7 +203,7 @@ This flow of execution is messy. Because downloading data from  the network is a
 
 In the case of callback-based asynchronous code, control is given back whenever completion handlers are executed.
 
-And as you may imagine, these calls can be come more and more complex and nested.
+And as you may imagine, these calls can become more and more complex and nested.
 
 # Introducing async/await
 
@@ -251,7 +251,7 @@ If the system does suspend the function, `await` will return control, not to the
 
 You can think of it as a traffic light. If you are driving down the road and you find a red light, chances are you will stop. But if it is 4 AM in the morning and there's no cars coming you may just run it. \*\*\*
 
-**What you need to understand about await is that, it it does choose to suspend, nothing below it will execute until the system tells it to, and the system will use the thread to do other work.**
+**What you need to understand about await is that, if it does choose to suspend, nothing below it will execute until the system tells it to, and the system will use the thread to do other work.**
 
 Every call to an `async` function, must be marked as `await`.
 
