@@ -53,7 +53,7 @@ keywords:
 2. [Understanding async/await in Swift](https://www.andyibanez.com/posts/understanding-async-await-in-swift/)
 3. [Converting closure-based code into async/await in Swift](/posts/converting-closure-based-code-into-async-await-in-swift/)
 4. **Structured Concurrency in Swift: Using async let**
-5. [Structured Concurrency With Group Tasks in Swift](/posts/posts/structured-concurrency-with-group-tasks-in-swift/)
+5. [Structured Concurrency With Group Tasks in Swift](/posts/structured-concurrency-with-group-tasks-in-swift/)
 6. [Introduction to Unstructured Concurrency in Swift](/posts/introduction-to-unstructured-concurrency-in-swift/)
 7. [Unstructured Concurrency With Detached Tasks in Swift](/posts/unstructured-concurrency-with-detached-tasks-in-swift/)
 
@@ -136,7 +136,7 @@ In this example, the image download and metadata download are two independent ta
 
 Before we move on, think about how you would do this with closure-based code. First, you would need to launch to `URLSession` data tasks, each with its own completion handler. But then what? How will the tasks coordinate the completion for this task? What happens if the image downloads first? What happens if the metadata finishes first? How are we gonna "lock" and guarantee access and that the final completion handler is called?
 
-In truth, doing this task with pure closure-based code (and even with delegate-based code), it becomes pretty messy quick. And we are just talking about a measly *two* tasks at once!
+In truth, doing this task with pure closure-based code (and even with delegate-based code), it becomes pretty messy real quick. And we are just talking about a measly *two* tasks at once!
 
 In Swift, we have two ways to work with structured concurrency:
 
