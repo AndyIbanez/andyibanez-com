@@ -67,7 +67,7 @@ To perform a variable number of tasks, Swift gives us Task Groups.
 
 # Group Tasks
 
-Group Tasks offered more flexibility than `async let` without giving up the simplicity of structured concurrency.
+Group Tasks offer more flexibility than `async let` without giving up the simplicity of structured concurrency.
 
 A `Task Group` is a form of structured concurrency designed to provide a dynamic amount of concurrency. With it, we can launch multiple tasks, launch them in a *group*, and have them execute all at the same time.
 
@@ -137,7 +137,7 @@ The implementation of our method is not complete yet, but going step by step, it
 * Instead of appending to an array, `group.async` will now return an `await`ed `DetailedImage` on each run of the loop.
 
 
-Essentially, we are "filling the group" with `DetailedImage`s that we will eventually - unless an error occurs. If an error occurs, the child tasks will be cancelled, and the tasks will need to be stopped. Recall from [Beginning Concurrency in Swift: Structured Concurrency and async-let]() that you are responsible from keeping cancellation in mind when designing your code, but luckily it's a one-line call in the case of structured concurrency.
+Essentially, we are "filling the group" with `DetailedImage`s that we will eventually return - unless an error occurs. If an error occurs, the child tasks will be cancelled, and the tasks will need to be stopped. Recall from [Beginning Concurrency in Swift: Structured Concurrency and async-let]() that you are responsible from keeping cancellation in mind when designing your code, but luckily it's a one-line call in the case of structured concurrency.
 
 Our `group` variable is of type `ThrowingTaskGroup<DetailedImage, Error>`. And surprise, this is a collection! You can iterate over it or apply some functional programming into them such as `filter`, `map`, and `reduce`.
 
@@ -165,7 +165,7 @@ Note that the `await` in the for loop behaves the same way as any other `await` 
 
 We will explore `AsyncSequence` in depth in a future article.
 
-When we are dealing with Task Groups, we actually have a bit more flexibility. We can for example launch a task asynchronously with a given priority:\
+When we are dealing with Task Groups, we actually have a bit more flexibility. We can for example launch a task asynchronously with a given priority:
 
 ```swift
 group.async(priority: .userInitiated) {
