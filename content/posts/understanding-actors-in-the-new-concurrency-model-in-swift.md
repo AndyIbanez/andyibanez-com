@@ -195,11 +195,11 @@ func reset() {
 
 Then, create a new function, `foo`, and start calling `reset()` within it. You will see that the autocomplete suggestions will suggest you autofill with `reset()`.
 
-![Calling reset() within the actor](/images/actors_foo.png)
+![Calling reset() within the actor](/img/actors_foo.png)
 
 Whereas, if you call `reset` externally, you will see that the `reset()` method has `async` on its signature.
 
-[Calling reset() outside the actor](/images/actors_reset_async.png).
+![Calling reset() outside the actor](/img/actors_reset_async.png).
 
 You can see that anything called within the actor is synchronous (as you can tell due to the lack of the `async` keyword), but calling the very same methods externally are `async`. Synchronous code on the actor *always* runs to completion without being interrupted. You will notice you cannot await on the actor's properties or methods, although nothing prevents the actor from calling async methods from other actors or other places.
 
