@@ -1,11 +1,5 @@
 ---
 title: "Understanding Actors in the New Concurrency Model in Swift"
-date: 2021-07-29T22:00:31-04:00
-draft: true
----
-
----
-title: "Understanding Actors in the New Concurrency Model in Swift"
 date: 2021-08-04T07:00:00-04:00
 originalDate: 2021-07-29T22:00:31-04:00
 publishDate: 2021-08-04T07:00:00-04:00
