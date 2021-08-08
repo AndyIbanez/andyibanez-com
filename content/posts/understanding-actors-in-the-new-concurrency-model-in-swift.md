@@ -55,6 +55,7 @@ keywords:
 6. [Introduction to Unstructured Concurrency in Swift](https://www.andyibanez.com/posts/introduction-to-unstructured-concurrency-in-swift/)
 7. [Unstructured Concurrency With Detached Tasks in Swift](https://www.andyibanez.com/posts/unstructured-concurrency-with-detached-tasks-in-swift/)
 8. **Understanding Actors in the New Concurrency Model in Swift**
+9. [@MainActor and Global Actors in Swift](/posts/mainactor-and-global-actors-in-swift.md)
 
 <hr>
 
