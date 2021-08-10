@@ -227,8 +227,6 @@ Let's take a few minutes to discuss the `async` and `await` keywords individuall
 * To tell the compiler when a piece of code is asynchronous.
 * To spawn asynchronous tasks in parallel.
 
-In this article, we will only explore the former two, but the third use case will come in a later article in the series.
-
 To mark a function as `async`, simply put the keyword after the function's closing parenthesis and before the arrow, like this:
 
 ```swift
@@ -238,7 +236,7 @@ func downloadImage(id: Int) async -> UIImage? { ... }
 Or:
 
 ```swift
-Func downloadImage(id: Int) async throws -> UIImage { ... }
+func downloadImage(id: Int) async throws -> UIImage { ... }
 ```
 
 You can already see a huge advantage here. The completion handler is gone, and our function signature is very clear with its purpose. We can tell at first glance if it is `async` and what it returns.
@@ -286,15 +284,15 @@ To better understand this, we will rewrite our `downloadImageAndMetadata` functi
 
 This is a long function, but it's already much better than the pyramid version of it. Let's highlight the important parts first:
 
-1. As soon as the program enters the function, it will procedurally create `imageUrl` and `imageRequest`.
-2. The images sees an async call to `URLSession.shared.data(for:)`.
+1. The program procedurally creates `imageUrl` and `imageRequest`.
+2. The program reaches a call to an async call, `URLSession.shared.data(for:)`.
 3. The program will make a decision on suspending the function or continuing it. In this case, it's likely it will suspend due to the nature of networking, but don't get used to taking that for granted. We will assume the program suspends the function.
 4. This will give control back to the system.
-5. The system may do other work that is not relevant to this task while the download `awaits.
+5. The system may do other work that is not relevant to this task while the download `await`s.
 6. Anything under the first await *will not* be executed. It will not reach the guard, it will not create the variables for the metadata, it will do *nothing* until the `await`ed function finishes.
 7. After some time, the system will give control back to you, after the `await`ed function has finished.
 8. The `guard` statement is reached, throwing an error if necessary.
-9. The program will repeat steps 2-8 but for the metadata tasks.
+9. The program will repeat steps 2-8 but for the metadata task.
 10. The program will return a new `DetailedImage`.
 
 As you can see, it is a pretty linear flow, and the way `await` suspends the rest of the execution until the system deems it necessary makes it behave very much like procedural programming.
@@ -330,7 +328,7 @@ func downloadMetadata(for id: Int) async throws -> ImageMetadata {
 }
 ```
 
-As long as we mark the functions as `await`, this is possible to do.
+As long as we mark the functions as `async`, this is possible to do.
 
 It is important to note the linearity of this. The metadata and image **are not being downloaded at the same time**. It will download the image first, and the metadata later. We can make it download both the image and metadata at the same time, but this article is not about actual concurrency just yet. We will explore how to do both tasks at the same time when we learn about *structured concurrency*.
 
@@ -348,7 +346,7 @@ func downloadImageAndMetadata(imageNumber: Int) async throws -> DetailedImage {
 }
 ```
 
-If your internet is a bit too speedy to appreciate the slow prints, Apple gives us a neat method we can call called `Task.sleep`. This function solely exists to sleep the thread for a given number of time, and you can use it to explore async/await.
+If your internet is a bit too speedy to appreciate the slow prints, Apple provides us a neat method: `Task.sleep`. This function solely exists to sleep the thread for a given number of time, and you can use it to explore async/await.
 
 * **Note**: *Unfortunately `Task.sleep` appears to crash as of Xcode 13 Beta 1. `await Task.sleep(2 * 1_000_000_000) `.*
 
