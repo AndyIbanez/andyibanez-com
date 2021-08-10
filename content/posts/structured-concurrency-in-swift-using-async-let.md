@@ -65,13 +65,13 @@ keywords:
 
 `async/await` are the most important concepts when it comes to the new concurrency system in Swift. Understanding async/await will open you the doors to perform multiple tasks in parallel with a clean syntax and straightforward code.
 
-There are actually [multiple ways to do this](https://www.andyibanez.com/posts/multithreading-options-on-apple-platforms/), but the way Apple has given us at WWDC2021 with Swift 5.5 is the safest one to use, and unless you have highly specific needs, probably one you will use almost exclusively.
+There are actually [multiple ways to do this](https://www.andyibanez.com/posts/multithreading-options-on-apple-platforms/), but the way Apple has given us at WWDC2021 with Swift 5.5 is the safest one to use, and unless you have highly specific needs, probably the one you will use almost exclusively.
 
 # Introducing Structured Concurrency.
 
 In previous articles, we have discussed how callback-based code can be messy to manage when used in concurrent contexts. For that reason, Apple gave us `async/await`, which is a set of keywords that can help us write concurrent code while keeping a linear flow in our code. This code can be read from top to bottom. However, in [Understanding async/await in Swift](https://www.andyibanez.com/posts/understanding-async-await-in-swift/), we noted that by just using async/await it doesn't mean that we will perform more than one task at once (the tasks we call may do so internally, though). We will now begin executing some code in parallel, and we will start with the concept of *Structured Concurrency*.
 
-The ideas behind structured concurrency are based on the same ideas as structured programming. We write structured code the vast majority of the time, so you never think about it. Structured code can be read from top to bottom, following a linear flow, in a way that outputs are predictable and code is executed in the exact given order. When using variables, they have a well-defined lifetime within the block they are declared in. Unlike callback-based concurrency, in which you fire your tasks in different threads or contexts as your main thread keeps executing, which has the potential to alter the output of your program every time it's run. If you are writing Objective-C, you need to treat your variables as `__block` in order to modify them within a block. This creates a labyrinth of code where everything can happen in any order in order to give you the result you want.
+The ideas behind structured concurrency are based on the same ideas as structured programming. We write structured code the vast majority of the time, so you never think about it. Structured code can be read from top to bottom, following a linear flow, in a way that outputs are predictable and code is executed in the exact given order. When using variables, they have a well-defined lifetime within the block they are declared in. In callback-based concurrency, you fire off tasks in different threads or contexts as your main thread keeps executing, creating the potential to alter the output of your program every time it's run. If you are writing Objective-C, you need to treat your variables as `__block` in order to modify them within a block. This creates a labyrinth of code where everything can happen in any order in order to give you the result you want.
 
 Now, consider the following functions:
 
@@ -151,9 +151,9 @@ This article will be limited to `async let`, but we will cover Task groups in a 
 
 Tasks are the underlying mechanism in which Swift executes your code in parallel. Each task provides a new async context in which it can execute concurrently, alongside other tasks. They will run in parallel automatically as long as it is safe and efficient to do so.
 
-Our `downloadImageAndMetadata` function does not actually create any tasks. Both downloads are `await`ed and this is why they don't run in parallel. We will solve this
+Our `downloadImageAndMetadata` function does not actually create any tasks. Both downloads are `await`ed and this is why they don't run in parallel. We will solve this.
 
-These new concurrency features are deeply integrated into Swift, so as you go along writing concurrent code, the compiler will be there to stop you from introducing common concurrency bugs. I imagine this will be frustrating for new programmers as they will be reported as compiler errors, but in reality, Swift is doing its best to protect you and your code from doing anything crazy. After all, concurrency is a very hard problem to solve. If you have read a book on operating systems you have probably seen that there's multiple patterns developers can make use of in order to write concurrent safe code. But writing this code manually is hard, error prone, and depending on the context, hard to test. Having these checks at compile time is a great security feature.
+These new concurrency features are deeply integrated into Swift, so as you go along writing concurrent code, the compiler will be there to stop you from introducing common concurrency bugs. I imagine this will be frustrating for new programmers as they will be reported as compiler errors, but in reality, Swift is doing its best to protect you and your code from doing anything crazy. After all, concurrency is a very hard problem to solve. If you have read a book on operating systems you have probably seen that there's multiple patterns developers can make use of in order to write safe concurrent code. But writing this code manually is hard, error prone, and depending on the context, hard to test. Having these checks at compile time is a great security feature.
 
 Marking a function as `async` does not mean a new task will be created - if anything, by default, when the compiler sees a function marked as `async`, it expects it to be `await`ed on each call. Creating tasks is not an automatic process. We can inform the compiler that we want to run concurrent code, but it will be up to it to honor your request. Tasks are always created explicitly.
 
@@ -184,7 +184,7 @@ func downloadImageConcurrentlyWhilePrinting(imageNumber: Int) async throws -> UI
 
 You will notice that all the `print` statements are executed basically instantly. This is because `async let` has launched `downloadImage` as another task. The two `print` statements prior to the `async let` call will be executed as you would expect. The other print statements will print just as quickly because `downloadImage` is not an `await`ed call. By the time we reach `return try await image`, we are telling our program to suspend on the return statement until the image is done downloading (or if an error is thrown).
 
-And because this is one of the mechanisms that will allow us to execute code concurrently, you can have multiple `async let` calls in any given point, and the system will execute them concurrently if possible.
+Because this is one of the mechanisms that will allow us to execute code concurrently, you can have multiple `async let` calls at any given point, and the system will execute them concurrently if possible.
 
 We can now rewrite our `downloadImageAndMetadata` function to download both the image and the metadata at the same time.
 
@@ -198,13 +198,13 @@ func downloadImageAndMetadata(imageNumber: Int) async throws -> DetailedImage {
 
 **Note**: *The session most of this article is based on, [Explore structured concurrency in Swift](https://developer.apple.com/videos/play/wwdc2021/10134/), uses a similar example to this, but you can run and play with this one.*
 
-By appending `async` before `let` and moving those `await` around, we have successfully rewritten our function to download both the image and metadata at the same time rather than sequentially. The `await` keyword has now been moved to the places where we expect the values to exist before we can continue. We have successfully downloaded multiple things at once, using a structured flow. That's really neat!
+By appending `async` before `let` and moving the `await` keyword to the place where we expect values to exist, we have successfully downloaded multiple things at once, using a structured flow. That's really neat!
 
 And that's it. That's how you can execute code concurrently with the new async/await APIs. This article is not over yet, though. Before we are done, we need to explore a very important concept: The Task Tree.
 
 ### The Task Tree
 
-Structured Concurrency makes use of concept called **The Task Tree**. The task tree is a hierarchy in which our structured concurrency code runs on. The task tree influences attributes of our tasks such as cancellation, priority, and local variables. When we jump from one async function to another, the same task is used to execute the new call.
+Structured Concurrency makes use of a concept called **The Task Tree**. The task tree is a hierarchy that our structured concurrency code runs on. The task tree influences attributes of our tasks such as cancellation, priority, and local variables. When we jump from one async function to another, the same task is used to execute the new call.
 
 ```swift
 func downloadImageAndMetadata(imageNumber: Int) async throws -> DetailedImage {
@@ -228,17 +228,17 @@ The task tree enforces a very important rule: **A parent task can only finish it
 
 You can see this enforcement because the `await` calls won't let the execution continue until they are given the green light to continue. Both `downloadImage` and `downloadMetadata` may throw an error or return a value, but in either case, they finish their work before the code that requires them can continue executing.
 
-The normal case for `downloadImageAndMetadata` is that both `downloadImage` and `downloadMetadata` will both finish successfully. But what happens if one of them throws an error and the other finishes without a hitch?
+The normal case for `downloadImageAndMetadata` is that `downloadImage` and `downloadMetadata` will both finish successfully. But what happens if one of them throws an error and the other finishes without a hitch?
 
 The great thing is that you can see, intuitively, and thanks to the fact that the code is *structured* and runs from top to bottom, that whenever one of them throws an error, `downloadImageAndMetadata` will throw the same error. But what happens to the actual execution of the other task? That is, suppose `downloadMetadata` fails and `downloadImage` is downloading a big image. What happens to the image download?
 
 When a task fails, Swift will mark the remaining child tasks as `cancelled`. In this example, since `downloadMetadata` failed, `downloadImage` will be marked as cancelled. Marking a task as `cancelled` does not actually mean that the task is cancelled. Instead, it simply notifies the task that its results are no longer needed. All the child tasks and their descendants will be cancelled when their parent is cancelled.
 
-But when do the tasks actually stop their execution? This is a neat property of structured tasks: cancellation is cooperative. Tasks do not stop immediately. Instead, they will do it as soon as they see it appropriate. If you have network calls going, it may be inappropriate to just stop them the moment they get the cancel notification.
+But when do the tasks actually stop their execution? This is a neat property of structured tasks: cancellation is cooperative. Tasks do not stop immediately. Instead, they will do it as soon as they see it is appropriate. If you have network calls going, it may be inappropriate to just stop them the moment they get the cancel notification.
 
 Tasks have to check for cancellation explicitly. You can check for cancellation from anywhere. This makes it your responsibility to design your code with cancellation in mind, especially if you have tasks that can take a very long time to complete.
 
-To check for cancellation, you have two ways. First, you can call `try Task.checkCancellation()` when your functions are marked as `throws`. And second, there is a `Task.isCancelled` which returns a boolean when your tasks are not running inside `throw`ing contexts.
+There are two ways to check for cancellation. First, you can call `try Task.checkCancellation()` when your functions are marked as `throws`. And second, there is a `Task.isCancelled` which returns a boolean when your tasks are not running inside `throw`ing contexts.
 
 ```swift
 func downloadImage(imageNumber: Int) async throws -> UIImage {
@@ -282,12 +282,12 @@ func downloadMultipleImagesWithMetadata(images: Int...) async throws -> [Detaile
 }
 ```
 
-In the example above, we have added a cancellation check at the beginning of `downloadImage` and `downloadMetadata`. We have also added a function that will try to download multiple images (although no concurrently - we will learn how perform a variable number of concurrent tasks when we talk about Task Groups). If *any* image or *metadata* fails, the children tasks will be notified of the cancellation, and if they have a chance to cancel - i.e. if they haven't started downloading their images or metadata yet, they will stop their execution.
+In the example above, we have added a cancellation check at the beginning of `downloadImage` and `downloadMetadata`. We have also added a function that will try to download multiple images (although not concurrently - we will learn how perform a variable number of concurrent tasks when we talk about Task Groups). If *any* image or *metadata* download fails, the children tasks will be notified of the cancellation, and if they have a chance to cancel - i.e. if they haven't started downloading their images or metadata - they will stop their execution.
 
 # Summary
 
 We have finally started exploring the world of actual concurrent execution using the new async/await APIs. You learned what structured concurrency is, and a way to implement it with `async let`. You also learned about the task tree and how cancellation is cooperative and how it works.
 
-Although you may have noticed that our newest function `downloadMultipleImagesWithMetadata`, will not download all three images at the same time, because it is necessary to `await` the result before we can append it to the array. We will learn how to execute a variable number of concurrent tasks when we begin talking about Task Groups.
+You may have noticed that our newest function, `downloadMultipleImagesWithMetadata`, will not download all three images at the same time, because it is necessary to `await` the result before we can append it to the array. We will learn how to execute a variable number of concurrent tasks when we begin talking about Task Groups.
 
 In the meantime, take your time to analyze the contents of this article, and as usual, here is [the sample project](/archives/AsyncAwaitConcurrent.zip) you can play around with to better understand the concepts of this article.
