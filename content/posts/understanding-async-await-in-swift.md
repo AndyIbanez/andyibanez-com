@@ -57,6 +57,7 @@ keywords:
 6. [Introduction to Unstructured Concurrency in Swift](/posts/introduction-to-unstructured-concurrency-in-swift/)
 7. [Unstructured Concurrency With Detached Tasks in Swift](/posts/unstructured-concurrency-with-detached-tasks-in-swift/)
 8. [Understanding Actors in the New Concurrency Model in Swift](/posts/understanding-actors-in-the-new-concurrency-model-in-swift/)
+9. [@MainActor and Global Actors in Swift](/posts/mainactor-and-global-actors-in-swift.md)
 
 <hr>
 
@@ -64,7 +65,7 @@ Before you try to dive in with concurrency in Swift, you need to understand asyn
 
 This article will explore async/await and nothing else. Once you understand these concepts, we will start moving on to more advanced articles where we cover structured concurrency, unstructured concurrency, SwiftUI, and more.
 
-If you have been writing callback-based concurrency, keep in mind that the implementation for async/await is *very* different to anything you have seen before in Apple's technologies. It basically throws what you know about concurrent programming out of the window. It's important to keep that in mind to read this article.
+If you have been writing callback-based concurrency, keep in mind that the implementation for async/await is *very* different from anything you have seen before in Apple's technologies. It basically throws what you know about concurrent programming out the window. It's important to keep that in mind as you read this article.
 
 In this article, we will write a function that downloads an image and then its metadata using a different network call. We will show you how doing this with callback-based concurrency can become hard to manage quickly, and how async/await solves this problem beautifully.
 
@@ -192,7 +193,7 @@ This is what happens:
 1. The method calls `sayHi()` normally.
 2. We create a variable `x` and assign it a value.
 3. `downloadImageAndMetadata` is called, which internally will set up the first variables it needs for its execution (`imageUrl`).
-4. We create a variable, once again synchronously, that will hold a `dataTask` and provide it with a completion handler that will be called after its done downloading.
+4. We create a variable, once again synchronously, that will hold a `dataTask` and provide it with a completion handler that will be called after it's done downloading.
 5. We call `resume()` on the task to begin the download.
 6. The contents of the completion handler will not be executed immediately. Instead, while the downloads happen, the program continues its execution.
 7. The program may, or may not, print `"We got results"`. In the case of a network download, it will always take a while, but if this were a faster asynchronous operation, it may be called at this point. The program will create a variable `y`.
@@ -200,7 +201,7 @@ This is what happens:
 9. If the downloads have finished successfully, the program will print `"We got results"`, otherwise it will call `sayBye`.
 10. Somewhere above there and at any point, the program may start the metadata download task after the image task has downloaded.
 
-This flow of execution is messy. Because downloading data from  the network is asynchronous and all its work happens somewhere else. Anything else may happen on the main thread while the downloads take place. Whatever the console prints may have a different output on each run \*\*. The downloads spawn from the main thread onto another thread, but the program will continue executing the code in the main thread without any issue. This makes it hard to think procedurally, because we rely on the `completionHandler` to let us know when it has finished its work. If there are tasks that can be performed in the main thread, but they depend on image and/or its metadata, we have to do all that work in the completion handler (while rerouting the work to the main thread with `DispatchQueue.main.async` whenever relevant).
+This flow of execution is messy, because downloading data from the network is asynchronous and all its work happens somewhere else. Anything else may happen on the main thread while the downloads take place. Whatever the console prints may have a different output on each run \*\*. The downloads spawn from the main thread onto another thread, but the program will continue executing the code in the main thread without any issue. This makes it hard to think procedurally, because we rely on the `completionHandler` to let us know when it has finished its work. If there are tasks that can be performed in the main thread, but they depend on an image and/or its metadata, we have to do all that work in the completion handler (while rerouting the work to the main thread with `DispatchQueue.main.async` whenever relevant).
 
 In the case of callback-based asynchronous code, control is given back whenever completion handlers are executed.
 
