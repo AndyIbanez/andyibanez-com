@@ -49,7 +49,7 @@ keywords:
 
 This is a tutorial series focused on the new async/await APIs Apple introduced in WWDC2021. I do not know how many articles it is going to have yet, but they will be posted in the upcoming weeks.
 
-The WWDC2021 session videos do a great job explaining these new APIs, but I feel they can still be overwhelming for both newcomers and long-time developers alike. My intention with this series is to talk about the new concurrency APIs, one step a time, covering a few concepts on each article, until you can feel confident with your understanding of these APIs. When I see it necessary, I may use or modify Apple's provided snippets. I will explicitly mark this external code as such.
+The WWDC2021 session videos do a great job explaining these new APIs, but I feel they can still be overwhelming for newcomers and long-time developers alike. My intention with this series is to talk about the new concurrency APIs, one step a time, covering a few concepts on each article, until you can feel confident with your understanding of these APIs. When I see it necessary, I may use or modify Apple's provided snippets. I will explicitly mark this external code as such.
 
 The knowledge you will see throughout the series is knowledge I have obtained from the WWDC2021 sessions (the relevant sessions will be linked in each article), playing around with them myself, and other sources. I do not claim to know everything about the new await/async APIs, and while the Evolution proposal was approved ahead of WWDC2021, I am building this series with the knowledge I have as I did not explore the proposal before WWDC2021
 
@@ -69,7 +69,7 @@ Before moving on, remember that these new APIs are guaranteed to become the stan
 
 ## Callback-based concurrency for API for consumers
 
-Take the `URLSession` API as an example. Prior to WWDC2021, if you needed to some sort of networking call, you would call something like this:
+Take the `URLSession` API as an example. Prior to WWDC2021, if you needed to make some sort of networking call, you would call something like this:
 
 ```swift
 // ... (1)
@@ -87,7 +87,7 @@ Anything that goes inside the callback closure - that is, everything within the 
 
 In the snippet above, we have code that executes before the network call `(1)`. But `(2)` will not be executed immediately. Instead, execution *may* continue for `(3)`, and when the download has finished `(2)` will be executed. The execution order for `(2)` and `(3)` is not guaranteed. In this particular example, we can say that "obviously" a network call is slower than the linear execution of a program, but don't take this for granted - there's plenty of APIs that don't hit the network that are asynchronous in nature.
 
-This works, and this old-style API is not going anywhere. But what if we need to later parse some JSON, or do more network calls based on the response? This becomes painful and we arrive to what we call a *pyramid of doom*.
+This works, and this old-style API is not going anywhere. But what if we need to later parse some JSON, or do more network calls based on the response? This becomes painful and we arrive at what we call a *pyramid of doom*.
 
 ```swift
 let task = URLSession.shared.dataTask(with: ...) { data, response, error in
@@ -135,13 +135,13 @@ func fetchThumbnail(for id: String, completion: @escaping (UIImage?, Error?) -> 
 ```
 *(This code was taken directly as-is from Apple's [Meet async/await in Swift](https://developer.apple.com/videos/play/wwdc2021/10132/) session)*
 
-The first thing you will notice is that this code is a mouthful. Just sit down and appreciate how *long* it is. It begins by downloading an image, and then it tries to resize it. Both the network call and the thumbnail resizing call are asynchronous calls. Not only that, but your call needs to pass in their own completion handler as well.
+The first thing you will notice is that this code is a mouthful. Just sit down and appreciate how *long* it is. It begins by downloading an image, and then it tries to resize it. Both the network call and the thumbnail resizing call are asynchronous calls. Not only that, but your call needs to pass in its own completion handler as well.
 
 This code has bugs too, and they may be hard to find. Remember that if you write a callback-based function, you need to call the passed callback regardless of what happens. The developer calling your function can find cases in which their callback is never called. In the example above, there's two places where this can happen. I have marked those places as `(1)` and `(2)`. As you are not calling the completion handler in these places, you will leave the API caller waiting for a response that will never arrive - at the very least you won't be blocking the thread, though.
 
-So, the first problem we can find here is that you are responsible from calling the callback when you are done with your job. This isn't too bad for small functions, but it can become overwhelming when you realize there's many edge cases you need to think of.
+So, the first problem we can find here is that you are responsible for calling the callback when you are done with your job. This isn't too bad for small functions, but it can become overwhelming when you realize there's many edge cases you need to think of.
 
-But one thing I have always disliked about callback-based APIs is that all the information about the "return" type and the error are part of the closure you are given. Because of this, you cannot have a clean API that states its return type and whether it can yield an error not. There's no such thing as throwing an error. With these APIs. You have to provide them to the callback. While static typing does not disappear, it does get more abstracted (not to mention autocomplete isn't as useful, as there times it decides not to work when making such calls). And as a cherry on top, your API consumers may decide to discard the error if they so choose - this is not necessarily a bad thing, but there's times when you want them to *really* take some action.
+But one thing I have always disliked about callback-based APIs is that all the information about the "return" type and the error are part of the closure you are given. Because of this, you cannot have a clean API that states its return type and whether it can yield an error not. There's no such thing as throwing an error. With these APIs. You have to provide the error in the callback. While static typing does not disappear, it does get more abstracted (not to mention autocomplete isn't as useful, as there times it decides not to work when making such calls). And as a cherry on top, your API consumers may decide to discard the error if they so choose - this is not necessarily a bad thing, but there's times when you want them to *really* take some action.
 
 # Combine?
 
@@ -155,9 +155,9 @@ Combine will not be mentioned much throughout this tutorial series unless it's r
 
 # A new way of thinking
 
-Finally, before diving in to the articles below, I recommend you try to throw your current knowledge of concurrency out of the window, because the implementation for async/await is very different, and it's important to understand this mindset before you truly understand how it works. Once you understand async/await, the rest of the toolset is easier to understand.
+Finally, before diving in to the articles below, I recommend you try to throw your current knowledge of concurrency out the window, because the implementation for async/await is very different, and it's important to understand this mindset before you truly understand how it works. Once you understand async/await, the rest of the toolset is easier to understand.
 
-I am not saying your current concurrency knowledge will be irrelevant. Far from it, but it's interesting how imposing an easier to write concurrency code requires us to rethink how we have been thinking about concurrency in Apple's platforms in the past decades. I actually think async/await is easier to understand for people who have never seen asynchronous code before, because the way it's implemented doesn't derive much from procedural programming.
+I am not saying your current concurrency knowledge will be irrelevant. Far from it, but it's interesting how imposing an easier to write concurrency code requires us to rethink how we have been thinking about concurrency in Apple's platforms in the past decades. I actually think async/await is easier to understand for people who have never seen asynchronous code before, because it's so similar to procedural programming.
 
 # Without further ado...
 
