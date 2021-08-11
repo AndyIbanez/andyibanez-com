@@ -51,7 +51,7 @@ keywords:
 2. [Understanding async/await in Swift](https://www.andyibanez.com/posts/understanding-async-await-in-swift/)
 3. [Converting closure-based code into async/await in Swift](/posts/converting-closure-based-code-into-async-await-in-swift/)
 4. [Structured Concurrency in Swift: Using async let](https://www.andyibanez.com/posts/structured-concurrency-in-swift-using-async-let/)
-5. [Structured Concurrency With Group Tasks in Swift](https://www.andyibanez.com/posts/structured-concurrency-with-group-tasks-in-swift/)
+5. [Structured Concurrency With Task Groups in Swift](https://www.andyibanez.com/posts/structured-concurrency-with-group-tasks-in-swift/)
 6. [Introduction to Unstructured Concurrency in Swift](https://www.andyibanez.com/posts/introduction-to-unstructured-concurrency-in-swift/)
 7. [Unstructured Concurrency With Detached Tasks in Swift](https://www.andyibanez.com/posts/unstructured-concurrency-with-detached-tasks-in-swift/)
 8. **Understanding Actors in the New Concurrency Model in Swift**
@@ -59,13 +59,13 @@ keywords:
 
 <hr>
 
-When we are working with concurrency, the most common problem developers face are data races. Whether it is a task updating a value at the same time another task is reading it or two tasks writing a value so that it it has an invalid value, data races are probably the main pain point of concurrency. Data races are very easy write, and hard to debug. There are entire books dedicated to the problem of data races and established patterns to avoid them.
+When we are working with concurrency, the most common problem developers face are data races. Whether it is a task updating a value at the same time another task is reading it or two tasks writing a value so that it it has an invalid value, data races are probably the main pain point of concurrency. Data races are very easy create, and hard to debug. There are entire books dedicated to the problem of data races and established patterns to avoid them.
 
-Data races happen when there's shared mutable state. If you are only working with `let` variables that are never mutated, you are unlikely to encounter them. Unfortunately, even the most trivial of programs does have mutable state at the same point, so racking your brain to make everything immutable is not going to yield results. In general, preferring to use `let` as much as possible and using value semantics (like `struct`s) is going to help a lot when dealing with data races.
+Data races happen when there's shared mutable state. If you are only working with `let` variables that are never mutated, you are unlikely to encounter them. Unfortunately, even the most trivial of programs does have mutable state at some point, so racking your brain to make everything immutable is not going to yield results. In general, preferring to use `let` as much as possible and using value semantics (like `struct`s) is going to help a lot when dealing with data races.
 
-Shared mutable state requires synchronization. In the most basic form (which is also the hardest - the case where you are writing all that code yourself), you can make use of locks (a concept that guarantees mutable state will only be modified by one process at a time) and other primitives. In the past few years, many Apple Platform developers have used serial dispatch queues, which are higher level concepts for dealing with concurrency.
+Shared mutable state requires synchronization. In the most basic - and hardest - form, you can make use of locks (a concept that guarantees mutable state will only be modified by one process at a time) and other primitives. In the past few years, many Apple Platform developers have used serial dispatch queues, which are higher level concepts for dealing with concurrency. Going this route requires you to write all that code.
 
-Luckily, with Swift 5.5 and the new concurrency APIs introduced at WWDC2021, Swift now has a much easier to way to deal with mutable state, ensuring only one process at a time modifies a value. Of course, this has the same implications as the other new concurrency APIs we have seen in this series so far, which is easy to use, but may be limiting if you need more control. The good news is that the actors API is going to be enough for the vast majority of developers.
+Luckily, with Swift 5.5 and the new concurrency APIs introduced at WWDC2021, Swift now has a much easier way to deal with mutable state, ensuring that only one process at a time modifies a value. Of course, this has the same implications as the other new concurrency APIs we have seen so far in this series. It iss easy to use, but may be limiting if you need more control. The good news is that the actors API is going to be enough for the vast majority of developers.
 
 # Introducing actors
 
@@ -73,7 +73,7 @@ Actors provide synchronization for mutable state automatically, and they isolate
 
 ## Implementation details
 
-`actors` in Swift are implemented as `actor` types. Similar to how you define `class`es, `enum`s, and `struct`s, you declare an actor by using the `actor` keyword. Actors are reference types, meaning that their behaviors are most similar to `class`es than `struct`s. Which makes complete sense if you think about it, as actors are all about hiding shared *mutable* state that other types may need to access. The main differences between `actor`s and `class`es is that actors implement all the synchronization mechanisms behind the scenes, their data is isolated from the rest of the program, and `actor`s cannot inherit or be inherited from, although they can conform to protocols and be extended.
+`actors` in Swift are implemented as `actor` types. Similar to how you define `class`es, `enum`s, and `struct`s, you declare an actor by using the `actor` keyword. Actors are reference types, meaning that their behaviors are more similar to `class`es than `struct`s. Which makes complete sense if you think about it, as actors are all about hiding shared *mutable* state that other types may need to access. The main differences between `actor`s and `class`es is that actors implement all the synchronization mechanisms behind the scenes, their data is isolated from the rest of the program, and `actor`s cannot inherit or be inherited from, although they can conform to protocols and be extended.
 
 Thanks to the fact that actors are integrated deeply into the Swift compiler, Swift will do a lot to protect you against code that may run haywire due to its concurrency needs.
 
@@ -116,7 +116,7 @@ class ViewController: UIViewController {
 
 *Also, I originally intended to provide a sample Playground with these examples, but I couldn't get it to work as of Xcode 13 Beta 4, so I will provide a standard iOS project instead at the end of this article)*
 
-In this example, you will attempt to increment the counter variable inside [detached tasks](). There is no locking mechanism or any synchronization that ensures that the code will work as you expect it to work. The system could increment to 0 both times, and the values that get printed can be drastically different on each turn.
+In this example, you are attempting to increment the counter variable inside [detached tasks](). There is no locking mechanism or any synchronization that ensures that the code will work as you expect it to work. The system could increment to 0 both times, and the values that get printed can be drastically different on each turn.
 
 We can fix it and ensure that the output is always "1, 2" by making `Counter` an `actor` instead of a class.
 
@@ -130,13 +130,13 @@ actor Counter {
 }
 ```
 
-Simply doing this change will not be enough. Trying to compile and run it will give you this error in both places where we try to print:
+Simply making this change will not be enough. Trying to compile and run it will give you this error in both places where we try to print:
 
 ```
 Expression is 'async' but is not marked with 'await'
 ```
 
-This is beautiful, and it really shows you how deeply concurrency is implemented at the compiler level to save you from writing buggy concurrent code, and to save you the time from having to spend hours, days, months, or even years, to learn how to write concurrency safely yourself. I absolutely love the compiler integration, because it also shows you that all the concepts we have explored throughout these series, converge on this point, and we have the compiler helping us make sense of everything we learned so far.
+This is beautiful, and it really shows you how deeply concurrency is implemented at the compiler level to save you from writing buggy concurrent code. It can save you from having to spend hours, days, months, or even years, learning to write concurrent code safely yourself. I absolutely love the compiler integration, because it also shows you that all the concepts we have explored throughout this series converge. The compiler is helping us make sense of everything we learned so far.
 
 To fix that error, simply add `await` when you call `increment()`.
 
@@ -144,7 +144,7 @@ To fix that error, simply add `await` when you call `increment()`.
 print(await counter.increment())
 ```
 
-The way actors are implemented in Swift is that all public methods are automatically made async for the consumers of your interface. This will allow us to safely interact with actors, because using the `await` keyword will suspend execution until the code is notified that it can go into the actor next and do its job.
+All of an ``actor``'s public interface are automatic made async for its consumers. This allows us to safely interact with actors, because using the `await` keyword will suspend execution until the code is notified that it can go into the actor next and do its job.
 
 *(This is a good point to stop and think if you actually understand `async/await`, which are the most basic building blocks for the new concurrency system in Swift. If you think you need a refresher, you can read the [Understanding async/await in Swift](https://www.andyibanez.com/posts/understanding-async-await-in-swift/) article of this series.)*
 
@@ -154,7 +154,7 @@ Do note that this has some implications when attempting to access the properties
 print(counter.count)
 ```
 
-It will make the compiler yell you with:
+It will make the compiler yell at you with:
 
 ```
 Actor-isolated property 'count' can only be referenced from inside the actor
@@ -194,7 +194,7 @@ func reset() {
 }
 ```
 
-Then, create a new function, `foo`, and start calling `reset()` within it. You will see that the autocomplete suggestions will suggest you autofill with `reset()`.
+Then, create a new function, `foo`, and typing `reset` within it. You will see that the autocomplete suggestions will suggest you autofill with `reset()`.
 
 ![Calling reset() within the actor](/img/actors_foo.png)
 
@@ -276,7 +276,7 @@ func downloadImages() async {
 }
 ```
 
-**Important Note:** As of Xcode 13 Beta 4 (and this is an issue that has existed since Beta 1), there is a bug that causes your code to deadlock when entering an actor twice from the same `Task` via `async let`. Apple is aware of this issue, and it will hopefully be fixed in a later beta. The implications of this bug is that the workaround is to use `Task.detached` instead of just `Task` when using more than one `async let` binding at the same time. By the time a later Beta comes out, the GM, or the final release comes out, the bug may be fixed. Please keep that in mind as ultimately, normal `Task`s and `Task.detached` calls have different uses.
+**Important Note:** As of Xcode 13 Beta 4 (and all the way down to Beta 3), there is a bug that causes your code to deadlock when entering an actor twice from the same `Task` via `async let`. Apple is aware of this issue, and it will hopefully be fixed in a later beta. Until this bug is fixed, the workaround is to use `Task.detached` instead of just `Task` when using more than one `async let` binding at the same time. By the time a later Beta comes out, the GM, or the final release comes out, the bug may be fixed. Please keep that in mind as ultimately, normal `Task`s and `Task.detached` calls have different uses.
 
 We are entering the actor via two different `async let` calls. The first call (`downloadedImage`) will enter the actor and it will execute until it finds the `await` call on `downloadImages`. It will suspend, and the second call, `sameDownloadedImage` will begin executing. Note that `downloadedImage` reached the await, and since it suspended, it hasn't had any time to download the image yet. And because the image is not in the cache, `sameDownloadedImage` will also download the image instead of retrieving it from memory. If you are *really unlucky*, the server may have updated the image behind the same URL, so `downloadedImage` and `sameDownloadedImage` may download different things!
 
@@ -343,7 +343,7 @@ Actor reentrancy prevents deadlocks and guarantees forward progress, but it is n
 
 # Actor isolation
 
-Actors are all about isolation. Their main purpose is to isolate their state from others, so they can manage access to their own properties, ensuring not multiple writes are performed at the same time, leaving your program in a weird state.
+Actors are all about isolation. Their main purpose is to isolate their state from others, so they can manage access to their own properties, ensuring that multiple writes are performed at the same time, which could leave your program in an unexpected state.
 
 Immutable properties can be accessed at any time.
 
@@ -374,7 +374,7 @@ extension DollMaker: Hashable {
 }
 ```
 
-On the other hand, this is murky waters. While we also only reference the `id` field, this method is an instance method. It is supposed to be `async` to be isolated. Luckily, in this case, we can explicitly mark the method as `nonisolated` to let the compiler know this is not isolated. The compiler will treat this method as being "outside" the actor, and move on, as long as you only access immutable properties inside of it. If the hasher was using the `dolls` property instead of `id`, this wouldn't work as `dolls` is mutable.
+On the other hand, this is getting into murky waters. While we also only reference the `id` field, this method is an instance method. It is supposed to be `async` to be isolated. Luckily, in this case, we can explicitly mark the method as `nonisolated` to let the compiler know this is not isolated. The compiler will treat this method as being "outside" the actor, and move on, as long as you only access immutable properties inside of it. If the hasher was using the `dolls` property instead of `id`, this wouldn't work as `dolls` is mutable.
 
 # The Sendable Type
 
@@ -385,7 +385,7 @@ The concurrency model also introduces `Sendable` types. `Sendable` types are tho
 
 Classes can be `Sendable` but only if they are immutable or if they provide their own synchronization within themselves. `Sendable` classes are exceptional.
 
-It is recommended that your concurrent code communicates using `Sendable` types. At some point, Swift will be able to check, at compile time, if you are sharing non `Sendable` types across functions, but this doesn't appear to be the case as of Xcode 14, Beta 4.
+It is recommended that your concurrent code communicates using `Sendable` types. At some point, Swift will be able to check, at compile time, if you are sharing non `Sendable` types across functions, but this doesn't appear to be the case as of Xcode 13, Beta 4.
 
 ## The Sendable Protocol
 
@@ -445,7 +445,7 @@ Stored property 'games' of 'Sendable'-conforming struct 'VideogameMaker' has non
 
 ## Sendable and generics
 
-A Generic type can be `Sendable` only if its all arguments are `Sendable`.
+A Generic type can be `Sendable` only if its all properties are `Sendable`.
 
 ```swift
 struct Pair<T, U> {
@@ -460,12 +460,12 @@ extension Pair: Sendable where T: Sendable, U: Sendable {}
 
 For functions that can be passed across actors, they can be made marked as `@Sendable`.
 
-When it comes to closures, marking them as `@Sendable` impose some restrictions. They cannot capture mutable variables from its surrounding scope, everything it captures must be `Sendable`, and finally, they cannot be both asynchronous and actor isolated.
+When it comes to closures, marking them as `@Sendable` impose some restrictions. They cannot capture mutable variables from their surrounding scope, everything they capture must be `Sendable`, and finally, they cannot be both asynchronous and actor isolated.
 
 # Conclusion
 
 A sample project for the image download can be downloaded from [here](/archives/Actors.zip).
 
-In this article we explored what actors are and how to use them. We learned that actors isolate their own state and all write access to its properties must be done through the actors. By isolating their own state, actors provide concurrency safety.
+In this article we explored what actors are and how to use them. We learned that an actor isolates its own state and all write access to its properties must be done through the actor itself. By isolating their own state, actors provide concurrency safety.
 
 We also learned about `Sendable` types and how they are crucial to the new concurrency system in Swift. Sendable types help provide compile-time checks to write concurrent code. As they provide static checking, it's very hard to write incorrect code that breaks the concurrency model or introduces concurrency bugs.
