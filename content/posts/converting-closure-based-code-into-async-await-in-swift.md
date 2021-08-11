@@ -53,10 +53,11 @@ keywords:
 2. [Understanding async/await in Swift](/posts/understanding-async-await-in-swift/)
 3. **Converting closure-based code into async/await in Swift**
 4. [Structured Concurrency in Swift: Using async let](/posts/structured-concurrency-in-swift-using-async-let/)
-5. [Structured Concurrency With Group Tasks in Swift](/posts/structured-concurrency-with-group-tasks-in-swift/)
+5. [Structured Concurrency With Task Groups in Swift](/posts/structured-concurrency-with-group-tasks-in-swift/)
 6. [Introduction to Unstructured Concurrency in Swift](/posts/introduction-to-unstructured-concurrency-in-swift/)
 7. [Unstructured Concurrency With Detached Tasks in Swift](/posts/unstructured-concurrency-with-detached-tasks-in-swift/)
 8. [Understanding Actors in the New Concurrency Model in Swift](/posts/understanding-actors-in-the-new-concurrency-model-in-swift/)
+9. [@MainActor and Global Actors in Swift](/posts/mainactor-and-global-actors-in-swift.md)
 
 <hr>
 
@@ -64,9 +65,9 @@ keywords:
 
 *I was debating whether this article should be its own or if its contents should be appended to Introducing async/await in Swift. I decided to make the previous article shorter in an attempt to not overload the articles with information, and to hopefully make it easier to understand these API with smaller articles.*
 
-Last week, we had a long discussion on async/await. We contrasted how it compares to callbacks, and we showed examples that hopefully convinced async/await is really neat.
+Last week, we had a long discussion on async/await. We contrasted how it compares to callbacks, and we showed examples that hopefully convinced you async/await is really neat.
 
-We are just one step away from actual concurrency. Before we dive in into concurrency - with *structured concurrency* - next week, I want to show you how you can convert closure-based and delegate-based code into async/await code. The idea behind this article is to give you all the tools so that you can start adopting async/await in your projects, baby steps at a time.
+We are just one step away from actual concurrency. Before we dive into concurrency - with *structured concurrency* - next week, I want to show you how you can convert closure-based and delegate-based code into async/await code. The idea behind this article is to give you all the tools so that you can start adopting async/await in your projects, baby steps at a time.
 
 If you are a library vendor, you will be able to provide async/await code for all your closure-based APIs, so not only will you be able to start using it for your uses, you will be able to ship async/await to your users.
 
@@ -184,9 +185,9 @@ func downloadImageAndMetadata(imageNumber: Int) async throws -> DetailedImage {
 
 The magic behind this function occurs inside the `withCheckedThrowingContinuation` part. This function will give us a `CheckedContinuation<T, E> where E: Error` object that provides us with methods we need to call. In this example, the original version of `downloadImageWithMetadata` passes us a `DetailedImage` or an error, and we need to call the right `resume` method depending on what we get. If this method called us with a `Result<DetailedImage, Error>`, we could call `.resume(with:)` and pass it the `result` directly.
 
-Continuations **must be called exactly once**, therefore there must be a continuation call within every branch of `withCheckedThrowingContinuation`. If you forget to call a `.resume`, things could go awry. Luckily, Swift will let you know.
+Continuations **must be called exactly once**, therefore there must be a continuation call within every branch of `withCheckedThrowingContinuation`. If you forget to call `.resume`, things could go awry. Luckily, Swift will let you know.
 
-**Note**: *Or least, it is supposed to. This article is based on the last few minutes of the [Meet async/await in Swift](https://developer.apple.com/videos/play/wwdc2021/10132/?time=1733) session. At least as of Beta 1, I was able to have code with branches that don't call `resume`.*
+**Note**: *Or at least, it is supposed to. This article is based on the last few minutes of the [Meet async/await in Swift](https://developer.apple.com/videos/play/wwdc2021/10132/?time=1733) session. At least as of Beta 1, I was able to have code with branches that don't call `resume`.*
 
 And just like that, we have converted closure-based code into something prettier! Using the `async/await` version of this function is as easy as:
 
@@ -244,10 +245,10 @@ We can declare `ContactPicker` as follows:
 ```swift
 @MainActor
 class ContactPicker: NSObject, CNContactPickerDelegate {
-    private typealias ContactCheckedContinuation = CheckedContinuation<CNContact, Never>
+    private typealias ContactCheckedContinuation = CheckedContinuation<CNContact, Never> // 1
 
     private unowned var viewController: UIViewController
-    private var contactContinuation: ContactCheckedContinuation?
+    private var contactContinuation: ContactCheckedContinuation? // 2
     private var picker: CNContactPickerViewController
 
     init(viewController: UIViewController) {
@@ -257,7 +258,7 @@ class ContactPicker: NSObject, CNContactPickerDelegate {
         picker.delegate = self
     }
 
-    func pickContact() async -> CNContact {
+    func pickContact() async -> CNContact { // 3
         viewController.present(picker, animated: true)
         return await withCheckedContinuation({ (continuation: ContactCheckedContinuation) in
             self.contactContinuation = continuation
@@ -265,7 +266,7 @@ class ContactPicker: NSObject, CNContactPickerDelegate {
     }
 
     func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
-        contactContinuation?.resume(returning: contact)
+        contactContinuation?.resume(returning: contact) // 4
         contactContinuation = nil
         picker.dismiss(animated: true, completion: nil)
     }
@@ -275,7 +276,7 @@ class ContactPicker: NSObject, CNContactPickerDelegate {
 What you need to understand here is:
 
 1. We are typealiasing `CheckedContinuation<CNContact, Never>` so it's easier to refer to. Since we can't get an error, the error parameter is `Never`.
-2. `private var contactContinuation: ContactCheckedContinuation?` will hold a reference to the continuation itself. This continuation is given to us in the `withCheckedContinuation` handler. It's an optional, because to avoid it from getting called more than once, we will set it to `nil` after the first call.
+2. `private var contactContinuation: ContactCheckedContinuation?` will hold a reference to the continuation itself. This continuation is given to us in the `withCheckedContinuation` handler. It’s an optional because we will set it to nil after the first call to avoid it being called more than once.
 3. `pickContact` is `async`, as it will return the `CNContact` to us. We call `withCheckedContinuation` here.
 4. When the contact is picked, we will call the continuation with `resume`.
 
@@ -352,7 +353,7 @@ You can download a full version of the contact picker app [here](/archives/Async
 
 In this article we have explored how we can bridge from callback-based code or delegate-based code into `async/await`. We learned how to use checked continuations to do so, and we enforced the idea of what a continuation actually is.
 
-With this, you should now know have all the essentials of `async/await`, You are now ready to tackle actual concurrency, and I'm happy to tell you will explore concurrency next week covering *structured concurrency*. You will learn how to run many tasks in parallel and how to process such results.
+With this, you should now understand all the essentials of `async/await`. You are now ready to tackle actual concurrency, and next week we will start talking about that, starting with *structured concurrency*. You will learn how to run many tasks in parallel and how to process such results.
 
 # Notes
 
