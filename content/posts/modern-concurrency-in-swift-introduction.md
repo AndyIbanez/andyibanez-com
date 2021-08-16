@@ -175,4 +175,5 @@ The tutorials contain code that you can run. Feel free to copy and paste it or d
 6. [Unstructured Concurrency With Detached Tasks in Swift](/posts/unstructured-concurrency-with-detached-tasks-in-swift/)
 7. [Understanding Actors in the New Concurrency Model in Swift](/posts/understanding-actors-in-the-new-concurrency-model-in-swift/)
 8. [@MainActor and Global Actors in Swift](/posts/mainactor-and-global-actors-in-swift/)
+9. [Sharing Data Across Tasks with the @TaskLocal property wrapper in the new Swift Concurrency Model](posts/sharing-data-across-tasks-tasklocal-new-swift-concurrency-model)
 7. The AsyncSequence Protocol in Swift

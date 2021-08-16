@@ -59,6 +59,7 @@ keywords:
 7. **Unstructured Concurrency With Detached Tasks in Swift**
 8. [Understanding Actors in the New Concurrency Model in Swift](/posts/understanding-actors-in-the-new-concurrency-model-in-swift/)
 9. [@MainActor and Global Actors in Swift](/posts/mainactor-and-global-actors-in-swift/)
+10. [Sharing Data Across Tasks with the @TaskLocal property wrapper in the new Swift Concurrency Model](posts/sharing-data-across-tasks-tasklocal-new-swift-concurrency-model)
 
 <hr>
 
