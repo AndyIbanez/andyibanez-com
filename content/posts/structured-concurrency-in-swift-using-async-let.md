@@ -137,7 +137,7 @@ The downloads take place sequentially, which is exactly what you want most of th
 
 In this example, the image download and metadata download are two independent tasks, so we can give the function a little push to download both at the same time and therefore finish earlier.
 
-Before we move on, think about how you would do this with closure-based code. First, you would need to launch to `URLSession` data tasks, each with its own completion handler. But then what? How will the tasks coordinate the completion for this task? What happens if the image downloads first? What happens if the metadata finishes first? How are we gonna "lock" and guarantee access and that the final completion handler is called?
+Before we move on, think about how you would do this with closure-based code. First, you would need to launch two `URLSession` data tasks, each with its own completion handler. But then what? How will the tasks coordinate the completion for this task? What happens if the image downloads first? What happens if the metadata finishes first? How are we gonna "lock" and guarantee access and that the final completion handler is called?
 
 In truth, doing this task with pure closure-based code (and even with delegate-based code), it becomes pretty messy real quick. And we are just talking about a measly *two* tasks at once!
 
