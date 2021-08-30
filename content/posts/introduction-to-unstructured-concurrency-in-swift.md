@@ -59,10 +59,11 @@ keywords:
 8. [Understanding Actors in the New Concurrency Model in Swift](/posts/understanding-actors-in-the-new-concurrency-model-in-swift/)
 9. [@MainActor and Global Actors in Swift](/posts/mainactor-and-global-actors-in-swift/)
 10. [Sharing Data Across Tasks with the @TaskLocal property wrapper in the new Swift Concurrency Model](posts/sharing-data-across-tasks-tasklocal-new-swift-concurrency-model)
+11. [Using AsyncSequence in Swift](/posts/using-asyncsequence-in-swift/)
 
 <hr>
 
-*Understanding Structured Concurrency in Swift is a pre-requisite to read this article. If you aren't familiar with that concept, feel free to read the [Beginning Concurrency in Swift: Structured Concurrency and async-let]() and [Structured Concurrency With Group Tasks in Swift]() articles of this series.*
+*Understanding Structured Concurrency in Swift is a pre-requisite to read this article. If you aren't familiar with that concept, feel free to read the [Beginning Concurrency in Swift: Structured Concurrency and async-let](https://www.andyibanez.com/posts/structured-concurrency-in-swift-using-async-let/) and [Structured Concurrency With Group Tasks in Swift](https://www.andyibanez.com/posts/structured-concurrency-with-group-tasks-in-swift/) articles of this series.*
 
 So far we have focused in exploring Structured Concurrency with the new APIs introduced in Swift 5.5. Structured Concurrency is great to keep a linear flow in our programs, keeping a hierarchy of tasks that is easy to follow. Structured Concurrency helps a lot with keeping task cancellation on track and making error handling as obvious as it would be with no concurrency. Structured concurrency is a great tool to execute various tasks at once, without making our code more difficult to read.
 
