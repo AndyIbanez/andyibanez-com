@@ -57,6 +57,8 @@ keywords:
 8. [Understanding Actors in the New Concurrency Model in Swift](/posts/understanding-actors-in-the-new-concurrency-model-in-swift/)
 9. [@MainActor and Global Actors in Swift](/posts/mainactor-and-global-actors-in-swift)
 10. **Sharing Data Across Tasks with the @TaskLocal property wrapper in the new Swift Concurrency Model**
+11. [Using AsyncSequence in Swift](/posts/using-asyncsequence-in-swift/)
+12. [Modern Swift Concurrency Summary, Cheatsheet, and Thanks](/posts/modern-swift-concurrency-summary-cheatsheet-thanks/)
 
 <hr>
 

@@ -161,9 +161,9 @@ I am not saying your current concurrency knowledge will be irrelevant. Far from 
 
 # Without further ado...
 
-The table of contents below list the articles of this series. As the series is not complete at the time of this writing, this table may change overtime, adding or removing topics, or reordering them, as the series progresses. They are designed to be independent of each other, so you don't need to read the early articles if you just need the last ones. That said if you are new to async/await, you should read them all in order.
+The table of contents below list the articles of this series. They are designed to be independent of each other, so you don't need to read the early articles if you just need the last ones. That said if you are new to async/await, you should read them all in order.
 
-The tutorials contain code that you can run. Feel free to copy and paste it or download the sample projects when available to aid your learning.
+Many of the articles contain code that you can run. Feel free to copy and paste it or download the sample projects when available to aid your learning.
 
 # Table of Contents
 
@@ -177,3 +177,4 @@ The tutorials contain code that you can run. Feel free to copy and paste it or d
 8. [@MainActor and Global Actors in Swift](/posts/mainactor-and-global-actors-in-swift/)
 9. [Sharing Data Across Tasks with the @TaskLocal property wrapper in the new Swift Concurrency Model](posts/sharing-data-across-tasks-tasklocal-new-swift-concurrency-model)
 10. [Using AsyncSequence in Swift](/posts/using-asyncsequence-in-swift/)
+11. [Modern Swift Concurrency Summary, Cheatsheet, and Thanks](/posts/modern-swift-concurrency-summary-cheatsheet-thanks/)

@@ -60,6 +60,7 @@ keywords:
 9. [@MainActor and Global Actors in Swift](/posts/mainactor-and-global-actors-in-swift/)
 10. [Sharing Data Across Tasks with the @TaskLocal property wrapper in the new Swift Concurrency Model](posts/sharing-data-across-tasks-tasklocal-new-swift-concurrency-model)
 11. [Using AsyncSequence in Swift](/posts/using-asyncsequence-in-swift/)
+12. [Modern Swift Concurrency Summary, Cheatsheet, and Thanks](/posts/modern-swift-concurrency-summary-cheatsheet-thanks/)
 
 <hr>
 
@@ -354,7 +355,7 @@ If your internet is a bit too speedy to appreciate the slow prints, Apple provid
 
 One final important note about `await`: It's not guaranteed that the same thread that executed the code above it is the same one that will execute the code below it (commonly called the *continuation*). This has important implications when dealing with UI. If you use `await` in a context that needs the main thread such as a ViewController, make sure you mark the functions with `await` with the `@MainActor` attribute, or add the attribute to the entire class declaration. If you want a complete tour behind how the new concurrency works in Swift, check out the [Swift concurrency: Behind the scenes](https://developer.apple.com/videos/play/wwdc2021/10254/) WWDC2021 session talk.
 
-## "Bridging" between the sync and async worlds with async{}
+## "Bridging" between the sync and async worlds with Task{}
 
 We can create a "bridge" between the sync and async worlds creating a `Task`. To understand why this is necessary, consider the following piece of code:
 
