@@ -49,10 +49,15 @@ googleAnalytics = "UA-146179797-1"
     identifier = "posts"
     url = "/posts/"
 [[menu.main]]
-    name = "WWDC 2020"
+    name = "WWDC 2021"
     weight = 101
-    identifier = "wwdc2020"
-    url = "/tags/wwdc2020/"
+    identifier = "wwdc2021"
+    url = "/tags/wwdc2021/"
+[[menu.main]]
+    name = "Workshops"
+    weight = 102
+    identifier = "workshops"
+    url = "/workshops/"
 [[menu.main]]
     name = "Projects"
     identifier = "projects"

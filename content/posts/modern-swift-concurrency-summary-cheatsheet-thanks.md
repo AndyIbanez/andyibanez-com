@@ -411,12 +411,8 @@ func loadVideogames() async {
 
 The articles in this series have quickly become one of my most visited pages on my website since I relaunched it in 2019. Because of that, I have also received a lot feedback from members in the community.
 
-I want to take a minute to thank everyone who has written me regarding typos or weird phrasing in some sentences. I have taken a lot of care into improving the article with all your opinions and comments. You have all helped me increase the quality of these articles a lot.
+I want to take a minute to thank everyone who has written me regarding typos or weird phrasing in some sentences. I have taken a lot of care into improving the articles with all your opinions and comments. You have all helped me increase the quality of these articles a lot.
 
-I have received a lot of emails, and it's really, really hard to name all of you due to the sheer amount of people who wrote to me. So, thank you all so much for helping me improve the quality of my blog.
+I have received a lot of emails, and it's really, really hard to name all of you due to the sheer amount of people who wrote to me. So, thank you all so much for helping me improve the quality of my blog. I am also sorry if I could not reply to everyone - I got a lot of email and sometimes I lost track of who I had replied to.
 
 There is one person in particular I want to mention by name, because he has spent a lot of time going through all the articles in the series and sending very detailed emails with observations and improvements. This person's emails were actually very long, and whenever I received an email from him, I spent a long time working through the fixes. That said, every second I spent working on his recommendations paid off, and this article series is probably one of the things I'm very proud of. This person is [Dennis Birch](https://twitter.com/dennisbirch2). Big thanks to Dennis for helping this article series become one of my favorites.
-
-I also want to thank to everyone who has shared these article or mentioning them in their own content. I want to thank [Steward Lynch](https://twitter.com/StewartLynch) for the exposure to his YouTube viewers.
-
-And a big thanks to [Dave Verwer](https://twitter.com/daveverwer). His iOSDevWeekly newsletter has not only helped me exposing this series to the world, but also with a lot of articles that I have rewritten since I relaunched my site in 2019.
