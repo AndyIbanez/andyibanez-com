@@ -55,7 +55,7 @@ googleAnalytics = "UA-146179797-1"
     url = "/tags/wwdc2021/"
 [[menu.main]]
     name = "Workshops"
-    weight = 102
+    weight = 103
     identifier = "workshops"
     url = "/workshops/"
 [[menu.main]]
