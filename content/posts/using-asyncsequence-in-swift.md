@@ -47,7 +47,7 @@ keywords:
  - multithreading
 ---
 
-*This article is part of my [Modern Concurrency in Swift Article Series](https://www.andyibanez.com/posts/modern-concurrency-in-swift-introduction/).*
+* This article is part of my [Modern Concurrency in Swift Article Series](https://www.andyibanez.com/posts/modern-concurrency-in-swift-introduction/).*
 
 ###### Table of Contents
 

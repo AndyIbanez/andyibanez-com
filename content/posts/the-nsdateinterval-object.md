@@ -23,8 +23,6 @@ keywords:
  - nsdate
 ---
 
-The NSDateInterval Object
-
 Somehow, this shiny new object, which was actually introduced in iOS 10, flew past my radar. Today I want to take a few minutes to talk about the `NSDateInterval` object. This object allows us to quickly calculate the time interval (represented as a `NSTimeInterval`) between dates, it allows us to check if two dates overlap, and it allows us to check if a given date is within a certain interval.
 
 # The NSDateInterval Class
