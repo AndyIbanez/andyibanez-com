@@ -317,9 +317,9 @@ class ContactPicker: NSObject, CNContactPickerDelegate {
     }
 
     func pickContact() async -> CNContact? {
-        viewController.present(picker, animated: true)
         return await withCheckedContinuation({ (continuation: ContactCheckedContinuation) in
             self.contactContinuation = continuation
+            viewController.present(picker, animated: true)
         })
     }
 
