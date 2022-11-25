@@ -4,22 +4,11 @@ date: 2022-11-24T19:46:21-04:00
 originalDate: 2022-11-24T19:46:21-04:00
 publishDate: 2022-11-24T19:46:21-04:00
 draft: false
-highlightjslanguages:
- - swift
- - objectivec
----
-
----
-title: "Modern Concurrency in Swift: Introduction"
-date: 2021-06-16T07:00:00-04:00
-originalDate: 2021-06-13T00:17:10-04:00
-publishDate: 2021-06-16T07:00:00-04:00
-draft: false
-highlightjslanguages:
- - swift
- - objectivec
 categories:
  - development
+highlightjslanguages:
+ - swift
+ - objectivec
 tags:
  - swift
  - apple
