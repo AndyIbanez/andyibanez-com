@@ -15,6 +15,7 @@ googleAnalytics = "UA-146179797-1"
 	reddit = "andyibanez"
 	gravatar = "leonnears+realpic@gmail.com"
     facebook = "AndyIbanezCom"
+    mastodon = "https://iosdev.space/@andy"
 
 ## Site Settings
 [params]
