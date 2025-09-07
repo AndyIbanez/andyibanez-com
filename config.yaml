@@ -1,0 +1,71 @@
+baseURL: "https://www.andyibanez.com"
+languageCode: "en-us"
+title: "Andy Ibanez"
+theme: "colordrop"
+
+markup:
+  highlight:
+    style: catppuccin-mocha
+  goldmark:
+    renderer:
+      unsafe: true
+
+author:
+  name: Andy Ibanez
+  job: iOS Developer
+  image: profile.png
+  github: AndyIbanez
+  twitter: twitter
+  linkedin: linkedin
+
+  license:
+    name: Attribuition-ShareAlike
+    type: by-sa
+    version: "4.0"
+    locale: en
+    size: 88x31
+
+menu:
+  main:
+    - identifier: about-me
+      name: About Me
+      url: about/
+      weight: 1
+    - identifier: blog
+      name: Blog
+      url: blog/
+      weight: 2
+    - identifier: tags
+      name: Tags
+      url: tags/
+      weight: 3
+  footer:
+    - identifier: github
+      name: github
+      url: "https://github.com/AndyIbanez"
+      weight: 1
+    - identifier: twitter
+      name: twitter
+      url: "https://x.com/AndyIbanezK"
+      weight: 2
+    - identifier: linkedin
+      name: linkedin
+      url: "https://www.linkedin.com/in/andyibanez/"
+      weight: 3
+    - identifier: rss
+      name: rss
+      weight: 5
+    - identifier: curriculum
+      name: curriculum
+      url: curriculum/
+      weight: 6
+    - identifier: email
+      name: email
+      url: "/contact-me"
+      weight: 7
+
+params:
+  description: A blog where I write about the stuff that interests me and the knowledge I’ve picked up over the years. Expect a lot of iOS development content, along with scripting, automation, and the occasional side topic.
+  siteLogo: img/profile.png
+  themeColor: "#292148"        # deep elegant purple (Fairese-style)
+  themeInverseColor: "#ffffff" # soft lavender accent
