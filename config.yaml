@@ -43,10 +43,14 @@ menu:
       name: Tags
       url: tags/
       weight: 3
+    - identifier: projects
+      name: projects
+      url: projects/
+      weight: 40
     - identifier: privacy-policy
       name: Privacy policy
       url: privacy-policy/
-      weight: 40
+      weight: 50
   footer:
     - identifier: github
       name: github
