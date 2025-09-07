@@ -22,3 +22,11 @@ As of 2025, I am currently involved in the aircraft maintenance industry working
 # Availability for Hire
 
 If you are interested in working with me for any kind of project, in either short or long-term contracts, I established an LLC, [Fairese](https://www.fairese.com), in 2025 specialized in iOS App Development. If you need work done on other technologies, I can use my contact network to find the right fit for your project.
+
+## Quick Facts
+
+- 💼 15 years of iOS development experience
+- 🎓 Computer Systems Engineer (UPB, Bolivia)
+- 🛠️ Former Software Architect at Banco Nacional de Bolivia
+- ✈️ Currently at Trax, building iPad apps for airlines
+- 🧾 Founder of Fairese LLC, offering iOS development services
