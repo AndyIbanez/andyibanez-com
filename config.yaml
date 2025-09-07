@@ -2,7 +2,10 @@ baseURL: "https://www.andyibanez.com"
 languageCode: "en-us"
 title: "Andy Ibanez"
 theme: "colordrop"
-googleAnalytics: G-CE7T69YX8Y
+
+services:
+  googleAnalytics:
+    id: G-CE7T69YX8Y
 
 markup:
   highlight:
@@ -40,6 +43,10 @@ menu:
       name: Tags
       url: tags/
       weight: 3
+    - identifier: privacy-policy
+      name: Privacy policy
+      url: privacy-policy/
+      weight: 40
   footer:
     - identifier: github
       name: github
@@ -67,6 +74,6 @@ menu:
 
 params:
   description: A blog where I write about the stuff that interests me and the knowledge I’ve picked up over the years. Expect a lot of iOS development content, along with scripting, automation, and the occasional side topic.
-  siteLogo: img/profile.png
+  siteLogo: img/andy_profile.png
   themeColor: "#292148"        # deep elegant purple (Fairese-style)
   themeInverseColor: "#ffffff" # soft lavender accent

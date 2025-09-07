@@ -19,6 +19,8 @@ I continued working with financial services after I left Banco Nacional de Boliv
 
 As of 2025, I am currently involved in the aircraft maintenance industry working for [Trax](https://trax.aero), a company that developers software to aid aircraft maintenance personnel with their day to day tasks. Trax currently builds and deploys iPads apps for multiple airlines in the world, including some big ones like Southwest and Qatar Airlines.
 
+In 2022, [I published my first book](https://swiftasyncbook.com), making it one of my favorite projects to date.
+
 # Availability for Hire
 
 If you are interested in working with me for any kind of project, in either short or long-term contracts, I established an LLC, [Fairese](https://www.fairese.com), in 2025 specialized in iOS App Development. If you need work done on other technologies, I can use my contact network to find the right fit for your project.

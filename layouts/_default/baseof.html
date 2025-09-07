@@ -19,9 +19,13 @@
     {{ block "headAdditional" . }}
     {{ end }}
 
-    {{ if .Site.GoogleAnalytics }}
-        {{ template "_internal/google_analytics.html" . }}
+{{ with .Site.Config.Services }}
+  {{ with .GoogleAnalytics }}
+    {{ with .ID }}
+      {{ template "_internal/google_analytics.html" $ }}
     {{ end }}
+  {{ end }}
+{{ end }}
   </head>
 
   <body class="{{ block "bodyClass" . }}{{ end }}">
