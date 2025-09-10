@@ -6,48 +6,629 @@
     <description>Recent content in Tags on Andy Ibanez</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Oct 2020 07:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 13 Oct 2021 07:00:00 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Apple</title>
       <link>http://localhost:1313/tags/apple/</link>
-      <pubDate>Wed, 21 Oct 2020 07:00:00 -0400</pubDate>
+      <pubDate>Wed, 13 Oct 2021 07:00:00 -0400</pubDate>
       <guid>http://localhost:1313/tags/apple/</guid>
       <description></description>
     </item>
     <item>
       <title>Ios</title>
       <link>http://localhost:1313/tags/ios/</link>
-      <pubDate>Wed, 21 Oct 2020 07:00:00 -0400</pubDate>
+      <pubDate>Wed, 13 Oct 2021 07:00:00 -0400</pubDate>
       <guid>http://localhost:1313/tags/ios/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ipados</title>
-      <link>http://localhost:1313/tags/ipados/</link>
-      <pubDate>Wed, 21 Oct 2020 07:00:00 -0400</pubDate>
-      <guid>http://localhost:1313/tags/ipados/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Nsformatter</title>
-      <link>http://localhost:1313/tags/nsformatter/</link>
-      <pubDate>Wed, 21 Oct 2020 07:00:00 -0400</pubDate>
-      <guid>http://localhost:1313/tags/nsformatter/</guid>
       <description></description>
     </item>
     <item>
       <title>Programming</title>
       <link>http://localhost:1313/tags/programming/</link>
-      <pubDate>Wed, 21 Oct 2020 07:00:00 -0400</pubDate>
+      <pubDate>Wed, 13 Oct 2021 07:00:00 -0400</pubDate>
       <guid>http://localhost:1313/tags/programming/</guid>
       <description></description>
     </item>
     <item>
       <title>Swift</title>
       <link>http://localhost:1313/tags/swift/</link>
-      <pubDate>Wed, 21 Oct 2020 07:00:00 -0400</pubDate>
+      <pubDate>Wed, 13 Oct 2021 07:00:00 -0400</pubDate>
       <guid>http://localhost:1313/tags/swift/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Codable</title>
+      <link>http://localhost:1313/tags/codable/</link>
+      <pubDate>Wed, 29 Sep 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/codable/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ipados</title>
+      <link>http://localhost:1313/tags/ipados/</link>
+      <pubDate>Wed, 29 Sep 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/ipados/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Json</title>
+      <link>http://localhost:1313/tags/json/</link>
+      <pubDate>Wed, 29 Sep 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/json/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Macos</title>
+      <link>http://localhost:1313/tags/macos/</link>
+      <pubDate>Wed, 29 Sep 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/macos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>No Overview Available</title>
+      <link>http://localhost:1313/tags/no-overview-available/</link>
+      <pubDate>Wed, 29 Sep 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/no-overview-available/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Watchos</title>
+      <link>http://localhost:1313/tags/watchos/</link>
+      <pubDate>Wed, 29 Sep 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/watchos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wwdc2021</title>
+      <link>http://localhost:1313/tags/wwdc2021/</link>
+      <pubDate>Wed, 29 Sep 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/wwdc2021/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Async</title>
+      <link>http://localhost:1313/tags/async/</link>
+      <pubDate>Wed, 08 Sep 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/async/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Await</title>
+      <link>http://localhost:1313/tags/await/</link>
+      <pubDate>Wed, 08 Sep 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/await/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Concurrency</title>
+      <link>http://localhost:1313/tags/concurrency/</link>
+      <pubDate>Wed, 08 Sep 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/concurrency/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Multithreading</title>
+      <link>http://localhost:1313/tags/multithreading/</link>
+      <pubDate>Wed, 08 Sep 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/multithreading/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Asyncsequence</title>
+      <link>http://localhost:1313/tags/asyncsequence/</link>
+      <pubDate>Wed, 01 Sep 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/asyncsequence/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Asyncstream</title>
+      <link>http://localhost:1313/tags/asyncstream/</link>
+      <pubDate>Wed, 01 Sep 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/asyncstream/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wwdc</title>
+      <link>http://localhost:1313/tags/wwdc/</link>
+      <pubDate>Wed, 26 May 2021 07:00:07 -0400</pubDate>
+      <guid>http://localhost:1313/tags/wwdc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Faceid</title>
+      <link>http://localhost:1313/tags/faceid/</link>
+      <pubDate>Wed, 12 May 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/faceid/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Swiftui</title>
+      <link>http://localhost:1313/tags/swiftui/</link>
+      <pubDate>Wed, 12 May 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/swiftui/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Touchid</title>
+      <link>http://localhost:1313/tags/touchid/</link>
+      <pubDate>Wed, 12 May 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/touchid/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Foundation</title>
+      <link>http://localhost:1313/tags/foundation/</link>
+      <pubDate>Wed, 05 May 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/foundation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nsdate</title>
+      <link>http://localhost:1313/tags/nsdate/</link>
+      <pubDate>Wed, 05 May 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/nsdate/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Javascript</title>
+      <link>http://localhost:1313/tags/javascript/</link>
+      <pubDate>Wed, 14 Apr 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/javascript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Xcode</title>
+      <link>http://localhost:1313/tags/xcode/</link>
+      <pubDate>Wed, 14 Apr 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/xcode/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Templates</title>
+      <link>http://localhost:1313/tags/templates/</link>
+      <pubDate>Wed, 07 Apr 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/templates/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nsformatter</title>
+      <link>http://localhost:1313/tags/nsformatter/</link>
+      <pubDate>Wed, 24 Mar 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/nsformatter/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Simulator</title>
+      <link>http://localhost:1313/tags/simulator/</link>
+      <pubDate>Wed, 10 Mar 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/simulator/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tvos</title>
+      <link>http://localhost:1313/tags/tvos/</link>
+      <pubDate>Wed, 10 Mar 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/tvos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>App Transfer</title>
+      <link>http://localhost:1313/tags/app-transfer/</link>
+      <pubDate>Wed, 03 Mar 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/app-transfer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gcd</title>
+      <link>http://localhost:1313/tags/gcd/</link>
+      <pubDate>Wed, 24 Feb 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/gcd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Grand Central Dispatch</title>
+      <link>http://localhost:1313/tags/grand-central-dispatch/</link>
+      <pubDate>Wed, 24 Feb 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/grand-central-dispatch/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nsoperation</title>
+      <link>http://localhost:1313/tags/nsoperation/</link>
+      <pubDate>Wed, 24 Feb 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/nsoperation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Optionset</title>
+      <link>http://localhost:1313/tags/optionset/</link>
+      <pubDate>Wed, 17 Feb 2021 07:30:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/optionset/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Networking</title>
+      <link>http://localhost:1313/tags/networking/</link>
+      <pubDate>Wed, 10 Feb 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/networking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Proxy</title>
+      <link>http://localhost:1313/tags/proxy/</link>
+      <pubDate>Wed, 10 Feb 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/proxy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reverse Engineering</title>
+      <link>http://localhost:1313/tags/reverse-engineering/</link>
+      <pubDate>Wed, 10 Feb 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/reverse-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nil</title>
+      <link>http://localhost:1313/tags/nil/</link>
+      <pubDate>Wed, 03 Feb 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/nil/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nsnull</title>
+      <link>http://localhost:1313/tags/nsnull/</link>
+      <pubDate>Wed, 03 Feb 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/nsnull/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nullability</title>
+      <link>http://localhost:1313/tags/nullability/</link>
+      <pubDate>Wed, 03 Feb 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/nullability/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Objective-C</title>
+      <link>http://localhost:1313/tags/objective-c/</link>
+      <pubDate>Wed, 03 Feb 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/objective-c/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data</title>
+      <link>http://localhost:1313/tags/data/</link>
+      <pubDate>Wed, 27 Jan 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/data/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data Structures</title>
+      <link>http://localhost:1313/tags/data-structures/</link>
+      <pubDate>Wed, 27 Jan 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/data-structures/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dictionary</title>
+      <link>http://localhost:1313/tags/dictionary/</link>
+      <pubDate>Wed, 27 Jan 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/dictionary/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Structures</title>
+      <link>http://localhost:1313/tags/structures/</link>
+      <pubDate>Wed, 27 Jan 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/structures/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sets</title>
+      <link>http://localhost:1313/tags/sets/</link>
+      <pubDate>Wed, 20 Jan 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/sets/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Development</title>
+      <link>http://localhost:1313/tags/development/</link>
+      <pubDate>Wed, 13 Jan 2021 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>App Store Connect</title>
+      <link>http://localhost:1313/tags/app-store-connect/</link>
+      <pubDate>Wed, 09 Dec 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/app-store-connect/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wwdc2020</title>
+      <link>http://localhost:1313/tags/wwdc2020/</link>
+      <pubDate>Wed, 02 Dec 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/wwdc2020/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sequences</title>
+      <link>http://localhost:1313/tags/sequences/</link>
+      <pubDate>Wed, 25 Nov 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/sequences/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Keypaths</title>
+      <link>http://localhost:1313/tags/keypaths/</link>
+      <pubDate>Wed, 11 Nov 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/keypaths/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Metrickit</title>
+      <link>http://localhost:1313/tags/metrickit/</link>
+      <pubDate>Wed, 07 Oct 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/metrickit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wwdc19</title>
+      <link>http://localhost:1313/tags/wwdc19/</link>
+      <pubDate>Wed, 07 Oct 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/wwdc19/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wwdc20</title>
+      <link>http://localhost:1313/tags/wwdc20/</link>
+      <pubDate>Wed, 07 Oct 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/wwdc20/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IOS14</title>
+      <link>http://localhost:1313/tags/ios14/</link>
+      <pubDate>Wed, 30 Sep 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/ios14/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cryptokit</title>
+      <link>http://localhost:1313/tags/cryptokit/</link>
+      <pubDate>Mon, 14 Sep 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/cryptokit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Logging</title>
+      <link>http://localhost:1313/tags/logging/</link>
+      <pubDate>Wed, 09 Sep 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/logging/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Oslog</title>
+      <link>http://localhost:1313/tags/oslog/</link>
+      <pubDate>Wed, 09 Sep 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/oslog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cryptography</title>
+      <link>http://localhost:1313/tags/cryptography/</link>
+      <pubDate>Wed, 19 Aug 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/cryptography/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Encryption</title>
+      <link>http://localhost:1313/tags/encryption/</link>
+      <pubDate>Wed, 19 Aug 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/encryption/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Combine</title>
+      <link>http://localhost:1313/tags/combine/</link>
+      <pubDate>Wed, 12 Aug 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/combine/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Backgroundtasks</title>
+      <link>http://localhost:1313/tags/backgroundtasks/</link>
+      <pubDate>Wed, 05 Aug 2020 00:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/backgroundtasks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Xcode12</title>
+      <link>http://localhost:1313/tags/xcode12/</link>
+      <pubDate>Wed, 29 Jul 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/xcode12/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Multipeerconnectivity</title>
+      <link>http://localhost:1313/tags/multipeerconnectivity/</link>
+      <pubDate>Wed, 15 Jul 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/multipeerconnectivity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Uidatepicker</title>
+      <link>http://localhost:1313/tags/uidatepicker/</link>
+      <pubDate>Wed, 08 Jul 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/uidatepicker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Uikit</title>
+      <link>http://localhost:1313/tags/uikit/</link>
+      <pubDate>Wed, 08 Jul 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/uikit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Error Handling</title>
+      <link>http://localhost:1313/tags/error-handling/</link>
+      <pubDate>Thu, 18 Jun 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/error-handling/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ocr</title>
+      <link>http://localhost:1313/tags/ocr/</link>
+      <pubDate>Wed, 10 Jun 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/ocr/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Scanning</title>
+      <link>http://localhost:1313/tags/scanning/</link>
+      <pubDate>Wed, 10 Jun 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/scanning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vision Framework</title>
+      <link>http://localhost:1313/tags/vision-framework/</link>
+      <pubDate>Wed, 10 Jun 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/vision-framework/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Visionkit</title>
+      <link>http://localhost:1313/tags/visionkit/</link>
+      <pubDate>Wed, 10 Jun 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/visionkit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Keychain</title>
+      <link>http://localhost:1313/tags/keychain/</link>
+      <pubDate>Wed, 03 Jun 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/keychain/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Storyboard</title>
+      <link>http://localhost:1313/tags/storyboard/</link>
+      <pubDate>Wed, 13 May 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/storyboard/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dynamism</title>
+      <link>http://localhost:1313/tags/dynamism/</link>
+      <pubDate>Wed, 06 May 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/dynamism/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Metaprogramming</title>
+      <link>http://localhost:1313/tags/metaprogramming/</link>
+      <pubDate>Wed, 06 May 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/metaprogramming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mirror</title>
+      <link>http://localhost:1313/tags/mirror/</link>
+      <pubDate>Wed, 06 May 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/mirror/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reflection</title>
+      <link>http://localhost:1313/tags/reflection/</link>
+      <pubDate>Wed, 06 May 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/reflection/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dynamiccallable</title>
+      <link>http://localhost:1313/tags/dynamiccallable/</link>
+      <pubDate>Wed, 29 Apr 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/dynamiccallable/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dynamicmemberlookup</title>
+      <link>http://localhost:1313/tags/dynamicmemberlookup/</link>
+      <pubDate>Wed, 29 Apr 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/dynamicmemberlookup/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Swift-Evolution</title>
+      <link>http://localhost:1313/tags/swift-evolution/</link>
+      <pubDate>Wed, 29 Apr 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/swift-evolution/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ArgumentParser</title>
+      <link>http://localhost:1313/tags/argumentparser/</link>
+      <pubDate>Wed, 22 Apr 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/argumentparser/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Function Builders</title>
+      <link>http://localhost:1313/tags/function-builders/</link>
+      <pubDate>Wed, 11 Mar 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/function-builders/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wwdc2019</title>
+      <link>http://localhost:1313/tags/wwdc2019/</link>
+      <pubDate>Wed, 11 Mar 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/wwdc2019/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Natural Language</title>
+      <link>http://localhost:1313/tags/natural-language/</link>
+      <pubDate>Wed, 04 Mar 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/natural-language/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IOS13</title>
+      <link>http://localhost:1313/tags/ios13/</link>
+      <pubDate>Wed, 29 Jan 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/ios13/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Speech</title>
+      <link>http://localhost:1313/tags/speech/</link>
+      <pubDate>Wed, 29 Jan 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/speech/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Speech Recognition</title>
+      <link>http://localhost:1313/tags/speech-recognition/</link>
+      <pubDate>Wed, 29 Jan 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/speech-recognition/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shortcuts</title>
+      <link>http://localhost:1313/tags/shortcuts/</link>
+      <pubDate>Wed, 08 Jan 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/shortcuts/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Siri</title>
+      <link>http://localhost:1313/tags/siri/</link>
+      <pubDate>Wed, 08 Jan 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/siri/</guid>
       <description></description>
     </item>
     <item>
@@ -55,6 +636,174 @@
       <link>http://localhost:1313/tags/open-source/</link>
       <pubDate>Tue, 31 Dec 2019 17:27:58 -0400</pubDate>
       <guid>http://localhost:1313/tags/open-source/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Relativedatetimeformatter</title>
+      <link>http://localhost:1313/tags/relativedatetimeformatter/</link>
+      <pubDate>Wed, 11 Dec 2019 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/relativedatetimeformatter/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Property Wrappers</title>
+      <link>http://localhost:1313/tags/property-wrappers/</link>
+      <pubDate>Wed, 04 Dec 2019 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/property-wrappers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Search</title>
+      <link>http://localhost:1313/tags/search/</link>
+      <pubDate>Wed, 13 Nov 2019 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/search/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Uisearchbar</title>
+      <link>http://localhost:1313/tags/uisearchbar/</link>
+      <pubDate>Wed, 13 Nov 2019 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/uisearchbar/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Uisearchtextfield</title>
+      <link>http://localhost:1313/tags/uisearchtextfield/</link>
+      <pubDate>Wed, 13 Nov 2019 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/uisearchtextfield/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Uisearchtoken</title>
+      <link>http://localhost:1313/tags/uisearchtoken/</link>
+      <pubDate>Wed, 13 Nov 2019 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/uisearchtoken/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Patternmatching</title>
+      <link>http://localhost:1313/tags/patternmatching/</link>
+      <pubDate>Wed, 30 Oct 2019 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/patternmatching/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nsnotificationcenter</title>
+      <link>http://localhost:1313/tags/nsnotificationcenter/</link>
+      <pubDate>Wed, 23 Oct 2019 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/nsnotificationcenter/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Arrays</title>
+      <link>http://localhost:1313/tags/arrays/</link>
+      <pubDate>Wed, 16 Oct 2019 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/arrays/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nsarray</title>
+      <link>http://localhost:1313/tags/nsarray/</link>
+      <pubDate>Wed, 16 Oct 2019 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/nsarray/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nspredicate</title>
+      <link>http://localhost:1313/tags/nspredicate/</link>
+      <pubDate>Wed, 16 Oct 2019 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/nspredicate/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Corehaptics</title>
+      <link>http://localhost:1313/tags/corehaptics/</link>
+      <pubDate>Wed, 02 Oct 2019 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/corehaptics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Error</title>
+      <link>http://localhost:1313/tags/error/</link>
+      <pubDate>Wed, 11 Sep 2019 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/error/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Result</title>
+      <link>http://localhost:1313/tags/result/</link>
+      <pubDate>Wed, 11 Sep 2019 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/result/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nsurl</title>
+      <link>http://localhost:1313/tags/nsurl/</link>
+      <pubDate>Wed, 04 Sep 2019 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/nsurl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Urls</title>
+      <link>http://localhost:1313/tags/urls/</link>
+      <pubDate>Wed, 04 Sep 2019 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/urls/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Command Line</title>
+      <link>http://localhost:1313/tags/command-line/</link>
+      <pubDate>Tue, 20 Aug 2019 13:59:15 -0400</pubDate>
+      <guid>http://localhost:1313/tags/command-line/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>http://localhost:1313/tags/linux/</link>
+      <pubDate>Tue, 20 Aug 2019 13:59:15 -0400</pubDate>
+      <guid>http://localhost:1313/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rclone</title>
+      <link>http://localhost:1313/tags/rclone/</link>
+      <pubDate>Tue, 20 Aug 2019 13:59:15 -0400</pubDate>
+      <guid>http://localhost:1313/tags/rclone/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>App Store</title>
+      <link>http://localhost:1313/tags/app-store/</link>
+      <pubDate>Mon, 08 May 2017 21:06:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/app-store/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Php</title>
+      <link>http://localhost:1313/tags/php/</link>
+      <pubDate>Wed, 26 Mar 2014 19:13:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/php/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web</title>
+      <link>http://localhost:1313/tags/web/</link>
+      <pubDate>Wed, 26 Mar 2014 19:13:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/web/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cydia</title>
+      <link>http://localhost:1313/tags/cydia/</link>
+      <pubDate>Sat, 04 Jan 2014 22:07:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/cydia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jailbreak</title>
+      <link>http://localhost:1313/tags/jailbreak/</link>
+      <pubDate>Sat, 04 Jan 2014 22:07:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/jailbreak/</guid>
       <description></description>
     </item>
   </channel>

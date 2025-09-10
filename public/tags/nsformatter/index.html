@@ -45,8 +45,8 @@
 
   <meta itemprop="name" content="Nsformatter">
   <meta itemprop="description" content="A blog where I write about the stuff that interests me and the knowledge I’ve picked up over the years. Expect a lot of iOS development content, along with scripting, automation, and the occasional side topic.">
-  <meta itemprop="datePublished" content="2020-10-21T07:00:00-04:00">
-  <meta itemprop="dateModified" content="2020-10-21T07:00:00-04:00">
+  <meta itemprop="datePublished" content="2021-03-24T07:00:00-04:00">
+  <meta itemprop="dateModified" content="2021-03-24T07:00:00-04:00">
 
 
 <meta property="og:url" content="http://localhost:1313/tags/nsformatter/">
@@ -84,10 +84,55 @@
       
       {
         "@type": "BlogPosting",
+        "headline": "Using NSMeasurement For Working with Dimensions and Units",
+        "url": "http://localhost:1313/posts/using-nsmeasurement-for-working-with-dimensions-and-units/",
+        "datePublished": "2021-03-24",
+        "description": "Learn how to use NSMeasurement to work with dimensions and units."
+      }
+    
+      ,
+      {
+        "@type": "BlogPosting",
         "headline": "A More Practical Custom Formatter ",
         "url": "http://localhost:1313/posts/a-more-practical-custom-formatter/",
         "datePublished": "2020-10-21",
         "description": "Implement a more interesting custom Formatter in Swift."
+      }
+    
+      ,
+      {
+        "@type": "BlogPosting",
+        "headline": "Writing Custom NSFormatters in Swift",
+        "url": "http://localhost:1313/posts/writing-custom-nsformatters-swift/",
+        "datePublished": "2020-10-14",
+        "description": "Learn how to write your own NSFormatter subclasses in Swift."
+      }
+    
+      ,
+      {
+        "@type": "BlogPosting",
+        "headline": "Formatting Notes and Gotchas",
+        "url": "http://localhost:1313/posts/formatting-notes-and-gotchas/",
+        "datePublished": "2020-09-30",
+        "description": "Usage notes and things to watch out for when formatting content with NSFormatters."
+      }
+    
+      ,
+      {
+        "@type": "BlogPosting",
+        "headline": "Formatting Relative Dates With RelativeDateTimeFormatter",
+        "url": "http://localhost:1313/posts/formatting-relative-dates-relativedatetimeformatter/",
+        "datePublished": "2019-12-11",
+        "description": "Learn how to perform background tasks in your iOS App."
+      }
+    
+      ,
+      {
+        "@type": "BlogPosting",
+        "headline": "Formatting Content with NSFormatter",
+        "url": "http://localhost:1313/posts/nsformatter/",
+        "datePublished": "2019-09-25",
+        "description": "Learn to use the different NSFormatter subclasses to format data in a human-readable way."
       }
     
   ]
@@ -167,7 +212,7 @@
   <div class="container">
     <div class="main-navigation">
       
-      <a href="/about/" >About Me</a><a href="/blog/" >Blog</a><a href="/tags/" >Tags</a><a href="/projects/" >Projects</a><a href="/privacy-policy/" >Privacy policy</a>
+      <a href="/about/" >About Me</a><a href="/posts/" >Blog</a><a href="/tags/" >Tags</a><a href="/projects/" >Projects</a><a href="/privacy-policy/" >Privacy policy</a>
     </div>
   </div>
 </nav>
@@ -192,6 +237,24 @@
 
   
     <article>
+      <h2 class="title"><a href="http://localhost:1313/posts/using-nsmeasurement-for-working-with-dimensions-and-units/">Using NSMeasurement For Working with Dimensions and Units</a></h2>
+
+      <p class="publish">
+  Published on
+  <time class="post-date" datetime="2021-03-24T07:00:00-04:00">
+    March 24, 2021
+  </time>
+</p>
+
+
+      
+
+      <p>Software development can be an easy thing, as it can be a very complex thing. And one of those complex things is keeping in mind all the different languages, locations, and standards users may use in their daily lives. This makes working with certain information. From different date formats to entirely different measuring system, software is challenging, especially when working with anything that requires localization. The situation is just so bad that a lot of software just make assumptions about their users environment and don&rsquo;t let you change any settings.</p>
+    </article>
+
+    <hr>
+  
+    <article>
       <h2 class="title"><a href="http://localhost:1313/posts/a-more-practical-custom-formatter/">A More Practical Custom Formatter </a></h2>
 
       <p class="publish">
@@ -207,6 +270,83 @@
       <p>I had announced that I wouldn&rsquo;t be able to write an article this week due to it being Elections Day in my country. that said I just can&rsquo;t leave you guys without article, so this is a short one.</p>
 <p>We will write another <code>NSFormatter</code> subclass. It will allow us to compose E-mails easily. This should also help show that formatters can format string into anything else really.</p>
 <p>In short, we will be able to &ldquo;compose&rdquo; emails using raw strings, like this:</p>
+    </article>
+
+    <hr>
+  
+    <article>
+      <h2 class="title"><a href="http://localhost:1313/posts/writing-custom-nsformatters-swift/">Writing Custom NSFormatters in Swift</a></h2>
+
+      <p class="publish">
+  Published on
+  <time class="post-date" datetime="2020-10-14T07:00:00-04:00">
+    October 14, 2020
+  </time>
+</p>
+
+
+      
+
+      <p>Last year we explored <a href="https://www.andyibanez.com/posts/nsformatter/">some NSFormatters and how to use them</a>. We also explored some formatters <a href="https://www.andyibanez.com/posts/formatting-relative-dates-relativedatetimeformatter/">introduced in iOS 13</a>. Finally, a few weeks ago <a href="https://www.andyibanez.com/posts/formatting-notes-and-gotchas/">we learned about yet more formatters, and how to better use the ones we already had</a>. In short, we have explored how powerful NSFormatter is. One thing we haven&rsquo;t done yet though, is to write our own custom <code>NSFormatter</code> subclass.</p>
+<h1 id="nsformatter">NSFormatter</h1>
+<p><code>NSFormatter</code> is an abstract class. All formatter classes inherit from it. In Swift, everything we need about it is <code>open</code>, so we can create our own <code>NSFormatters</code> with ease.</p>
+    </article>
+
+    <hr>
+  
+    <article>
+      <h2 class="title"><a href="http://localhost:1313/posts/formatting-notes-and-gotchas/">Formatting Notes and Gotchas</a></h2>
+
+      <p class="publish">
+  Published on
+  <time class="post-date" datetime="2020-09-30T07:00:00-04:00">
+    September 30, 2020
+  </time>
+</p>
+
+
+      
+
+      <p>A year ago, we talked about <a href="https://www.andyibanez.com/posts/nsformatter/">using NSFormatter for formatting data in a human readable format</a>. WWDC2020 brings some updates and changes to the <code>NSFormatter</code> APIs that we need to be aware of. This article will complement the NSFormatter article from last year with best practices and things to look out for.</p>
+<h1 id="improvements-for-combinations-of-languages-and-regions">Improvements for Combinations of Languages and Regions.</h1>
+<p><code>NSFormatter</code> always does its best to format the data according to the user&rsquo;s language and region where relevant. Apple is improving the combinations for this because it&rsquo;s highly common for people to set their phones in a language that is not commonly used in a given region. This is pretty exciting for me, because I live in Bolivia where people speak Spanish, but I have used my devices in English for as long as I can remember.</p>
+    </article>
+
+    <hr>
+  
+    <article>
+      <h2 class="title"><a href="http://localhost:1313/posts/formatting-relative-dates-relativedatetimeformatter/">Formatting Relative Dates With RelativeDateTimeFormatter</a></h2>
+
+      <p class="publish">
+  Published on
+  <time class="post-date" datetime="2019-12-11T07:00:00-04:00">
+    December 11, 2019
+  </time>
+</p>
+
+
+      
+
+      <p>Formatting Relative Dates With RelativeDateTimeFormatter</p>
+<p>A few weeks ago we talked about <a href="https://www.andyibanez.com/posts/nsformatter/">formatting content with NSFormatter</a>, an abstract class from which multiple formatting classes inherit from to allow you to format different kinds of data in a human-readable form. <code>NSFormatter</code> is not only a class you can inherit from yourself, but as iOS evolves, more formatters will be added to its family. This week, we will explore a new member of this family introduced in iOS 13: <code>RelativeDateTimeFormatter</code>.</p>
+    </article>
+
+    <hr>
+  
+    <article>
+      <h2 class="title"><a href="http://localhost:1313/posts/nsformatter/">Formatting Content with NSFormatter</a></h2>
+
+      <p class="publish">
+  Published on
+  <time class="post-date" datetime="2019-09-25T07:00:00-04:00">
+    September 25, 2019
+  </time>
+</p>
+
+
+      
+
+      <p>Very often, we need to deal with data in a &ldquo;raw&rdquo; format that, if displayed directly to the user, it makes little sense to them. This kind of data includes a date timestamp, the number of bytes in a big file, or numbers with no rounding a bunch of decimals. There is a lot of data like this, and we need to be able to format it and show it to the user.</p>
     </article>
 
     <hr>
