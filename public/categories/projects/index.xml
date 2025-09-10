@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Andy Ibanez</title>
+    <link>http://localhost:1313/categories/projects/</link>
+    <description>Recent content in Projects on Andy Ibanez</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 31 Dec 2019 17:27:58 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AIiCloudSync</title>
+      <link>http://localhost:1313/projects/aiicloudsync/</link>
+      <pubDate>Tue, 31 Dec 2019 17:27:58 -0400</pubDate>
+      <guid>http://localhost:1313/projects/aiicloudsync/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/AndyIbanez/AIiCloudSync&#34;&gt;GitHub Repository&lt;/a&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;aiicloudsync&#34;&gt;AIiCloudSync&lt;/h1&gt;&#xA;&lt;p&gt;AIiCloudSync is a simple Package written in Swift to synchronize specific UserDefaults with the iCloud Key Value store (&lt;code&gt;NSUbiquitousKeyValueStore&lt;/code&gt;).&lt;/p&gt;&#xA;&lt;p&gt;To use this package, create a single instance of &lt;code&gt;AIiCloudSync&lt;/code&gt;, and keep a reference to it. Once you create it, you don&amp;rsquo;t need to worry about it any longer. It will automatically sync changes between iCloud and your local UserDefaults through the lifetime of your application. You can optionally receive notifications when the iCloud Syncs change so you can react accordingly.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Andy Ibanez</title>
+    <link>http://localhost:1313/projects/</link>
+    <description>Recent content in Projects on Andy Ibanez</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 17 Oct 2020 11:48:58 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Silvianna for Anilist </title>
+      <link>http://localhost:1313/projects/silvianna/</link>
+      <pubDate>Sat, 17 Oct 2020 11:48:58 -0400</pubDate>
+      <guid>http://localhost:1313/projects/silvianna/</guid>
+      <description>&lt;p&gt;Silvianna is the best Anilist client for iOS.&lt;/p&gt;&#xA;&lt;p&gt;Anilist is the popular website for anime and manga fans, where you can keep track of your favorite series, or discover something new to watch or read.&lt;/p&gt;&#xA;&lt;p&gt;Silvianna comes packed with power features for list management. The app allows you to modify anything about items on your list as long as it is supported by Anilist.&lt;/p&gt;&#xA;&lt;p&gt;FEATURES:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Friendly on the smallest iPhone and the biggest iPad.&lt;/li&gt;&#xA;&lt;li&gt;Keep track of series that are currently airing easily. Series that you haven&amp;rsquo;t watcheda all the episodes of and are currently airing will have a visible red banner telling you how many episodes behind you are, making it easy to keep track of everything you watch.&lt;/li&gt;&#xA;&lt;li&gt;When you finish watching a series, you will automatically be prompted for the rating. You no longer need to navigate through different screens if you weren&amp;rsquo;t able to rate something you watched.&lt;/li&gt;&#xA;&lt;li&gt;When rating a series, it will use the rating system currently set in your Anilist account. It doesn&amp;rsquo;t matter if you are using the standard 10 point system, 10 point decimal system, 5-star system, or even the Emoji system - Silvianna supports all the rating systems provided by Anilist.&lt;/li&gt;&#xA;&lt;li&gt;If your rating system supports Advanced Scoring, Silvianna will grab your parameters and you will be able to also perform advanced scoring according to your custom parameters.&lt;/li&gt;&#xA;&lt;li&gt;You have access to your Anilist profile, so you can access your Manga and Anime lists easily and quickly.&lt;/li&gt;&#xA;&lt;li&gt;Multiwindow support on the iPad.&lt;/li&gt;&#xA;&lt;li&gt;You can search the entire Anilist database for Anime and Manga.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;This is just the initial release of Silvianna, and we are excited to make the project grow with your feedback and ideas.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AIiCloudSync</title>
+      <link>http://localhost:1313/projects/aiicloudsync/</link>
+      <pubDate>Tue, 31 Dec 2019 17:27:58 -0400</pubDate>
+      <guid>http://localhost:1313/projects/aiicloudsync/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/AndyIbanez/AIiCloudSync&#34;&gt;GitHub Repository&lt;/a&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;aiicloudsync&#34;&gt;AIiCloudSync&lt;/h1&gt;&#xA;&lt;p&gt;AIiCloudSync is a simple Package written in Swift to synchronize specific UserDefaults with the iCloud Key Value store (&lt;code&gt;NSUbiquitousKeyValueStore&lt;/code&gt;).&lt;/p&gt;&#xA;&lt;p&gt;To use this package, create a single instance of &lt;code&gt;AIiCloudSync&lt;/code&gt;, and keep a reference to it. Once you create it, you don&amp;rsquo;t need to worry about it any longer. It will automatically sync changes between iCloud and your local UserDefaults through the lifetime of your application. You can optionally receive notifications when the iCloud Syncs change so you can react accordingly.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -16,11 +16,67 @@
       <description>&lt;p&gt;¡Hola!&lt;/p&gt;&#xA;&lt;p&gt;My name is Andy. I come from across the Andes, overwatched by the beautiful Illimani, and I am a Computer Systems Engineer, graduated from &lt;a href=&#34;https://www.upb.edu&#34;&gt;Universidad Privada Boliviana&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;I started programming when I was 14 years old. My career got kickstarted thanks to a website called &lt;a href=&#34;https://www.neoseeker.com&#34;&gt;Neoseeker&lt;/a&gt;. Neoseeker is one of the few old-style internet forums that is still around today. Neoseeker is a gaming website, and I joined the website because, well, I wanted to talk about videogames. However, little did I know that it would kickstart my programming career thanks to the fact it allows you to build and host a small HTML webpage on your profile. Thanks to the small, but active, programmer community on the website, I was able to extend my programming knowledge from simple HTML websites all the way up to native applications and backend development.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>try! Swift World: An Overview of the Modern Concurrency Features Introduced in Swift 5.5</title>
+      <link>http://localhost:1313/tsw-concurrency2021/</link>
+      <pubDate>Fri, 17 Sep 2021 00:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/tsw-concurrency2021/</guid>
+      <description>&lt;h1 id=&#34;workshop-description&#34;&gt;Workshop Description&lt;/h1&gt;&#xA;&lt;p&gt;Swift 5.5 introduced an exciting new set of concurrency APIs. Starting with async/await, the language has received a set of features that allow us to write shorter, concise, and more obvious concurrent code. You will learn how the new concurrency APIs help us avoid &amp;ldquo;pyramids of doom&amp;rdquo; with async/await, how structured concurrency is cooperative and how to apply it in the world; how unstructured concurrency gives us more control without sacrificing code readability; how to transform callback and even delegate based code into async/await, and how actors isolate their own state to make them usable across concurrent code. We will finish this course giving a bird&amp;rsquo;s eye overview of other new concurrency features, such as global actors, the @TaskLocal property wrapper, and AsyncSequences and AsyncStreams. By the end of this workshop, you will have a solid of understanding of the new concurrency system in Swift in order to tackle concurrency problems in the real world.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A More Practical Custom Formatter </title>
+      <link>http://localhost:1313/posts/a-more-practical-custom-formatter/</link>
+      <pubDate>Wed, 21 Oct 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/posts/a-more-practical-custom-formatter/</guid>
+      <description>&lt;p&gt;I had announced that I wouldn&amp;rsquo;t be able to write an article this week due to it being Elections Day in my country. that said I just can&amp;rsquo;t leave you guys without article, so this is a short one.&lt;/p&gt;&#xA;&lt;p&gt;We will write another &lt;code&gt;NSFormatter&lt;/code&gt; subclass. It will allow us to compose E-mails easily. This should also help show that formatters can format string into anything else really.&lt;/p&gt;&#xA;&lt;p&gt;In short, we will be able to &amp;ldquo;compose&amp;rdquo; emails using raw strings, like this:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Silvianna for Anilist </title>
+      <link>http://localhost:1313/projects/silvianna/</link>
+      <pubDate>Sat, 17 Oct 2020 11:48:58 -0400</pubDate>
+      <guid>http://localhost:1313/projects/silvianna/</guid>
+      <description>&lt;p&gt;Silvianna is the best Anilist client for iOS.&lt;/p&gt;&#xA;&lt;p&gt;Anilist is the popular website for anime and manga fans, where you can keep track of your favorite series, or discover something new to watch or read.&lt;/p&gt;&#xA;&lt;p&gt;Silvianna comes packed with power features for list management. The app allows you to modify anything about items on your list as long as it is supported by Anilist.&lt;/p&gt;&#xA;&lt;p&gt;FEATURES:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Friendly on the smallest iPhone and the biggest iPad.&lt;/li&gt;&#xA;&lt;li&gt;Keep track of series that are currently airing easily. Series that you haven&amp;rsquo;t watcheda all the episodes of and are currently airing will have a visible red banner telling you how many episodes behind you are, making it easy to keep track of everything you watch.&lt;/li&gt;&#xA;&lt;li&gt;When you finish watching a series, you will automatically be prompted for the rating. You no longer need to navigate through different screens if you weren&amp;rsquo;t able to rate something you watched.&lt;/li&gt;&#xA;&lt;li&gt;When rating a series, it will use the rating system currently set in your Anilist account. It doesn&amp;rsquo;t matter if you are using the standard 10 point system, 10 point decimal system, 5-star system, or even the Emoji system - Silvianna supports all the rating systems provided by Anilist.&lt;/li&gt;&#xA;&lt;li&gt;If your rating system supports Advanced Scoring, Silvianna will grab your parameters and you will be able to also perform advanced scoring according to your custom parameters.&lt;/li&gt;&#xA;&lt;li&gt;You have access to your Anilist profile, so you can access your Manga and Anime lists easily and quickly.&lt;/li&gt;&#xA;&lt;li&gt;Multiwindow support on the iPad.&lt;/li&gt;&#xA;&lt;li&gt;You can search the entire Anilist database for Anime and Manga.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;This is just the initial release of Silvianna, and we are excited to make the project grow with your feedback and ideas.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sponsor Me</title>
+      <link>http://localhost:1313/sponsorship/</link>
+      <pubDate>Thu, 20 Aug 2020 00:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/sponsorship/</guid>
+      <description>&lt;p&gt;Each month, over 35,000 developers from all over the world find their way to this website, looking to read about iOS, iPadOS, and Swift development in general. Since the site was launched a year ago, it has enjoyed constant growth and an increase in visitors every month.&lt;/p&gt;&#xA;&lt;p&gt;If you are interested in sponsoring andyibanez.com, please send an e-mail to &lt;a href=&#34;mailto:sponsor@andyibanez.com&#34;&gt;sponsor@andyibanez.com&lt;/a&gt;. I take care to reply to all inquiries sent to this address within 24 hours. Ensure you can receive e-mails from the andyibanez.com and andresibanez.com domains.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Privacy Policy</title>
       <link>http://localhost:1313/privacy-policy/</link>
       <pubDate>Tue, 31 Dec 2019 18:38:56 -0400</pubDate>
       <guid>http://localhost:1313/privacy-policy/</guid>
       <description>&lt;p&gt;This website is pretty simple, and so is this privacy policy. Here&amp;rsquo;s what you should know:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Hosting&lt;/strong&gt;: This site is hosted on GitHub Pages. GitHub may log your IP address or other metadata when you visit. Please refer to &lt;a href=&#34;https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement&#34;&gt;GitHub’s Privacy Policy&lt;/a&gt; for details.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Analytics&lt;/strong&gt;: I use Google Analytics to understand how people find and use my content. I don’t care about tracking individuals, and I don’t attempt to personally identify anyone. I mostly look at page views, referral sources, and traffic trends.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AIiCloudSync</title>
+      <link>http://localhost:1313/projects/aiicloudsync/</link>
+      <pubDate>Tue, 31 Dec 2019 17:27:58 -0400</pubDate>
+      <guid>http://localhost:1313/projects/aiicloudsync/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/AndyIbanez/AIiCloudSync&#34;&gt;GitHub Repository&lt;/a&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;aiicloudsync&#34;&gt;AIiCloudSync&lt;/h1&gt;&#xA;&lt;p&gt;AIiCloudSync is a simple Package written in Swift to synchronize specific UserDefaults with the iCloud Key Value store (&lt;code&gt;NSUbiquitousKeyValueStore&lt;/code&gt;).&lt;/p&gt;&#xA;&lt;p&gt;To use this package, create a single instance of &lt;code&gt;AIiCloudSync&lt;/code&gt;, and keep a reference to it. Once you create it, you don&amp;rsquo;t need to worry about it any longer. It will automatically sync changes between iCloud and your local UserDefaults through the lifetime of your application. You can optionally receive notifications when the iCloud Syncs change so you can react accordingly.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>TranslateBO</title>
+      <link>http://localhost:1313/bolivia/translatebo/</link>
+      <pubDate>Mon, 11 Nov 2019 12:05:19 -0400</pubDate>
+      <guid>http://localhost:1313/bolivia/translatebo/</guid>
+      <description>&lt;p&gt;This article is translated to both English and Spanish.&lt;/p&gt;&#xA;&lt;p&gt;[ENGLISH]&lt;/p&gt;&#xA;&lt;p&gt;Hello everyone. A few hours ago, I made a call to all those who speak different languages to translate tweets to different languages. The number of requests and support has been very overwhelming, and I am very positively surprised with it.&lt;/p&gt;&#xA;&lt;p&gt;Originally, we were going to do everything in a Telegram group, but the amount of requests I received to join has been overwhelming! So, this is how we are going to work:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Old Content</title>
+      <link>http://localhost:1313/old-content/</link>
+      <pubDate>Thu, 22 Aug 2019 15:30:53 -0400</pubDate>
+      <guid>http://localhost:1313/old-content/</guid>
+      <description>&lt;p&gt;It looks like you followed a link to a very old article or tutorial. When I worked on my new website, I went through all my posts and just migrated the ones that are still relevant. Some old posts were not irrelevant per se, but the way they were written don&amp;rsquo;t really apply anymore.&lt;/p&gt;&#xA;&lt;p&gt;If you still want to read the original post of the link that got you here, you can download an archived version of my website and look for it there. This archive is a fully usable local copy of my old website, and you will definitely find the article you were looking for.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Next Anime Episode Privacy Policy</title>
+      <link>http://localhost:1313/privacy-policies/nae1/</link>
+      <pubDate>Mon, 19 Aug 2019 22:29:10 -0400</pubDate>
+      <guid>http://localhost:1313/privacy-policies/nae1/</guid>
+      <description>&lt;h1 id=&#34;note&#34;&gt;NOTE&lt;/h1&gt;&#xA;&lt;p&gt;This app has been transferred to &lt;a href=&#34;https://www.alonwaller.com&#34;&gt;Alon Waller&lt;/a&gt;, effective Feb 11, 2021. This privacy policy no longer applies.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Andy Ibanez K built the Next Anime Episode app as a Commercial app. This SERVICE is provided by Andy Ibanez K and is intended for use as is.&lt;/p&gt;&#xA;&lt;p&gt;This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use my Service.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

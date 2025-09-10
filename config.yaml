@@ -44,7 +44,7 @@ menu:
       url: tags/
       weight: 3
     - identifier: projects
-      name: projects
+      name: Projects
       url: projects/
       weight: 40
     - identifier: privacy-policy

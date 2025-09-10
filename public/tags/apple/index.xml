@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apple on Andy Ibanez</title>
+    <link>http://localhost:1313/tags/apple/</link>
+    <description>Recent content in Apple on Andy Ibanez</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Oct 2020 07:00:00 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/apple/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A More Practical Custom Formatter </title>
+      <link>http://localhost:1313/posts/a-more-practical-custom-formatter/</link>
+      <pubDate>Wed, 21 Oct 2020 07:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/posts/a-more-practical-custom-formatter/</guid>
+      <description>&lt;p&gt;I had announced that I wouldn&amp;rsquo;t be able to write an article this week due to it being Elections Day in my country. that said I just can&amp;rsquo;t leave you guys without article, so this is a short one.&lt;/p&gt;&#xA;&lt;p&gt;We will write another &lt;code&gt;NSFormatter&lt;/code&gt; subclass. It will allow us to compose E-mails easily. This should also help show that formatters can format string into anything else really.&lt;/p&gt;&#xA;&lt;p&gt;In short, we will be able to &amp;ldquo;compose&amp;rdquo; emails using raw strings, like this:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
