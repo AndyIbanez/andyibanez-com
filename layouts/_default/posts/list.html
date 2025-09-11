@@ -1,0 +1,52 @@
+{{ define "jsonLD" }}
+  <script type="application/ld+json">
+    {{ partial "blog-jsonld" . | safeJS }}
+  </script>
+{{ end }}
+
+{{ define "main" }}
+  <h1 class="text-center">Blog</h1>
+
+  {{ range .Paginator.Pages }}
+    <article>
+      <h2 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+
+      {{ partial "publish" . }}
+
+      {{ if and
+        (ne nil .Params.images)
+        (ne nil (index .Params.images 0))
+      }}
+        <div class="list-image">
+          {{ $image := index .Params.images 0 }}
+          <a href="{{ .Permalink }}">
+            <img
+              {{ if reflect.IsMap $image }}
+                src="{{ $image.src | safeURL }}"
+              {{ else }}
+                src="{{ $image | safeURL }}"
+              {{ end }}
+              alt="{{ .Title }}"
+              title="{{ .Title }}"
+            />
+          </a>
+
+          {{ if and
+            (reflect.IsMap $image)
+            (ne nil $image.attribution)
+          }}
+            <div class="attribution">
+              {{ print $image.attribution | safeHTML }}
+            </div>
+          {{ end }}
+        </div>
+      {{ end }}
+
+      {{ .Summary }}
+    </article>
+
+    <hr>
+  {{ end }}
+
+  {{ template "_internal/pagination.html" . }}
+{{ end }}
