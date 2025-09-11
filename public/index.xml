@@ -918,5 +918,12 @@
       <guid>http://localhost:1313/projects/sb-converter/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/sb-converter.png&#34; alt=&#34;SB Converter&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Discontinued project. Developed in 2011.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;A very complete base number converter for programmers and computer science students.&#xA;Super Base Converter (SBConverter) is a very powerful base number conversion tool. It offers a simple and intuitive user interface free of distractions to allow users to quickly convert from one number base to another.&lt;/p&gt;&#xA;&lt;h3 id=&#34;features&#34;&gt;Features:&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Convert any number back and forth in any base from base 2 (binary) to base 16 (hexadecimal).&lt;/li&gt;&#xA;&lt;li&gt;Convert any number base up to base 64 (no support to convert numbers in base 17 or longer to any other base, sorry! But you can convert any number to these high bases).&lt;/li&gt;&#xA;&lt;li&gt;Fast and slick user interface: Transform any number to any base as you type it instead of tapping a “convert” button.&lt;/li&gt;&#xA;&lt;li&gt;Change number bases easily.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;changelog&#34;&gt;Changelog:&lt;/h3&gt;&#xA;&lt;h4 id=&#34;10&#34;&gt;1.0&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Initial Release.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
+    <item>
+      <title>Contact Me</title>
+      <link>http://localhost:1313/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/contact/</guid>
+      <description>&lt;p&gt;Thank you for your interest in contacting me. Select the best category from the dropdown. If you expect a reply, it might take me a few days to get back to you.&lt;/p&gt;&#xA;&lt;p&gt;Please note that due to personal policy, I do not reply back to emails asking for help with code or projects for free. If you need help, please select the &amp;ldquo;Contracting&amp;rdquo; option below. You will receive a response back with my rates before continuing.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

@@ -79,20 +79,21 @@
     
   <script type="application/ld+json">
     {
-  "@context": "http://schema.org/",
-  "@type": "Person",
-  "name": "",
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "url": "http://localhost:1313/posts/using-ios-keychain-swift/",
+  "headline": "Using the iOS Keychain in Swift",
+  "description": "Learn how to use the iOS Keychain in Swift.",
+  "datePublished": "2020-05-27",
   
-    "url": "http://localhost:1313/about/",
+    "keywords": "swift,programming,apple,ios,macos,tvos,watchos,ipados,keychain",
   
-  "jobTitle": "",
-  "gender": "",
-  "image": "http://localhost:1313/",
-  "sameAs": [
-    "https://github.com//",
-    "https://twitter.com//",
-    "https://www.linkedin.com/in//"
-  ]
+  
+  "author": {
+    "@type": "Person",
+    "name": "",
+    
+  }
 }
 
   </script>
@@ -107,7 +108,8 @@
     
 
     
-    
+  
+
 
     
       
@@ -169,7 +171,7 @@
   <div class="container">
     <div class="main-navigation">
       
-      <a href="/about/" >About Me</a><a href="/posts/" >Blog</a><a href="/tags/" >Tags</a><a href="/projects/" >Projects</a><a href="/privacy-policy/" >Privacy policy</a>
+      <a href="/about/" >About Me</a><a href="/posts/" >Blog</a><a href="/projects/" >Projects</a><a href="/tags/" >Tags</a><a href="/contact/" >Contact</a><a href="/privacy-policy/" >Privacy policy</a>
     </div>
   </div>
 </nav>
@@ -190,8 +192,16 @@
         <main>
           <div class="container">
             
-  <article class="single">
-    <h1>Using the iOS Keychain in Swift</h1>
+  <article>
+    <h1 class="title">Using the iOS Keychain in Swift</h1>
+
+    <p class="publish">
+  Published on
+  <time class="post-date" datetime="2020-05-27T07:00:00-04:00">
+    May 27, 2020
+  </time>
+</p>
+
 
     <p><em>This article is an entirely rewritten version of an old tutorial I wrote years ago titled &ldquo;Using the iOS Keychain&rdquo;. Originally written in Objective-C, the old version has been archived but it is accessible <a href="https://www.andyibanez.com/old-content/">here</a>.</em></p>
 <p>The Keychain is the place where you would store sensitive data. As secure as iOS currently is, the keychain is the right place to store passwords, authentication tokens, and other sensitive data. You should not store this kind of data in <code>UserDefaults</code>, even if iOS has made it harder to access that data for normal users in the latest versions.</p>
@@ -467,7 +477,12 @@ Password: andyibanez-Pullip2020
 <p>Using the keychain to store sensitive data is the way to go. While it is a low-level API, the bridging to Swift has become more bearable in the last few years. You generally won&rsquo;t worry too much about the bridging types, but it&rsquo;s worth keeping into amount that the operations that return data back can return different data types.</p>
 <p>We explored the basic usage of the keychain services APIs. We learend how to add, search, update, and delete entries, but the keychain can actually do quite a lot more than just that. Hopefully this article helped you get started to write more secure storage for sensitive data in your own apps.</p>
 
+
+    
+
   </article>
+
+  
 
           </div>
         </main>
@@ -828,64 +843,7 @@ Password: andyibanez-Pullip2020
       <b>Colordrop</b>
     </a>
 
-    <span>theme | Made with</span>&nbsp;<span class="inline-svg" ><?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   viewBox="0 0 46 40"
-   version="1.1"
-   id="svg4"
-   sodipodi:docname="heart.svg"
-   width="46"
-   height="40"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)">
-  <metadata
-     id="metadata10">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <defs
-     id="defs8" />
-  <sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1600"
-     inkscape:window-height="845"
-     id="namedview6"
-     showgrid="false"
-     inkscape:zoom="0.4609375"
-     inkscape:cx="-1.0847458"
-     inkscape:cy="256"
-     inkscape:window-x="0"
-     inkscape:window-y="27"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg4" />
-  <path fill="currentColor"
-     d="m 41.419962,2.7350593 c -4.89277,-4.16957 -12.16942,-3.41957999 -16.66041,1.21426 l -1.7589,1.81247 -1.75889,-1.81247 c -4.48207,-4.63383999 -11.7676505,-5.38383 -16.6604105,-1.21426 -5.60704,4.78562 -5.90168,13.3747497 -0.88392,18.5621597 l 17.2764705,17.83896 c 1.11605,1.15176 2.92852,1.15176 4.04457,0 l 17.27647,-17.83896 c 5.0267,-5.18741 4.73206,-13.7765397 -0.87498,-18.5621597 z"
-     id="path2"
-     inkscape:connector-curvature="0"
-     style="stroke-width:0.08928408" />
-</svg>
-</span>
-&nbsp;<span>by</span>
+    <span>theme | Made </span><span>by</span>
 
     <a href="https://humberto.io/"><b>Humberto Rocha</b></a>
   </p>

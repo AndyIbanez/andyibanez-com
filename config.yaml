@@ -39,17 +39,21 @@ menu:
       name: Blog
       url: posts/
       weight: 2
-    - identifier: tags
-      name: Tags
-      url: tags/
-      weight: 3
     - identifier: projects
       name: Projects
       url: projects/
       weight: 40
+    - identifier: tags
+      name: Tags
+      url: tags/
+      weight: 41
     - identifier: privacy-policy
       name: Privacy policy
       url: privacy-policy/
+      weight: 50
+    - identifier: contact
+      name: Contact
+      url: contact/
       weight: 50
   footer:
     - identifier: github
