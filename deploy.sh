@@ -16,8 +16,8 @@ hugo --minify --destination "$DEPLOY_PATH"
 cd "$DEPLOY_PATH"
 echo "📤 Committing and pushing to deploy repo..."
 git add .
-git commit -m "Deploy Fairese site - $(date '+%Y-%m-%d %H:%M:%S')" || echo "⚠️ Nothing to commit."
-git push origin main
+git commit -m "Deploy AndyIbanez site - $(date '+%Y-%m-%d %H:%M:%S')" || echo "⚠️ Nothing to commit."
+git push origin master
 
 # === RETURN TO ORIGINAL DIRECTORY ===
 cd "$ORIGINAL_DIR"
