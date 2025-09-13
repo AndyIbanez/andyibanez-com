@@ -71,10 +71,7 @@ menu:
     - identifier: rss
       name: rss
       weight: 5
-    - identifier: curriculum
-      name: curriculum
-      url: curriculum/
-      weight: 6
+      url: "/posts/index.xml"
     - identifier: email
       name: email
       url: "/contact"
