@@ -1,0 +1,48 @@
+<!-- Required meta tags always come first -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+{{ template "_internal/google_analytics.html" . }}
+
+{{ partial "tracking" . }}
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="{{ "favicons/apple-touch-icon-180x180.png" | absURL }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ "favicons/favicon-32x32.png" | absURL }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ "favicons/favicon-16x16.png" | absURL }}">
+<link rel="manifest" href="{{ "favicons/site.webmanifest" | absURL }}">
+<link rel="mask-icon" href="{{ "favicons/safari-pinned-tab.svg" | absURL }}" color="#292148">
+<meta name="msapplication-TileColor" content="#292148">
+<meta name="msapplication-config" content="{{ "favicons/browserconfig.xml" | absURL }}">
+<meta name="theme-color" content="#292148">
+
+<!-- SEO tags -->
+<link rel="canonical" href="{{ .Permalink }}" />
+<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
+
+{{ if .IsTranslated }}
+  {{ range .Translations }}
+    <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
+  {{ end }}
+{{ end }}
+
+<!-- RSS Feed -->
+{{ with .OutputFormats.Get "rss" -}}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end -}}
+
+<!-- General -->
+<meta name="description" content="{{ index .Params "description" | default .Site.Params.description }}" />
+<meta name="author" content="{{ .Site.Params.Author.name }}" />
+<meta name="theme-color" content="{{ .Site.Params.themeColor }}" />
+
+<!-- Schema -->
+{{ template "_internal/schema.html" . }}
+
+<!-- Open Graph -->
+{{ template "_internal/opengraph.html" . }}
+
+<!-- Twitter -->
+{{ template "_internal/twitter_cards.html" . }}
+<meta name="twitter:creator" content="@{{ .Site.Params.Author.twitter }}" />
