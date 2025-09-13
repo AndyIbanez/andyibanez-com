@@ -77,7 +77,7 @@ menu:
       weight: 6
     - identifier: email
       name: email
-      url: "/contact-me"
+      url: "/contact"
       weight: 7
 
 params:
