@@ -1,0 +1,14 @@
+{{- with .Site.RegularPages -}}
+[
+  {{- range $i, $page := . -}}
+    {{- if $i }},{{ end }}
+    {
+      "id": {{ $page.File.UniqueID | jsonify }},
+      "title": {{ $page.Title | jsonify }},
+      "link": {{ $page.RelPermalink | jsonify }},
+      "content": {{ $page.Plain | jsonify }},
+      "tags": {{ $page.Params.tags | jsonify }}
+    }
+  {{- end -}}
+]
+{{- end -}}
