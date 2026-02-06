@@ -1,16 +1,17 @@
 ---
 title: "Notice of Ownership Transfer: Silvianna for AniList"
-date: 2026-02-06T21:00:00-04:00
-originalDate: 2026-02-06T21:00:00-04:00
-publishDate: 2026-02-06T21:00:00-04:00
+date: 2026-02-06T17:00:00-04:00
+originalDate: 2026-02-06T17:00:00-04:00
+publishDate: 2026-02-06T17:00:00-04:00
 draft: false
 highlightjslanguages:
  - swift
  - objectivec
 tags:
  - app
+ - apple
 categories:
- - notices
+ - development
 description: "Notice of ownership transfer of the app Silvianna for AniList."
 keywords:
  - app

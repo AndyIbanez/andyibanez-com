@@ -5,10 +5,7 @@ originalDate: 2021-01-10T15:43:15-04:00
 publishDate: 2021-01-13T07:00:00-04:00
 draft: false
 description: "Should you become an iOS developer in Bolivia? Read this post to find out."
-tags:
- - apple
- - ios
- - development
+
 categories:
  - development
 tags:
