@@ -1,7 +1,6 @@
 ---
 title: "New UIDatePicker in iOS 14"
 date: 2020-07-08T07:00:00-04:00
-date: 2020-07-08T07:00:00-04:00
 originalDate: 2020-07-05T21:48:43-04:00
 publishDate: 2020-07-08T07:00:00-04:00
 draft: false

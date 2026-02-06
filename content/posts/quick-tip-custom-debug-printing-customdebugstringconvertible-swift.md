@@ -1,7 +1,6 @@
 ---
 title: "Quick Tip: Custom Debug Printing with CustomDebugStringConvertible in Swift"
 date: 2020-11-15T15:58:59-04:00
-draft: false
 publishDate: 2020-11-18T07:00:00-04:00
 originalDate: 2020-11-15T15:58:59-04:00
 draft: false
