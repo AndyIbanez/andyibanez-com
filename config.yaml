@@ -49,10 +49,14 @@ menu:
       name: Projects
       url: projects/
       weight: 40
+    - identifier: by_book
+      name: My Book
+      url: https://swiftasyncbook.com
+      weight: 41
     - identifier: tags
       name: Tags
       url: tags/
-      weight: 41
+      weight: 42
     - identifier: privacy-policy
       name: Privacy policy
       url: privacy-policy/
