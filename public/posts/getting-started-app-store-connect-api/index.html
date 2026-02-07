@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-CE7T69YX8Y"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-CE7T69YX8Y');
+        }
+      </script>
+
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicons/favicon-16x16.png">
+<link rel="manifest" href="http://localhost:1313/favicons/site.webmanifest">
+<link rel="mask-icon" href="http://localhost:1313/favicons/safari-pinned-tab.svg" color="#292148">
+<meta name="msapplication-TileColor" content="#292148">
+<meta name="msapplication-config" content="http://localhost:1313/favicons/browserconfig.xml">
+<meta name="theme-color" content="#292148">
+
+
+<link rel="canonical" href="http://localhost:1313/posts/getting-started-app-store-connect-api/" />
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/getting-started-app-store-connect-api/" title="">
+
+
+
+
+
+<meta name="description" content="Get started with the App Store Connect API and how it can be automated." />
+<meta name="author" content="" />
+<meta name="theme-color" content="#292148" />
+
+
+
+  <meta itemprop="name" content="Getting Started with the App Store Connect API">
+  <meta itemprop="description" content="Get started with the App Store Connect API and how it can be automated.">
+  <meta itemprop="datePublished" content="2020-12-09T07:00:00-04:00">
+  <meta itemprop="dateModified" content="2020-12-09T07:00:00-04:00">
+  <meta itemprop="wordCount" content="1205">
+  <meta itemprop="keywords" content="apple,app store connect,programming">
+
+
+<meta property="og:url" content="http://localhost:1313/posts/getting-started-app-store-connect-api/">
+  <meta property="og:site_name" content="Andy Ibanez">
+  <meta property="og:title" content="Getting Started with the App Store Connect API">
+  <meta property="og:description" content="Get started with the App Store Connect API and how it can be automated.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-12-09T07:00:00-04:00">
+    <meta property="article:modified_time" content="2020-12-09T07:00:00-04:00">
+    <meta property="article:tag" content="Apple">
+    <meta property="article:tag" content="App Store Connect">
+    <meta property="article:tag" content="Programming">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Getting Started with the App Store Connect API">
+  <meta name="twitter:description" content="Get started with the App Store Connect API and how it can be automated.">
+
+<meta name="twitter:creator" content="@" />
+
+
+    
+  <script type="application/ld+json">
+    {
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "url": "http://localhost:1313/posts/getting-started-app-store-connect-api/",
+  "headline": "Getting Started with the App Store Connect API",
+  "description": "Get started with the App Store Connect API and how it can be automated.",
+  "datePublished": "2020-12-09",
+  
+    "keywords": "apple,app store connect,programming",
+  
+  
+  "author": {
+    "@type": "Person",
+    "name": "",
+    
+  }
+}
+
+  </script>
+
+
+    
+    <title>Getting Started with the App Store Connect API - Andy Ibanez</title>
+
+    
+    
+    <link rel="stylesheet" href="http://localhost:1313/style.main.min.ece3d6da729d5f53985f47f81cd21e75a1b9200898090cb2d549d3180ccc531c.css">
+    
+
+    
+  
+
+
+    
+      
+        
+          
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-CE7T69YX8Y"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-CE7T69YX8Y');
+        }
+      </script>
+        
+      
+    
+  </head>
+
+  <body class="">
+    
+      <div class="wrapper">
+        <nav>
+  <div class="container">
+    <div class="language-selector">
+      
+    </div>
+  </div>
+</nav>
+
+        <header>
+  <div class="container">
+    <div class="header-group">
+      <div class="header-logo-container">
+        <a class="header-logo-link" href="http://localhost:1313/">
+          
+          <img class="header-logo-circle"
+               src="http://localhost:1313/img/andy_profile.png"
+               alt="Andy Ibanez logo">
+          
+        </a>
+      </div>
+
+      <div class="header-title">
+        <a href="http://localhost:1313/">
+          Andy Ibanez
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+        <nav>
+  <div class="container">
+    <div class="main-navigation">
+      
+      <a href="/about/" >About Me</a><a href="/posts/" >Blog</a><a href="/projects/" >Projects</a><a href="https://swiftasyncbook.com" >My Book</a><a href="/tags/" >Tags</a><a href="/contact/" >Contact</a><a href="/privacy-policy/" >Privacy policy</a>
+    </div>
+  </div>
+</nav>
+
+        <div class="container">
+  <div class="search">
+    <input type="text" id="searchInput" placeholder="Type here to search">
+  </div>
+
+  <div class="container search-results-container" hidden="true">
+    <div id="searchResults" class="search-results">
+    </div>
+  </div>
+</div>
+
+
+
+        <main>
+          <div class="container">
+            
+  <article>
+    <h1 class="title">Getting Started with the App Store Connect API</h1>
+
+    <p class="publish">
+  Published on
+  <time class="post-date" datetime="2020-12-09T07:00:00-04:00">
+    December 9, 2020
+  </time>
+</p>
+
+
+    <p>In 2018, Apple introduced the App Store Connect API. We as iOS developers interact with App Store Connect almost daily. We like to see our sales reports, analytics, check how our apps are doing. Occasionally, we may need to register a new device or manage our users.</p>
+<p>Many of these tasks are so common that it was necessary to get an App Store Connect API at some point. Having an API allows us to automatize some aspects of our day to day tasks on App Store Connect, and to make some tasks easier and faster. In this article, we will explore a few features of the App Store Connect API.</p>
+<h1 id="the-app-store-connect-api">The App Store Connect API.</h1>
+<p>Apple provides us with a nice and simple RESTful API, meaning that all you need to do to interact with it is perform a few pure HTTP calls. We need to authenticate ourselves providing a JWT (Jason Web Token) token.</p>
+<h2 id="current-features">Current Features</h2>
+<p>At the time of this writing (December 2020), App Store connect offer us endpoints for the following tasks:</p>
+<ul>
+<li><strong>App Management</strong>: We can create new versions of our apps, configure pre-orders, manage manage phased releases of new versions, and even submit our apps for review.</li>
+<li><strong>App Metadata</strong>: We can edit our apps metadata, such as managing assets, edit the description, managing screenshots, and app previews.</li>
+<li>*<strong>Pricing and Availability</strong>: You can manage your app&rsquo;s price and availability, price tiers, and more.</li>
+<li><strong>Power and Performance</strong>: Introduced in WWDC2020, we can use this tool to monitor performance for our apps. We can get data for launch times, hang rates, disk writes, memory use, and battery life. This is the same API Apple uses to make such info available in Xcode.</li>
+<li><strong>Provisioning</strong>: Manage bundle IDs, certificates, development devices, and provisioning profiles.</li>
+<li><strong>Reporting</strong>: Manage Sales and Trends, allowing you to see first-time downloads, sales, proceeds, pre-orders, subscriptions, and more. We can also view our Payments and Financial reports with earnings by product, territory, currency, price, and more. The API will even show you how much you were paid each month and any money Apple may have withheld for tax or other reasons.</li>
+<li><strong>TestFlight</strong>: You can automate tester management and build distribution. You can remove and add testers, manage tester groups, manage builds based on testers and tester groups, submit builds to beta review, and more.</li>
+<li><strong>Users and Roles</strong>: You can manage Users and Roles. If you work on an organization, you can integrate with your own employee management tools, to have control over and link users between App Store and your own systems.</li>
+</ul>
+<h2 id="requesting-app-store-connect-api-access">Requesting App Store Connect API Access</h2>
+<h3 id="requesting-permission">Requesting Permission</h3>
+<p>To request App Store Connect API access, visit <a href="https://appstoreconnect.apple.com/access/api">this link</a>. You need to be the Account Holder to finish the process.</p>
+<p>I was under the impression that I needed approval and that my request would be reviewed manually. However after agreeing to the prompts, my request was instantly approved and I was able to use the API. I do not know if this is the case for everyone, or Apple does review some requests manually.</p>
+<h3 id="keys-and-access-tokens">Keys and Access Tokens.</h3>
+<p>You need to create API keys, which you later use to create JWT access tokens.</p>
+<h4 id="generating-keys">Generating Keys.</h4>
+<p>You can create up to 50 API keys, and you can limit the API access for each key. Once you create a key, you cannot edit its permissions.</p>
+<p>Click the &ldquo;Generate API Key&rdquo; button, and you will be greeted with the following view:</p>
+<p><img src="/img/api_key_1.png" alt="Configuring an API Key"></p>
+<p>You can give it any name you want and select the permissions. If you choose &ldquo;Admin&rdquo;, your key will automatically get all the permissions, but you can pick and choose stricter permissions and as many as you need for your particular scenario.</p>
+<p>I named mine &ldquo;Article Key&rdquo; and chose &ldquo;Admin&rdquo; as the key type.</p>
+<p><strong>Note</strong>: You probably know this, but just in case, do not share your API keys with people you don&rsquo;t trust! While it may make sense to create keys for specific members of your team, remember that the keys have power over the specific permissions you granted when creating them. If your keys fall in the wrong hands, <strong>damage CAN be done</strong>. Shall your keys be compromised, you can revoke them from the same screen where you generated them.</p>
+<p>Once you create the key, you have to download it. This is a file with a <code>.p8</code> extension. You can only download your key once, so make sure you don&rsquo;t lose it later.</p>
+<p>Make a mental note of the Key ID (this info is always visible), as you will need it to generate your JWT tokens.</p>
+<h4 id="generating-access-tokens">Generating Access Tokens</h4>
+<p>JSON Web Tokens are JSON payloads encoded in Base64 and signed with your private key for their transmission to the App Store Connect API server. You can create your token with any text editor.</p>
+<p>To create the token you will need the following info:</p>
+<ul>
+<li>Your private key (the <code>.p8</code> file you got earlier)</li>
+<li>Your KEY ID (This is visible in the same screen where you generate API keys - the one I linked you to above).</li>
+<li>Your Issuer ID. To get this, go back once again to the page where you generate keys. The issuer ID is near the top of the page.</li>
+</ul>
+<h5 id="the-jwt-token">The JWT Token</h5>
+<p>We will now begin creating creating our JWT token. The token is made of a JWT header and a JWT Payload, both joined together and signed with our private key.</p>
+<p>There are libraries out there that can do this for you. For this article, we will use the Ruby script Apple used at WWDC2018 to show how to generate the token. The script is below (<code>token.rb</code>):</p>
+<pre tabindex="0"><code>require &#34;base64&#34;
+require &#34;jwt&#34;
+
+ISSUER_ID = &#34;YOUR_ISSUER_ID&#34;
+KEY_ID = &#34;YOUR_KEY_ID&#34;
+
+PATH = &#34;PATH_TO_YOUR_P8_FILE&#34;
+
+private_key = OpenSSL::PKey.read(File.read(PATH))
+
+token = JWT.encode(
+   {    iss: ISSUER_ID,
+    exp: Time.now.to_i + 20 * 60,
+    aud: &#34;appstoreconnect-v1&#34;
+   },
+   private_key,
+   &#34;ES256&#34;,
+   header_fields={
+     kid: KEY_ID }
+ )
+
+puts token
+</code></pre><p>You may need to install the Ruby <code>jwt</code> dependency for it. If you have Homebrew and installed Ruby with it, simply run <code>gem install jwt</code> in a Terminal window and you will get the dependency.</p>
+<p>When you run the script (<code>ruby token.rb</code>), the console will print out the token you can use, with a lifetime of 20 minutes from the time it was generated.</p>
+<h2 id="using-the-api">Using the API.</h2>
+<p>Once you have the token, you can finally start using the API. You need to include your token in every call as a header field called <code>Authorization</code> with the format <code>Authorization: Bearer YOUR_TOKEN</code>.</p>
+<p>The following is a complete cURL request you can run the terminal:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>curl -v -H &#39;Authorization: Bearer [signed token]&#39; 
+</span></span><span style="display:flex;"><span>&#34;https://api.appstoreconnect.apple.com/v1/apps&#34;
+</span></span></code></pre></div><p>If you don&rsquo;t like the Terminal, you can also use something such as Postman to get a GUI.</p>
+<p>In a future article, we will explore a little bit more of the features the API offers. I originally intended to make this article to explore the API itself, but I spent more time than expected generating the token. Look forward to that. In the meantime, you can download the OpenAPI specification from <a href="https://developer.apple.com/app-store-connect/api/">here</a> and play around with what you find.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>The App Store Connect API has many features to help with automation. It has seen steady growth in terms of features each WWDC, and we can expect it to become better.</p>
+
+
+    
+
+  </article>
+
+  
+
+          </div>
+        </main>
+
+        <footer>
+  <div class="container">
+    <div class="footer-navigation"><a  href="https://github.com/AndyIbanez"><span class="inline-svg" ><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 42 40"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="github.svg"
+   width="42"
+   height="40"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="845"
+     id="namedview6"
+     showgrid="false"
+     inkscape:zoom="0.4609375"
+     inkscape:cx="-9.0847458"
+     inkscape:cy="256"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path fill="currentColor"
+     d="m 14.20936,32.20794 c 0,0.16542 -0.19024,0.29776 -0.4301,0.29776 -0.27295,0.0248 -0.46319,-0.10752 -0.46319,-0.29776 0,-0.16542 0.19024,-0.29776 0.4301,-0.29776 0.24814,-0.0248 0.46319,0.10752 0.46319,0.29776 z m -2.57234,-0.3722 c -0.0579,0.16542 0.10753,0.35566 0.35566,0.40528 0.21505,0.0827 0.46319,0 0.51282,-0.16542 0.0496,-0.16542 -0.10753,-0.35566 -0.35566,-0.4301 -0.21505,-0.0579 -0.45492,0.0248 -0.51282,0.19024 z m 3.65586,-0.14061 c -0.23986,0.0579 -0.40529,0.21505 -0.38047,0.40528 0.0248,0.16543 0.23986,0.27295 0.488,0.21505 0.23986,-0.0579 0.40528,-0.21505 0.38047,-0.38047 -0.0248,-0.15715 -0.24813,-0.26468 -0.488,-0.23986 z M 20.73531,-1.9734273e-7 C 9.2632,-1.9734273e-7 0.48748,8.7095398 0.48748,20.18166 c 0,9.17273 5.77328,17.02207 14.01964,19.78464 1.05871,0.19024 1.43091,-0.46319 1.43091,-1.00081 0,-0.51282 -0.0248,-3.34156 -0.0248,-5.0785 0,0 -5.78982,1.24067 -7.00568,-2.46481 0,0 -0.94292,-2.40691 -2.29939,-3.02725 0,0 -1.8941,-1.29857 0.13234,-1.27376 0,0 2.05952,0.16542 3.19267,2.13396 1.81139,3.19267 4.84691,2.27457 6.02969,1.72868 0.19023,-1.32339 0.72786,-2.24149 1.32338,-2.78739 -4.62358,-0.51281 -9.28852,-1.18278 -9.28852,-9.13964 0,-2.27458 0.62861,-3.416 1.95199,-4.87172 -0.21505,-0.53763 -0.9181,-2.7543 0.21506,-5.6161302 1.72867,-0.53762 5.7071,2.2332202 5.7071,2.2332202 1.65424,-0.46319 3.43254,-0.70305 5.1943,-0.70305 1.76176,0 3.54006,0.23986 5.1943,0.70305 0,0 3.97843,-2.7791202 5.7071,-2.2332202 1.13315,2.8701002 0.4301,5.0785002 0.21505,5.6161302 1.32339,1.46399 2.13397,2.60542 2.13397,4.87172 0,7.98168 -4.87172,8.61856 -9.49531,9.13964 0.76095,0.65342 1.4061,1.8941 1.4061,3.83782 0,2.78739 -0.0248,6.23647 -0.0248,6.9147 0,0.53763 0.38047,1.19105 1.43091,1.00082 C 35.90466,37.20373 41.51252,29.35439 41.51252,20.18166 41.51252,8.7095398 32.20745,-1.9734273e-7 20.73533,-1.9734273e-7 Z M 8.52706,28.52727 c -0.10752,0.0827 -0.0827,0.27295 0.0579,0.4301 0.13234,0.13234 0.32258,0.19024 0.4301,0.0827 0.10753,-0.0827 0.0827,-0.27295 -0.0579,-0.4301 -0.13233,-0.13234 -0.32257,-0.19024 -0.4301,-0.0827 z M 7.63378,27.8573 c -0.0579,0.10753 0.0248,0.23987 0.19023,0.32258 0.13234,0.0827 0.29777,0.0579 0.35566,-0.0579 C 8.23757,28.01446 8.15487,27.88212 7.98944,27.7994 7.82401,27.7498 7.69168,27.7746 7.63378,27.8573 Z m 2.67986,2.94454 c -0.13234,0.10753 -0.0827,0.35566 0.10752,0.51281 0.19024,0.19024 0.4301,0.21505 0.53763,0.0827 0.10752,-0.10752 0.0579,-0.35566 -0.10753,-0.51281 -0.18196,-0.19024 -0.4301,-0.21505 -0.53762,-0.0827 z M 9.37072,29.58598 c -0.13234,0.0827 -0.13234,0.29776 0,0.488 0.13234,0.19023 0.35566,0.27295 0.46319,0.19023 0.13234,-0.10752 0.13234,-0.32257 0,-0.51281 -0.1158,-0.19024 -0.33085,-0.27295 -0.46319,-0.16542 z"
+     id="path2"
+     inkscape:connector-curvature="0"
+     style="stroke-width:0.08271171" />
+</svg>
+</span>
+</a><a  href="https://x.com/AndyIbanezK"><span class="inline-svg" ><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 50 40"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="twitter.svg"
+   width="50"
+   height="40"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="845"
+     id="namedview6"
+     showgrid="false"
+     inkscape:zoom="0.4609375"
+     inkscape:cx="-1.0847458"
+     inkscape:cy="256"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path fill="currentColor"
+     d="m 44.56253,9.96871 c 0.0313,0.43748 0.0313,0.87506 0.0313,1.31254 C 44.59383,24.62494 34.43764,40 15.87508,40 10.1563,40 4.84383,38.34368 0.37506,35.4688 c 0.81253,0.0937 1.5937,0.12495 2.4375,0.12495 4.71867,0 9.06249,-1.5937 12.53125,-4.31245 -4.43751,-0.0938 -8.15627,-3.00003 -9.43754,-7.00006 0.62505,0.0937 1.25001,0.15622 1.90632,0.15622 0.90622,0 1.81254,-0.12505 2.65624,-0.34369 C 5.84384,23.15619 2.37498,19.09373 2.37498,14.18748 v -0.12495 c 1.3437,0.75 2.90633,1.21875 4.56246,1.28117 -2.71876,-1.81253 -4.49993,-4.90624 -4.49993,-8.40627 0,-1.87497 0.4999,-3.59372 1.37496,-5.09373 4.96877,6.125 12.43756,10.12493 20.81248,10.56251 -0.15622,-0.75001 -0.25,-1.53118 -0.25,-2.31245 C 24.37495,4.5312 28.87498,0 34.46871,0 c 2.90623,0 5.53121,1.21875 7.37501,3.1875 2.28118,-0.43748 4.46867,-1.28127 6.40626,-2.43749 -0.75011,2.3438 -2.34381,4.31255 -4.43751,5.56246 2.03127,-0.21864 4.00003,-0.78126 5.81247,-1.56244 -1.37477,1.99992 -3.09362,3.7811 -5.06237,5.21868 z"
+     id="path2"
+     inkscape:connector-curvature="0"
+     style="stroke-width:0.09619153" />
+</svg>
+</span>
+</a><a  href="https://www.linkedin.com/in/andyibanez/"><span class="inline-svg" ><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 41 40"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="linkedin.svg"
+   width="41"
+   height="40"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="845"
+     id="namedview6"
+     showgrid="false"
+     inkscape:zoom="0.4609375"
+     inkscape:cx="-33.084746"
+     inkscape:cy="256"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path fill="currentColor"
+     d="M 9.45332,40 H 1.16028 V 13.29405 H 9.45332 Z M 5.30234,9.65111 c -2.65185,0 -4.80279,-2.19648 -4.80279,-4.84832 a 4.80279,4.80279 0 0 1 9.60558,0 c 0,2.65184 -2.15184,4.84832 -4.80279,4.84832 z M 40.49152,40 H 32.21633 V 26.99971 c 0,-3.09828 -0.0625,-7.07159 -4.3117,-7.07159 -4.3117,0 -4.97243,3.36615 -4.97243,6.84837 V 40 H 14.64808 V 13.29405 h 7.95375 v 3.64294 h 0.11608 c 1.10716,-2.09827 3.81169,-4.3126 7.8466,-4.3126 8.39304,0 9.93594,5.52691 9.93594,12.70564 V 40 Z"
+     id="path2"
+     inkscape:connector-curvature="0"
+     style="stroke-width:0.08928771" />
+</svg>
+</span>
+</a>
+            <a href="http://localhost:1313/posts/index.xml"><span class="inline-svg" ><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 40 40"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="rss.svg"
+   width="40"
+   height="40"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="845"
+     id="namedview6"
+     showgrid="false"
+     inkscape:zoom="0.4609375"
+     inkscape:cx="-33.084746"
+     inkscape:cy="256"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path fill="currentColor"
+     d="m 11.435816,34.282008 c 0,3.15793 -2.5599899,5.71793 -5.7179299,5.71793 -3.15794,0 -5.717840022654,-2.56 -5.717840022654,-5.71793 0,-3.15794 2.559990022654,-5.71793 5.717930022654,-5.71793 3.15794,0 5.7178399,2.56008 5.7178399,5.71793 z m 15.68388,4.21873 C 26.373806,24.697208 15.317496,13.626978 1.4992361,12.880288 0.68361608,12.836188 4.6077346e-5,13.491538 4.6077346e-5,14.308318 v 4.29186 c 0,0.75134 0.579460002654,1.38142 1.329190022654,1.43017 9.9849699,0.65036 17.9886099,8.63408 18.6402999,18.6403 0.0488,0.74973 0.67893,1.3292 1.43018,1.3292 h 4.29186 c 0.81687,9e-5 1.47223,-0.68348 1.42812,-1.49911 z m 12.87933,0.0257 C 39.249566,17.649718 22.452206,0.754048 1.4735261,9.2799867e-4 0.66727608,-0.027972 4.6077346e-5,0.623338 4.6077346e-5,1.430038 v 4.29177 c 0,0.77008 0.610270002654,1.39687 1.379730022654,1.42848 17.0694999,0.6999 30.7701699,14.40316 31.4699899,31.46999 0.0315,0.76946 0.6583,1.37972 1.42848,1.37972 h 4.29177 c 0.8066,-8e-5 1.45794,-0.66731 1.42901,-1.47356 z"
+     id="path2"
+     inkscape:connector-curvature="0"
+     style="stroke-width:0.08928544" />
+</svg>
+</span>
+</a><a  href="http://localhost:1313/contact"><span class="inline-svg" ><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 40 40"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="email.svg"
+   width="40"
+   height="40"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="845"
+     id="namedview6"
+     showgrid="false"
+     inkscape:zoom="5.2149125"
+     inkscape:cx="68.146526"
+     inkscape:cy="2.9579672"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path fill="currentColor"
+     d="m 39.99999,36.249999 c 0,2.0711 -1.6789,3.75 -3.74999,3.75 H 3.75 c -2.07109,0 -3.74999,-1.6789 -3.74999,-3.75 v -20.56843 a 3.7499996,3.7499996 0 0 1 1.43648,-2.95125 C 3.38282,11.204619 4.99125,9.9674286 14.26461,3.2372786 15.57906,2.2789186 18.18727,-0.02709136 20,2.4864227e-4 21.81234,-0.02745136 24.42156,2.2793086 25.73539,3.2371986 c 9.27242,6.72945 10.88304,7.9683604 12.82812,9.4931204 a 3.7499996,3.7499996 0 0 1 1.43648,2.95125 z m -5.13015,-15.35976 c -0.20024,-0.29125 -0.60156,-0.35898 -0.88586,-0.14898 -1.78476,1.3182 -4.33297,3.18008 -8.24859,6.02179 -1.31445,0.95828 -3.92266,3.26414 -5.73539,3.23672 -1.81336,0.0269 -4.41867,-2.2768 -5.73539,-3.23672 -3.91515,-2.8414 -6.46359,-4.70343 -8.24859,-6.02179 -0.2843,-0.21 -0.68562,-0.14227 -0.88586,0.14898 l -0.70875,1.03094 a 0.62484368,0.62484368 0 0 0 0.14367,0.8568 c 1.78805,1.32023 4.33235,3.1789 8.2268,6.00531 1.5839,1.15476 4.41593,3.73539 7.20812,3.71664 2.79094,0.0189 5.62195,-2.56024 7.20804,-3.71664 3.89453,-2.82649 6.43891,-4.68516 8.2268,-6.00531 a 0.62484368,0.62484368 0 0 0 0.14367,-0.8568 z"
+     id="path2"
+     inkscape:connector-curvature="0"
+     style="stroke-width:0.07812498" />
+</svg>
+</span>
+</a></div>
+  </div>
+
+  
+
+  <p class="made-with-love">
+    <a href="https://github.com/humrochagf/colordrop">
+      <b>Colordrop</b>
+    </a>
+
+    <span>theme | Made </span><span>by</span>
+
+    <a href="https://humberto.io/"><b>Humberto Rocha</b></a>
+  </p>
+</footer>
+
+      </div>
+    
+
+    
+
+
+
+    
+    
+
+    
+      <script src="/copy/copy.js"></script>
+    
+
+    <script src="/search/elasticlunr.min.js"></script>
+    <script src="/search/search.js"></script>
+    <script>
+      loadSearch('http:\/\/localhost:1313\/index.json');
+    </script>
+  </body>
+</html>

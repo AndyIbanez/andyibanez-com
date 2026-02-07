@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-CE7T69YX8Y"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-CE7T69YX8Y');
+        }
+      </script>
+
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicons/favicon-16x16.png">
+<link rel="manifest" href="http://localhost:1313/favicons/site.webmanifest">
+<link rel="mask-icon" href="http://localhost:1313/favicons/safari-pinned-tab.svg" color="#292148">
+<meta name="msapplication-TileColor" content="#292148">
+<meta name="msapplication-config" content="http://localhost:1313/favicons/browserconfig.xml">
+<meta name="theme-color" content="#292148">
+
+
+<link rel="canonical" href="http://localhost:1313/posts/using-ios-keychain-swift/" />
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/using-ios-keychain-swift/" title="">
+
+
+
+
+
+<meta name="description" content="Learn how to use the iOS Keychain in Swift." />
+<meta name="author" content="" />
+<meta name="theme-color" content="#292148" />
+
+
+
+  <meta itemprop="name" content="Using the iOS Keychain in Swift">
+  <meta itemprop="description" content="Learn how to use the iOS Keychain in Swift.">
+  <meta itemprop="datePublished" content="2020-05-27T07:00:00-04:00">
+  <meta itemprop="dateModified" content="2020-05-27T07:00:00-04:00">
+  <meta itemprop="wordCount" content="2629">
+  <meta itemprop="keywords" content="swift,ios,tvos,ipados,watchos,keychain">
+
+
+<meta property="og:url" content="http://localhost:1313/posts/using-ios-keychain-swift/">
+  <meta property="og:site_name" content="Andy Ibanez">
+  <meta property="og:title" content="Using the iOS Keychain in Swift">
+  <meta property="og:description" content="Learn how to use the iOS Keychain in Swift.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-05-27T07:00:00-04:00">
+    <meta property="article:modified_time" content="2020-05-27T07:00:00-04:00">
+    <meta property="article:tag" content="Swift">
+    <meta property="article:tag" content="Programming">
+    <meta property="article:tag" content="Apple">
+    <meta property="article:tag" content="Ios">
+    <meta property="article:tag" content="Macos">
+    <meta property="article:tag" content="Tvos">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Using the iOS Keychain in Swift">
+  <meta name="twitter:description" content="Learn how to use the iOS Keychain in Swift.">
+
+<meta name="twitter:creator" content="@" />
+
+
+    
+  <script type="application/ld+json">
+    {
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "url": "http://localhost:1313/posts/using-ios-keychain-swift/",
+  "headline": "Using the iOS Keychain in Swift",
+  "description": "Learn how to use the iOS Keychain in Swift.",
+  "datePublished": "2020-05-27",
+  
+    "keywords": "swift,programming,apple,ios,macos,tvos,watchos,ipados,keychain",
+  
+  
+  "author": {
+    "@type": "Person",
+    "name": "",
+    
+  }
+}
+
+  </script>
+
+
+    
+    <title>Using the iOS Keychain in Swift - Andy Ibanez</title>
+
+    
+    
+    <link rel="stylesheet" href="http://localhost:1313/style.main.min.ece3d6da729d5f53985f47f81cd21e75a1b9200898090cb2d549d3180ccc531c.css">
+    
+
+    
+  
+
+
+    
+      
+        
+          
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-CE7T69YX8Y"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-CE7T69YX8Y');
+        }
+      </script>
+        
+      
+    
+  </head>
+
+  <body class="">
+    
+      <div class="wrapper">
+        <nav>
+  <div class="container">
+    <div class="language-selector">
+      
+    </div>
+  </div>
+</nav>
+
+        <header>
+  <div class="container">
+    <div class="header-group">
+      <div class="header-logo-container">
+        <a class="header-logo-link" href="http://localhost:1313/">
+          
+          <img class="header-logo-circle"
+               src="http://localhost:1313/img/andy_profile.png"
+               alt="Andy Ibanez logo">
+          
+        </a>
+      </div>
+
+      <div class="header-title">
+        <a href="http://localhost:1313/">
+          Andy Ibanez
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+        <nav>
+  <div class="container">
+    <div class="main-navigation">
+      
+      <a href="/about/" >About Me</a><a href="/posts/" >Blog</a><a href="/projects/" >Projects</a><a href="https://swiftasyncbook.com" >My Book</a><a href="/tags/" >Tags</a><a href="/contact/" >Contact</a><a href="/privacy-policy/" >Privacy policy</a>
+    </div>
+  </div>
+</nav>
+
+        <div class="container">
+  <div class="search">
+    <input type="text" id="searchInput" placeholder="Type here to search">
+  </div>
+
+  <div class="container search-results-container" hidden="true">
+    <div id="searchResults" class="search-results">
+    </div>
+  </div>
+</div>
+
+
+
+        <main>
+          <div class="container">
+            
+  <article>
+    <h1 class="title">Using the iOS Keychain in Swift</h1>
+
+    <p class="publish">
+  Published on
+  <time class="post-date" datetime="2020-05-27T07:00:00-04:00">
+    May 27, 2020
+  </time>
+</p>
+
+
+    <p><em>This article is an entirely rewritten version of an old tutorial I wrote years ago titled &ldquo;Using the iOS Keychain&rdquo;. Originally written in Objective-C, the old version has been archived but it is accessible <a href="https://www.andyibanez.com/old-content/">here</a>.</em></p>
+<p>The Keychain is the place where you would store sensitive data. As secure as iOS currently is, the keychain is the right place to store passwords, authentication tokens, and other sensitive data. You should not store this kind of data in <code>UserDefaults</code>, even if iOS has made it harder to access that data for normal users in the latest versions.</p>
+<p>In this article we will explore how to use the iOS keychain (which is also applicable to iPadOS, watchOS, and even tvOS) using Swift. The APIs are similar to the ones used in macOS, but the way both systems work with their keychain is different enough to consider them separate. The keychain APIs are very old and as such we will be written some &ldquo;ugly&rdquo; Swift code to get everything to work, although these days it&rsquo;s much easier to do the bridging to Core Foundation and back. With that said, using the keychain isn&rsquo;t too hard, and you should use it if you find yourself needing to store sensitive data.</p>
+<h1 id="basic-keychain-concepts">Basic Keychain Concepts</h1>
+<p>Before we write some code, we need to get some terminology down. Keep these concepts in mind as you read through this article:</p>
+<ul>
+<li><strong>Keychain</strong>: The keychain is a secure and encrypted storage place for sensitive data. You can think of it is a database of sensitive information.</li>
+<li><strong>Keychain Item</strong>: This is a registry in the keychain.</li>
+<li><strong>Item Class</strong>: You can think of a class as a template of information you want to store. The keychain offers classes for different common credentials, such as username/password pairs, a certificate, a generic password, and more.</li>
+</ul>
+<p>Please note that the keychain is tied to the developer provisioning profile used to sign the app and its bundle ID. If either of these change, the data becomes inaccessible.</p>
+<h1 id="common-keychain-operations">Common Keychain Operations</h1>
+<p>With that basic terminology out of the way, we can start doing basic operations: Adding new items to the keychain, searching for specific items, updating items, and deleting items.</p>
+<p>First things first, the keychain services are part of the <code>Security</code> framework, so don&rsquo;t forget to add that import:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span># <span style="color:#f38ba8">import</span> <span style="color:#f9e2af">Security</span>
+</span></span></code></pre></div><h2 id="adding-items-to-the-keychain">Adding Items to the Keychain</h2>
+<h3 id="adding-items">Adding Items</h3>
+<p>To add items to the keychain, you use the <code>SecItemAdd</code> function. Again, these APIs are very old, so you may be surprised by what they take as arguments and what they return. The first parameter is a dictionary known as a <em>query</em>. The query specifies the data the keychain item will hold along with parameters we can use to find it - more on that later. Being an old (and low level) API, this argument is actually a <code>CFDictionary</code>.</p>
+<p>At the very least, the keychain item should have:</p>
+<ul>
+<li>The item class, specified with the <code>kSecClass</code> key.</li>
+<li>The actual data you want to hold, whether it is a plain password, or anything else. This should be stored as <code>Data</code> (or if you prefer, <code>CFData</code>). The key is <code>kSecValueData</code>.</li>
+</ul>
+<p>You can specify optional attributes and optional return types as well. We will see these in a bit.</p>
+<p>The second parameter to this function is a <code>UnsafeMutablePointer&lt;CFTypeRef&gt;?</code> which may contain the data created. This is an unsafe generic pointer. This is low level stuff, but I promise it will make sense later.</p>
+<p>This parameter makes more sense when are retrieving items from the keychain, but if you wanted to return the item you just created to check its data or do anything else with it, you can use this parameter to return it after creating it.</p>
+<p>The function itself returns an <code>OSStatus</code>. <code>OSStatus</code> tells us the status of the operation we just performed, and you will see it in all the keychain APIs. If it returns <code>0</code> (or <code>errSecSuccess</code>), the operation finished successfully and our operation finished without an issue. In the case of <code>SecItemAdd</code>, that will mean our new item was added to the keychain.</p>
+<p>To create a keychain item, this is the minimum code you would need:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">keychainItemQuery</span> = [
+</span></span><span style="display:flex;"><span>  kSecValueData: <span style="color:#a6e3a1">&#34;Pullip2020&#34;</span>.data(using: .utf8)<span style="color:#89dceb;font-weight:bold">!</span>,
+</span></span><span style="display:flex;"><span>  kSecClass: kSecClassGenericPassword
+</span></span><span style="display:flex;"><span>] <span style="color:#cba6f7">as</span> CFDictionary
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">status</span> = SecItemAdd(keychainItemQuery, <span style="color:#fab387">nil</span>)
+</span></span><span style="display:flex;"><span><span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#34;Operation finished with status: </span><span style="color:#a6e3a1">\(</span>status<span style="color:#a6e3a1">)</span><span style="color:#a6e3a1">&#34;</span>)
+</span></span></code></pre></div><p>This will work fine, and it will print <code>0</code> for the status which is what we would expect (Yes, <code>OSStatus</code> is not bridged to Swift yet, so you won&rsquo;t get the actual enum case name <code>errSecSuccess</code>). The problem with this code is that searching for this item later will be a bit harder. We will explore why when we explore how to retrieve items, but for now, try to add more context to your new items. We can do this by adding optional attributes. All the attributes we can use are also dictionary keys that have the <code>kSecAttr</code> prefix.</p>
+<p>Different classes have different attributes that make the keys unique. When using <code>kSecClassInternetPassword</code>, we can specify a username and the domain name of the website. Note that we are passing <code>nil</code> to the second argument, because we aren&rsquo;t interested in returning the newly created item just yet.</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">keychainItem</span> = [
+</span></span><span style="display:flex;"><span>  kSecValueData: <span style="color:#a6e3a1">&#34;Pullip2020&#34;</span>.data(using: .utf8)<span style="color:#89dceb;font-weight:bold">!</span>,
+</span></span><span style="display:flex;"><span>  kSecAttrAccount: <span style="color:#a6e3a1">&#34;andyibanez&#34;</span>,
+</span></span><span style="display:flex;"><span>  kSecAttrServer: <span style="color:#a6e3a1">&#34;pullipstyle.com&#34;</span>,
+</span></span><span style="display:flex;"><span>  kSecClass: kSecClassInternetPassword
+</span></span><span style="display:flex;"><span>] <span style="color:#cba6f7">as</span> CFDictionary
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">status</span> = SecItemAdd(keychainItem, <span style="color:#fab387">nil</span>)
+</span></span><span style="display:flex;"><span><span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#34;Operation finished with status: </span><span style="color:#a6e3a1">\(</span>status<span style="color:#a6e3a1">)</span><span style="color:#a6e3a1">&#34;</span>)
+</span></span></code></pre></div><h3 id="retrieving-newly-added-records">Retrieving Newly-Added Records.</h3>
+<p><code>SecItemAdd</code> has a second argument we can use to return the newly created item if we want to use it instantly. This parameter is called <code>result</code>, and you will probably specify <code>nil</code> here most of the time, but it&rsquo;s good to know that this function can return data after adding items, in case you ever need it.</p>
+<p>When we create a new item, we can specify four different return types that will be filled in the second argument. Remember this parameter is of type <code>UnsafeMutablePointer&lt;CFTypeRef&gt;?</code>, so it can result a pointer that can point to pretty much anything. This is a big mess, so we will explain the different return types before we move on. All the return types are specified with a key in the query that has the prefix <code>kSecReturn</code>.</p>
+<ul>
+<li><code>kSecReturnRef</code>: When this is set to <code>true</code>, <code>result</code> will point to either a <code>SecKeychainItem</code>, <code>SecKey</code>, <code>SecCertificate</code>, <code>SecIdentity</code>, or <code>CFData</code>, depending on the <code>kSecClass</code> specified in the query. I couldn&rsquo;t get this to return anything on iOS.</li>
+<li><code>kSecReturnPersistentRef</code>: When this is set to <code>true</code>, <code>result</code> will contain <code>CFData</code> which you can use to persist on disk or pass to different processes.</li>
+<li><code>kSecReturnData</code>: When this is set to <code>true</code>, this will return the actual sensitive data stored in the keychain item. The sensitive data will vary on the item class, but if your query contains a <code>kSecValueData</code> key, it will return that.</li>
+<li><code>kSecReturnAttributes</code>: This will return all the attributes used to create the item in a <code>CFDictionary</code>.</li>
+</ul>
+<p>So&hellip; Yes, it is a mess. The API is very old, and <code>result</code> can be pretty much anything. This API is not really friendly with Swift&rsquo;s type safety, so we have to do a lot of casting when working with keychain services.</p>
+<p><code>CFTypeRef</code> is bridged to <code>AnyObject</code>, so you can forget about <code>CFTypeRef</code> and use <code>AnyObject</code> everywhere instead.</p>
+<p>Here is an example of a query that returns the attributes, using <code>kSecReturnAttributes</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">keychainItem</span> = [
+</span></span><span style="display:flex;"><span>  kSecValueData: <span style="color:#a6e3a1">&#34;Pullip2020&#34;</span>.data(using: .utf8)<span style="color:#89dceb;font-weight:bold">!</span>,
+</span></span><span style="display:flex;"><span>  kSecAttrAccount: <span style="color:#a6e3a1">&#34;andyibanez&#34;</span>,
+</span></span><span style="display:flex;"><span>  kSecAttrServer: <span style="color:#a6e3a1">&#34;pullipstyle.com&#34;</span>,
+</span></span><span style="display:flex;"><span>  kSecClass: kSecClassInternetPassword,
+</span></span><span style="display:flex;"><span>  kSecReturnAttributes: <span style="color:#fab387">true</span>
+</span></span><span style="display:flex;"><span>] <span style="color:#cba6f7">as</span> CFDictionary
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">var</span> <span style="color:#f5e0dc">ref</span>: <span style="color:#89dceb">AnyObject</span>?
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">status</span> = SecItemAdd(keychainItem, &amp;ref)
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">result</span> = ref <span style="color:#cba6f7">as</span>! NSDictionary
+</span></span><span style="display:flex;"><span><span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#34;Operation finished with status: </span><span style="color:#a6e3a1">\(</span>status<span style="color:#a6e3a1">)</span><span style="color:#a6e3a1">&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#34;Returned attributes:&#34;</span>)
+</span></span><span style="display:flex;"><span>result.forEach { key, value <span style="color:#cba6f7">in</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#34;</span><span style="color:#a6e3a1">\(</span>key<span style="color:#a6e3a1">)</span><span style="color:#a6e3a1">: </span><span style="color:#a6e3a1">\(</span>value<span style="color:#a6e3a1">)</span><span style="color:#a6e3a1">&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This will print:</p>
+<pre tabindex="0"><code>Operation finished with status: 0
+Returned attributes:
+acct: andyibanez
+atyp: 
+sha1: {length = 20, bytes = 0x589a101265fbb5cd7b596657d2109c13450533a1}
+path: 
+sdmn: 
+pdmn: ak
+mdat: 2020-05-24 19:33:51 +0000
+sync: 0
+cdat: 2020-05-24 19:33:51 +0000
+ptcl: 0
+srvr: pullipstyle.com
+agrp: 7X7FABXK4C.com.andyibanez.keychain
+port: 0
+</code></pre><p>You will never use these keys directly. Always use the proper <code>kSecAttr</code> key to get your data:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#34;Website: </span><span style="color:#a6e3a1">\(</span>result[kSecAttrServer] ?? <span style="color:#a6e3a1">&#34;&#34;</span><span style="color:#a6e3a1">)</span><span style="color:#a6e3a1">&#34;</span>) <span style="color:#6c7086;font-style:italic">// Website: pullipstyle.com</span>
+</span></span></code></pre></div><p>You may have noticed the actual password is missing. To get the password, we need to specify the <code>kSecReturnData</code> key instead. <code>kSecReturnData</code> returns a <code>CFData</code>, and <code>kSecReturnAttributes</code> returns a dictionary, so they are incompatible types to begin with.</p>
+<p>To retrieve the password itself:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">keychainItem</span> = [
+</span></span><span style="display:flex;"><span>  kSecValueData: <span style="color:#a6e3a1">&#34;Pullip2020&#34;</span>.data(using: .utf8)<span style="color:#89dceb;font-weight:bold">!</span>,
+</span></span><span style="display:flex;"><span>  kSecAttrAccount: <span style="color:#a6e3a1">&#34;andyibanez&#34;</span>,
+</span></span><span style="display:flex;"><span>  kSecAttrServer: <span style="color:#a6e3a1">&#34;pullipstyle.com&#34;</span>,
+</span></span><span style="display:flex;"><span>  kSecClass: kSecClassInternetPassword,
+</span></span><span style="display:flex;"><span>  kSecReturnData: <span style="color:#fab387">true</span>
+</span></span><span style="display:flex;"><span>] <span style="color:#cba6f7">as</span> CFDictionary
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">var</span> <span style="color:#f5e0dc">ref</span>: <span style="color:#89dceb">AnyObject</span>?
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">status</span> = SecItemAdd(keychainItem, &amp;ref)
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">result</span> = ref <span style="color:#cba6f7">as</span>! Data
+</span></span><span style="display:flex;"><span><span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#34;Operation finished with status: </span><span style="color:#a6e3a1">\(</span>status<span style="color:#a6e3a1">)</span><span style="color:#a6e3a1">&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">password</span> = <span style="color:#89dceb">String</span>(data: result, encoding: .utf8)<span style="color:#89dceb;font-weight:bold">!</span>
+</span></span><span style="display:flex;"><span><span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#34;Password: </span><span style="color:#a6e3a1">\(</span>password<span style="color:#a6e3a1">)</span><span style="color:#a6e3a1">&#34;</span>)
+</span></span></code></pre></div><pre tabindex="0"><code>Password: Pullip2020
+</code></pre><p>&hellip; But, you can actually return both at the same time! Even though using <code>kSecReturnData</code> and <code>kSecReturnAttributes</code> return different types, if you specify both keys at the same time and set them to true, <code>SecItemAdd</code> will return a <code>CFDictionary</code> that contains the attributes <em>and</em> the password. So, if you are aiming for consistency, and you always want <code>result</code> to have the same data type, if you specify more than one return key, you will always get a dictionary back.</p>
+<pre tabindex="0"><code>let keychainItem = [
+  kSecValueData: &#34;Pullip2020&#34;.data(using: .utf8)!,
+  kSecAttrAccount: &#34;andyibanez&#34;,
+  kSecAttrServer: &#34;pullipstyle.com&#34;,
+  kSecClass: kSecClassInternetPassword,
+  kSecReturnData: true,
+  kSecReturnAttributes: true
+] as CFDictionary
+
+var ref: AnyObject?
+
+let status = SecItemAdd(keychainItem, &amp;ref)
+let result = ref as! NSDictionary
+print(&#34;Operation finished with status: \(status)&#34;)
+print(&#34;Username: \(result[kSecAttrAccount] ?? &#34;&#34;)&#34;)
+let passwordData = result[kSecValueData] as! Data
+let passwordString = String(data: passwordData, encoding: .utf8)
+print(&#34;Password: \(passwordString ?? &#34;&#34;)&#34;)
+</code></pre><pre tabindex="0"><code>Operation finished with status: 0
+Username: andyibanez
+Password: Pullip2020
+</code></pre><h2 id="retrieving-items-from-the-keychain">Retrieving Items from the Keychain</h2>
+<p>In this section we will explore how to write queries that retrieve data from the keychain. If you want to work along, I have written this small piece of code that will populate the keychain with different but similar entries:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">usernames</span> = [<span style="color:#a6e3a1">&#34;andyibanez&#34;</span>, <span style="color:#a6e3a1">&#34;alice&#34;</span>, <span style="color:#a6e3a1">&#34;eileen&#34;</span>, <span style="color:#a6e3a1">&#34;blackberry&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>usernames.forEach { username <span style="color:#cba6f7">in</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">keychainItem</span> = [
+</span></span><span style="display:flex;"><span>    kSecValueData: <span style="color:#a6e3a1">&#34;</span><span style="color:#a6e3a1">\(</span>username<span style="color:#a6e3a1">)</span><span style="color:#a6e3a1">-Pullip2020&#34;</span>.data(using: .utf8)<span style="color:#89dceb;font-weight:bold">!</span>,
+</span></span><span style="display:flex;"><span>    kSecAttrAccount: username,
+</span></span><span style="display:flex;"><span>    kSecAttrServer: <span style="color:#a6e3a1">&#34;pullipstyle.com&#34;</span>,
+</span></span><span style="display:flex;"><span>    kSecClass: kSecClassInternetPassword,
+</span></span><span style="display:flex;"><span>    kSecReturnData: <span style="color:#fab387">true</span>,
+</span></span><span style="display:flex;"><span>    kSecReturnAttributes: <span style="color:#fab387">true</span>
+</span></span><span style="display:flex;"><span>  ] <span style="color:#cba6f7">as</span> CFDictionary
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#f38ba8">var</span> <span style="color:#f5e0dc">ref</span>: <span style="color:#89dceb">AnyObject</span>?
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">status</span> = SecItemAdd(keychainItem, &amp;ref)
+</span></span><span style="display:flex;"><span>  <span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">result</span> = ref <span style="color:#cba6f7">as</span>! NSDictionary
+</span></span><span style="display:flex;"><span>  <span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#34;Operation finished with status: </span><span style="color:#a6e3a1">\(</span>status<span style="color:#a6e3a1">)</span><span style="color:#a6e3a1">&#34;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#34;Username: </span><span style="color:#a6e3a1">\(</span>result[kSecAttrAccount] ?? <span style="color:#a6e3a1">&#34;&#34;</span><span style="color:#a6e3a1">)</span><span style="color:#a6e3a1">&#34;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">passwordData</span> = result[kSecValueData] <span style="color:#cba6f7">as</span>! Data
+</span></span><span style="display:flex;"><span>  <span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">passwordString</span> = <span style="color:#89dceb">String</span>(data: passwordData, encoding: .utf8)
+</span></span><span style="display:flex;"><span>  <span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#34;Password: </span><span style="color:#a6e3a1">\(</span>passwordString ?? <span style="color:#a6e3a1">&#34;&#34;</span><span style="color:#a6e3a1">)</span><span style="color:#a6e3a1">&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>To query the keychain and retrieve the items, we use the <code>SecItemCopyMatching</code> function. The two parameters it takes are actually the same ones as <code>SecItemAdd</code>. The way these two functions is the same: You specify a query, and get something in return, including nil. it returns a <code>OSStatus</code> like <code>SecItemAdd</code>.</p>
+<p>While <code>SecItemCopyMatching</code> has an optional second parameter, you probably want to specify it most of the time, otherwise you will never get any data back when working with it.</p>
+<p>You write your query the same way you did when creating items, but there&rsquo;s a few things we need to keep in mind. First, the queries can be as specific or as generic as you want. Second, you can force the keychain to return one or more items at once.</p>
+<p>Once again this API is messy, because the <code>result</code> can once again return more than one type. The conditions are the same as when returning data from <code>SecItemAdd</code>, but there is one more type <code>SecItemCopyMatching</code> can return. If you specify the key <code>kSecMatchLimit</code> and give it a value bigger than <code>1</code>, you will get a <code>CFArray</code> of <code>CFDictionary</code>.</p>
+<p>Let&rsquo;s see this in action. You know you have many items that have <code>pullipstyle.com</code> as their <code>kSecAttrServer</code>. Despite that, the following query will only return one:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">query</span> = [
+</span></span><span style="display:flex;"><span>  kSecClass: kSecClassInternetPassword,
+</span></span><span style="display:flex;"><span>  kSecAttrServer: <span style="color:#a6e3a1">&#34;pullipstyle.com&#34;</span>,
+</span></span><span style="display:flex;"><span>  kSecReturnAttributes: <span style="color:#fab387">true</span>,
+</span></span><span style="display:flex;"><span>  kSecReturnData: <span style="color:#fab387">true</span>
+</span></span><span style="display:flex;"><span>] <span style="color:#cba6f7">as</span> CFDictionary
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">var</span> <span style="color:#f5e0dc">result</span>: <span style="color:#89dceb">AnyObject</span>?
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">status</span> = SecItemCopyMatching(query, &amp;result)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#34;Operation finished with status: </span><span style="color:#a6e3a1">\(</span>status<span style="color:#a6e3a1">)</span><span style="color:#a6e3a1">&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">dic</span> = result <span style="color:#cba6f7">as</span>! NSDictionary
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">username</span> = dic[kSecAttrAccount] ?? <span style="color:#a6e3a1">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">passwordData</span> = dic[kSecValueData] <span style="color:#cba6f7">as</span>! Data
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">password</span> = <span style="color:#89dceb">String</span>(data: passwordData, encoding: .utf8)<span style="color:#89dceb;font-weight:bold">!</span>
+</span></span><span style="display:flex;"><span><span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#34;Username: </span><span style="color:#a6e3a1">\(</span>username<span style="color:#a6e3a1">)</span><span style="color:#a6e3a1">&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#34;Password: </span><span style="color:#a6e3a1">\(</span>password<span style="color:#a6e3a1">)</span><span style="color:#a6e3a1">&#34;</span>)
+</span></span></code></pre></div><p>If the query doesn&rsquo;t find any items to return, <code>result</code> will be nil, so make sure you check for that.</p>
+<p>To return more than one, we will specify <code>kSecMatchLimit</code> to a high enough number to return all the entries:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">query</span> = [
+</span></span><span style="display:flex;"><span>  kSecClass: kSecClassInternetPassword,
+</span></span><span style="display:flex;"><span>  kSecAttrServer: <span style="color:#a6e3a1">&#34;pullipstyle.com&#34;</span>,
+</span></span><span style="display:flex;"><span>  kSecReturnAttributes: <span style="color:#fab387">true</span>,
+</span></span><span style="display:flex;"><span>  kSecReturnData: <span style="color:#fab387">true</span>,
+</span></span><span style="display:flex;"><span>  kSecMatchLimit: <span style="color:#fab387">5</span>
+</span></span><span style="display:flex;"><span>] <span style="color:#cba6f7">as</span> CFDictionary
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">var</span> <span style="color:#f5e0dc">result</span>: <span style="color:#89dceb">AnyObject</span>?
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">status</span> = SecItemCopyMatching(query, &amp;result)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#34;Operation finished with status: </span><span style="color:#a6e3a1">\(</span>status<span style="color:#a6e3a1">)</span><span style="color:#a6e3a1">&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">array</span> = result <span style="color:#cba6f7">as</span>! [NSDictionary]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>array.forEach { dic <span style="color:#cba6f7">in</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">username</span> = dic[kSecAttrAccount] ?? <span style="color:#a6e3a1">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">passwordData</span> = dic[kSecValueData] <span style="color:#cba6f7">as</span>! Data
+</span></span><span style="display:flex;"><span>  <span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">password</span> = <span style="color:#89dceb">String</span>(data: passwordData, encoding: .utf8)<span style="color:#89dceb;font-weight:bold">!</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#34;Username: </span><span style="color:#a6e3a1">\(</span>username<span style="color:#a6e3a1">)</span><span style="color:#a6e3a1">&#34;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#34;Password: </span><span style="color:#a6e3a1">\(</span>password<span style="color:#a6e3a1">)</span><span style="color:#a6e3a1">&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Now the code has been adapted to work with an array instead of a dictionary, and we can now get all the entries that match the query.</p>
+<p>One annoying detail of specifying <code>kSecMatchLimit</code> is that when your query produces zero results, <code>result</code> will again be <code>nil</code> instead of an empty array, so keep that in mind.</p>
+<p>The more attribute keys you add, the more specific your queries become.</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">query</span> = [
+</span></span><span style="display:flex;"><span>  kSecClass: kSecClassInternetPassword,
+</span></span><span style="display:flex;"><span>  kSecAttrServer: <span style="color:#a6e3a1">&#34;pullipstyle.com&#34;</span>,
+</span></span><span style="display:flex;"><span>  kSecAttrAccount: <span style="color:#a6e3a1">&#34;andyibanez&#34;</span>,
+</span></span><span style="display:flex;"><span>  kSecReturnAttributes: <span style="color:#fab387">true</span>,
+</span></span><span style="display:flex;"><span>  kSecReturnData: <span style="color:#fab387">true</span>,
+</span></span><span style="display:flex;"><span>  kSecMatchLimit: <span style="color:#fab387">5</span>
+</span></span><span style="display:flex;"><span>] <span style="color:#cba6f7">as</span> CFDictionary
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">var</span> <span style="color:#f5e0dc">result</span>: <span style="color:#89dceb">AnyObject</span>?
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">status</span> = SecItemCopyMatching(query, &amp;result)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#34;Operation finished with status: </span><span style="color:#a6e3a1">\(</span>status<span style="color:#a6e3a1">)</span><span style="color:#a6e3a1">&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">array</span> = result <span style="color:#cba6f7">as</span>! [NSDictionary]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>array.forEach { dic <span style="color:#cba6f7">in</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">username</span> = dic[kSecAttrAccount] ?? <span style="color:#a6e3a1">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">passwordData</span> = dic[kSecValueData] <span style="color:#cba6f7">as</span>! Data
+</span></span><span style="display:flex;"><span>  <span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">password</span> = <span style="color:#89dceb">String</span>(data: passwordData, encoding: .utf8)<span style="color:#89dceb;font-weight:bold">!</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#34;Username: </span><span style="color:#a6e3a1">\(</span>username<span style="color:#a6e3a1">)</span><span style="color:#a6e3a1">&#34;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#34;Password: </span><span style="color:#a6e3a1">\(</span>password<span style="color:#a6e3a1">)</span><span style="color:#a6e3a1">&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The above code will match both the server (<code>pullipstyle.com</code>) and the username (<code>andyibanez</code>). This returns one item only in our specific case. Luckily since <code>kSecMatchLimit</code> is bigger than one, we still get an array and not a dictionary.</p>
+<pre tabindex="0"><code>Operation finished with status: 0
+Username: andyibanez
+Password: andyibanez-Pullip2020
+</code></pre><h2 id="updating-items">Updating Items</h2>
+<p>To update items in the keychain, you use the <code>SecItemUpdate</code> function which also returns an <code>OSStatus</code>. Unlike <code>SecItemAdd</code> and <code>SecItemCopyMatching</code>, this function takes two <code>CFDictionaries</code> as its arguments. The first one is the query which you know and love. The second one contains the attributes you want to update and their new values.</p>
+<p>When specifying the query, you really need to be careful with how specific it is. If it isn&rsquo;t specific enough, you may end up updating multiple items at once when you didn&rsquo;t intend to.</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">query</span> = [
+</span></span><span style="display:flex;"><span>  kSecClass: kSecClassInternetPassword,
+</span></span><span style="display:flex;"><span>  kSecAttrServer: <span style="color:#a6e3a1">&#34;pullipstyle.com&#34;</span>,
+</span></span><span style="display:flex;"><span>] <span style="color:#cba6f7">as</span> CFDictionary
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">updateFields</span> = [
+</span></span><span style="display:flex;"><span>  kSecValueData: <span style="color:#a6e3a1">&#34;newPassword&#34;</span>.data(using: .utf8)<span style="color:#89dceb;font-weight:bold">!</span>
+</span></span><span style="display:flex;"><span>] <span style="color:#cba6f7">as</span> CFDictionary
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">status</span> = SecItemUpdate(query, updateFields)
+</span></span><span style="display:flex;"><span><span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#34;Operation finished with status: </span><span style="color:#a6e3a1">\(</span>status<span style="color:#a6e3a1">)</span><span style="color:#a6e3a1">&#34;</span>)
+</span></span></code></pre></div><p>This will successfully modify the password of all <code>kSecClass</code>es whose <code>kSecAttrServer</code> is <code>pullipstyle.com</code>. It will update ALL the entries, because our query is too general and it matches many entries. Always try to make the query more specific to avoid these problems, especially if your keychain stores a lot of sensitive data.</p>
+<p>In this case it would better to also specify the username (<code>kSecAttrAccount</code>) of the user we want to update:</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">query</span> = [
+</span></span><span style="display:flex;"><span>  kSecClass: kSecClassInternetPassword,
+</span></span><span style="display:flex;"><span>  kSecAttrServer: <span style="color:#a6e3a1">&#34;pullipstylew.com&#34;</span>,
+</span></span><span style="display:flex;"><span>  kSecAttrAccount: <span style="color:#a6e3a1">&#34;andyibanez&#34;</span>
+</span></span><span style="display:flex;"><span>] <span style="color:#cba6f7">as</span> CFDictionary
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">updateFields</span> = [
+</span></span><span style="display:flex;"><span>  kSecValueData: <span style="color:#a6e3a1">&#34;newPassword&#34;</span>.data(using: .utf8)<span style="color:#89dceb;font-weight:bold">!</span>
+</span></span><span style="display:flex;"><span>] <span style="color:#cba6f7">as</span> CFDictionary
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">status</span> = SecItemUpdate(query, updateFields)
+</span></span><span style="display:flex;"><span><span style="color:#89dceb">print</span>(<span style="color:#a6e3a1">&#34;Operation finished with status: </span><span style="color:#a6e3a1">\(</span>status<span style="color:#a6e3a1">)</span><span style="color:#a6e3a1">&#34;</span>)
+</span></span></code></pre></div><h2 id="deleting-items">Deleting Items</h2>
+<p>To delete an item, use the <code>SecItemDelete</code> function. This function only takes one parameter, the query, and returns an <code>OSStatus</code>.</p>
+<p>Just like when we are updating items, make sure your query is very specific so you only delete what you intend to delete. If you don&rsquo;t you may delete extra entries accidentally.</p>
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#f38ba8">let</span> <span style="color:#f5e0dc">query</span> = [
+</span></span><span style="display:flex;"><span>  kSecClass: kSecClassInternetPassword,
+</span></span><span style="display:flex;"><span>  kSecAttrServer: <span style="color:#a6e3a1">&#34;pullipstyle.com&#34;</span>,
+</span></span><span style="display:flex;"><span>  kSecAttrAccount: <span style="color:#a6e3a1">&#34;andyibanez.com&#34;</span>
+</span></span><span style="display:flex;"><span>] <span style="color:#cba6f7">as</span> CFDictionary
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SecItemDelete(query)
+</span></span></code></pre></div><h1 id="conclusion">Conclusion</h1>
+<p>Using the keychain to store sensitive data is the way to go. While it is a low-level API, the bridging to Swift has become more bearable in the last few years. You generally won&rsquo;t worry too much about the bridging types, but it&rsquo;s worth keeping into amount that the operations that return data back can return different data types.</p>
+<p>We explored the basic usage of the keychain services APIs. We learend how to add, search, update, and delete entries, but the keychain can actually do quite a lot more than just that. Hopefully this article helped you get started to write more secure storage for sensitive data in your own apps.</p>
+
+
+    
+
+  </article>
+
+  
+
+          </div>
+        </main>
+
+        <footer>
+  <div class="container">
+    <div class="footer-navigation"><a  href="https://github.com/AndyIbanez"><span class="inline-svg" ><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 42 40"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="github.svg"
+   width="42"
+   height="40"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="845"
+     id="namedview6"
+     showgrid="false"
+     inkscape:zoom="0.4609375"
+     inkscape:cx="-9.0847458"
+     inkscape:cy="256"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path fill="currentColor"
+     d="m 14.20936,32.20794 c 0,0.16542 -0.19024,0.29776 -0.4301,0.29776 -0.27295,0.0248 -0.46319,-0.10752 -0.46319,-0.29776 0,-0.16542 0.19024,-0.29776 0.4301,-0.29776 0.24814,-0.0248 0.46319,0.10752 0.46319,0.29776 z m -2.57234,-0.3722 c -0.0579,0.16542 0.10753,0.35566 0.35566,0.40528 0.21505,0.0827 0.46319,0 0.51282,-0.16542 0.0496,-0.16542 -0.10753,-0.35566 -0.35566,-0.4301 -0.21505,-0.0579 -0.45492,0.0248 -0.51282,0.19024 z m 3.65586,-0.14061 c -0.23986,0.0579 -0.40529,0.21505 -0.38047,0.40528 0.0248,0.16543 0.23986,0.27295 0.488,0.21505 0.23986,-0.0579 0.40528,-0.21505 0.38047,-0.38047 -0.0248,-0.15715 -0.24813,-0.26468 -0.488,-0.23986 z M 20.73531,-1.9734273e-7 C 9.2632,-1.9734273e-7 0.48748,8.7095398 0.48748,20.18166 c 0,9.17273 5.77328,17.02207 14.01964,19.78464 1.05871,0.19024 1.43091,-0.46319 1.43091,-1.00081 0,-0.51282 -0.0248,-3.34156 -0.0248,-5.0785 0,0 -5.78982,1.24067 -7.00568,-2.46481 0,0 -0.94292,-2.40691 -2.29939,-3.02725 0,0 -1.8941,-1.29857 0.13234,-1.27376 0,0 2.05952,0.16542 3.19267,2.13396 1.81139,3.19267 4.84691,2.27457 6.02969,1.72868 0.19023,-1.32339 0.72786,-2.24149 1.32338,-2.78739 -4.62358,-0.51281 -9.28852,-1.18278 -9.28852,-9.13964 0,-2.27458 0.62861,-3.416 1.95199,-4.87172 -0.21505,-0.53763 -0.9181,-2.7543 0.21506,-5.6161302 1.72867,-0.53762 5.7071,2.2332202 5.7071,2.2332202 1.65424,-0.46319 3.43254,-0.70305 5.1943,-0.70305 1.76176,0 3.54006,0.23986 5.1943,0.70305 0,0 3.97843,-2.7791202 5.7071,-2.2332202 1.13315,2.8701002 0.4301,5.0785002 0.21505,5.6161302 1.32339,1.46399 2.13397,2.60542 2.13397,4.87172 0,7.98168 -4.87172,8.61856 -9.49531,9.13964 0.76095,0.65342 1.4061,1.8941 1.4061,3.83782 0,2.78739 -0.0248,6.23647 -0.0248,6.9147 0,0.53763 0.38047,1.19105 1.43091,1.00082 C 35.90466,37.20373 41.51252,29.35439 41.51252,20.18166 41.51252,8.7095398 32.20745,-1.9734273e-7 20.73533,-1.9734273e-7 Z M 8.52706,28.52727 c -0.10752,0.0827 -0.0827,0.27295 0.0579,0.4301 0.13234,0.13234 0.32258,0.19024 0.4301,0.0827 0.10753,-0.0827 0.0827,-0.27295 -0.0579,-0.4301 -0.13233,-0.13234 -0.32257,-0.19024 -0.4301,-0.0827 z M 7.63378,27.8573 c -0.0579,0.10753 0.0248,0.23987 0.19023,0.32258 0.13234,0.0827 0.29777,0.0579 0.35566,-0.0579 C 8.23757,28.01446 8.15487,27.88212 7.98944,27.7994 7.82401,27.7498 7.69168,27.7746 7.63378,27.8573 Z m 2.67986,2.94454 c -0.13234,0.10753 -0.0827,0.35566 0.10752,0.51281 0.19024,0.19024 0.4301,0.21505 0.53763,0.0827 0.10752,-0.10752 0.0579,-0.35566 -0.10753,-0.51281 -0.18196,-0.19024 -0.4301,-0.21505 -0.53762,-0.0827 z M 9.37072,29.58598 c -0.13234,0.0827 -0.13234,0.29776 0,0.488 0.13234,0.19023 0.35566,0.27295 0.46319,0.19023 0.13234,-0.10752 0.13234,-0.32257 0,-0.51281 -0.1158,-0.19024 -0.33085,-0.27295 -0.46319,-0.16542 z"
+     id="path2"
+     inkscape:connector-curvature="0"
+     style="stroke-width:0.08271171" />
+</svg>
+</span>
+</a><a  href="https://x.com/AndyIbanezK"><span class="inline-svg" ><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 50 40"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="twitter.svg"
+   width="50"
+   height="40"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="845"
+     id="namedview6"
+     showgrid="false"
+     inkscape:zoom="0.4609375"
+     inkscape:cx="-1.0847458"
+     inkscape:cy="256"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path fill="currentColor"
+     d="m 44.56253,9.96871 c 0.0313,0.43748 0.0313,0.87506 0.0313,1.31254 C 44.59383,24.62494 34.43764,40 15.87508,40 10.1563,40 4.84383,38.34368 0.37506,35.4688 c 0.81253,0.0937 1.5937,0.12495 2.4375,0.12495 4.71867,0 9.06249,-1.5937 12.53125,-4.31245 -4.43751,-0.0938 -8.15627,-3.00003 -9.43754,-7.00006 0.62505,0.0937 1.25001,0.15622 1.90632,0.15622 0.90622,0 1.81254,-0.12505 2.65624,-0.34369 C 5.84384,23.15619 2.37498,19.09373 2.37498,14.18748 v -0.12495 c 1.3437,0.75 2.90633,1.21875 4.56246,1.28117 -2.71876,-1.81253 -4.49993,-4.90624 -4.49993,-8.40627 0,-1.87497 0.4999,-3.59372 1.37496,-5.09373 4.96877,6.125 12.43756,10.12493 20.81248,10.56251 -0.15622,-0.75001 -0.25,-1.53118 -0.25,-2.31245 C 24.37495,4.5312 28.87498,0 34.46871,0 c 2.90623,0 5.53121,1.21875 7.37501,3.1875 2.28118,-0.43748 4.46867,-1.28127 6.40626,-2.43749 -0.75011,2.3438 -2.34381,4.31255 -4.43751,5.56246 2.03127,-0.21864 4.00003,-0.78126 5.81247,-1.56244 -1.37477,1.99992 -3.09362,3.7811 -5.06237,5.21868 z"
+     id="path2"
+     inkscape:connector-curvature="0"
+     style="stroke-width:0.09619153" />
+</svg>
+</span>
+</a><a  href="https://www.linkedin.com/in/andyibanez/"><span class="inline-svg" ><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 41 40"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="linkedin.svg"
+   width="41"
+   height="40"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="845"
+     id="namedview6"
+     showgrid="false"
+     inkscape:zoom="0.4609375"
+     inkscape:cx="-33.084746"
+     inkscape:cy="256"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path fill="currentColor"
+     d="M 9.45332,40 H 1.16028 V 13.29405 H 9.45332 Z M 5.30234,9.65111 c -2.65185,0 -4.80279,-2.19648 -4.80279,-4.84832 a 4.80279,4.80279 0 0 1 9.60558,0 c 0,2.65184 -2.15184,4.84832 -4.80279,4.84832 z M 40.49152,40 H 32.21633 V 26.99971 c 0,-3.09828 -0.0625,-7.07159 -4.3117,-7.07159 -4.3117,0 -4.97243,3.36615 -4.97243,6.84837 V 40 H 14.64808 V 13.29405 h 7.95375 v 3.64294 h 0.11608 c 1.10716,-2.09827 3.81169,-4.3126 7.8466,-4.3126 8.39304,0 9.93594,5.52691 9.93594,12.70564 V 40 Z"
+     id="path2"
+     inkscape:connector-curvature="0"
+     style="stroke-width:0.08928771" />
+</svg>
+</span>
+</a>
+            <a href="http://localhost:1313/posts/index.xml"><span class="inline-svg" ><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 40 40"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="rss.svg"
+   width="40"
+   height="40"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="845"
+     id="namedview6"
+     showgrid="false"
+     inkscape:zoom="0.4609375"
+     inkscape:cx="-33.084746"
+     inkscape:cy="256"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path fill="currentColor"
+     d="m 11.435816,34.282008 c 0,3.15793 -2.5599899,5.71793 -5.7179299,5.71793 -3.15794,0 -5.717840022654,-2.56 -5.717840022654,-5.71793 0,-3.15794 2.559990022654,-5.71793 5.717930022654,-5.71793 3.15794,0 5.7178399,2.56008 5.7178399,5.71793 z m 15.68388,4.21873 C 26.373806,24.697208 15.317496,13.626978 1.4992361,12.880288 0.68361608,12.836188 4.6077346e-5,13.491538 4.6077346e-5,14.308318 v 4.29186 c 0,0.75134 0.579460002654,1.38142 1.329190022654,1.43017 9.9849699,0.65036 17.9886099,8.63408 18.6402999,18.6403 0.0488,0.74973 0.67893,1.3292 1.43018,1.3292 h 4.29186 c 0.81687,9e-5 1.47223,-0.68348 1.42812,-1.49911 z m 12.87933,0.0257 C 39.249566,17.649718 22.452206,0.754048 1.4735261,9.2799867e-4 0.66727608,-0.027972 4.6077346e-5,0.623338 4.6077346e-5,1.430038 v 4.29177 c 0,0.77008 0.610270002654,1.39687 1.379730022654,1.42848 17.0694999,0.6999 30.7701699,14.40316 31.4699899,31.46999 0.0315,0.76946 0.6583,1.37972 1.42848,1.37972 h 4.29177 c 0.8066,-8e-5 1.45794,-0.66731 1.42901,-1.47356 z"
+     id="path2"
+     inkscape:connector-curvature="0"
+     style="stroke-width:0.08928544" />
+</svg>
+</span>
+</a><a  href="http://localhost:1313/contact"><span class="inline-svg" ><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 40 40"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="email.svg"
+   width="40"
+   height="40"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="845"
+     id="namedview6"
+     showgrid="false"
+     inkscape:zoom="5.2149125"
+     inkscape:cx="68.146526"
+     inkscape:cy="2.9579672"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path fill="currentColor"
+     d="m 39.99999,36.249999 c 0,2.0711 -1.6789,3.75 -3.74999,3.75 H 3.75 c -2.07109,0 -3.74999,-1.6789 -3.74999,-3.75 v -20.56843 a 3.7499996,3.7499996 0 0 1 1.43648,-2.95125 C 3.38282,11.204619 4.99125,9.9674286 14.26461,3.2372786 15.57906,2.2789186 18.18727,-0.02709136 20,2.4864227e-4 21.81234,-0.02745136 24.42156,2.2793086 25.73539,3.2371986 c 9.27242,6.72945 10.88304,7.9683604 12.82812,9.4931204 a 3.7499996,3.7499996 0 0 1 1.43648,2.95125 z m -5.13015,-15.35976 c -0.20024,-0.29125 -0.60156,-0.35898 -0.88586,-0.14898 -1.78476,1.3182 -4.33297,3.18008 -8.24859,6.02179 -1.31445,0.95828 -3.92266,3.26414 -5.73539,3.23672 -1.81336,0.0269 -4.41867,-2.2768 -5.73539,-3.23672 -3.91515,-2.8414 -6.46359,-4.70343 -8.24859,-6.02179 -0.2843,-0.21 -0.68562,-0.14227 -0.88586,0.14898 l -0.70875,1.03094 a 0.62484368,0.62484368 0 0 0 0.14367,0.8568 c 1.78805,1.32023 4.33235,3.1789 8.2268,6.00531 1.5839,1.15476 4.41593,3.73539 7.20812,3.71664 2.79094,0.0189 5.62195,-2.56024 7.20804,-3.71664 3.89453,-2.82649 6.43891,-4.68516 8.2268,-6.00531 a 0.62484368,0.62484368 0 0 0 0.14367,-0.8568 z"
+     id="path2"
+     inkscape:connector-curvature="0"
+     style="stroke-width:0.07812498" />
+</svg>
+</span>
+</a></div>
+  </div>
+
+  
+
+  <p class="made-with-love">
+    <a href="https://github.com/humrochagf/colordrop">
+      <b>Colordrop</b>
+    </a>
+
+    <span>theme | Made </span><span>by</span>
+
+    <a href="https://humberto.io/"><b>Humberto Rocha</b></a>
+  </p>
+</footer>
+
+      </div>
+    
+
+    
+
+
+
+    
+    
+
+    
+      <script src="/copy/copy.js"></script>
+    
+
+    <script src="/search/elasticlunr.min.js"></script>
+    <script src="/search/search.js"></script>
+    <script>
+      loadSearch('http:\/\/localhost:1313\/index.json');
+    </script>
+  </body>
+</html>
