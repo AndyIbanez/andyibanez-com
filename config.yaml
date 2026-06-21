@@ -49,13 +49,13 @@ menu:
       name: Projects
       url: projects/
       weight: 40
+    - identifier: my-company
+      name: My Company
+      url: https://fairese.com
+      weight: 41
     - identifier: by_book
       name: My Book
       url: https://swiftasyncbook.com
-      weight: 41
-    - identifier: tags
-      name: Tags
-      url: tags/
       weight: 42
     - identifier: privacy-policy
       name: Privacy policy
